@@ -1,0 +1,484 @@
+/******************************************************* 
+File:course-style.css
+Author:BYU CTL
+Contact:Nathan Walton 
+Desc:BYU Learning Suite Course Builder styles 
+*******************************************************/
+
+
+
+/* Partials */
+@import "mixins";
+@import "colors";
+
+
+ 
+/* Setup */
+#initialGroupSections {
+	form input[type="radio"] {
+		vertical-align: top;
+		position: relative;
+		top: 3px; }
+	.inlineLabel {
+		label {
+		display: inline; } } }
+
+/* TO DO */
+// Really need to figure out why this is showing up.
+// The setup options from the page are getting pulled down
+// into the feednack box. Weird. Maybe some jQuery somewhere
+// is being a little too agressive.
+#feedbackBox #setupOptions {
+	display:none } 
+
+
+/* Course List */
+
+.allCourseList {
+	max-width:800px;
+	position: relative;
+	.no-content {
+  	margin-top: 1em; } }
+
+.course-group {
+	margin: 1.5em 0 3em; }
+
+#unpublishedBox {
+  display:none;}
+
+.unpublishedLabel {
+width: 112px;
+text-align: center;
+position: absolute;
+right: 9px;
+top:10px; }
+
+h2.header {
+  color: $gray9;
+  position: relative;
+	border-bottom: 1px solid #eee;
+	font-size: 1em;
+	margin-left:1.25em;
+	text-transform: uppercase;
+	span {
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 2px; } }
+
+.divider-above {
+  border-top: 1px dotted #ddd;
+  padding-top: .75em;
+  margin-top:2em;
+}
+
+#courseListTabs {
+  border-bottom: 1px dotted #ddd;
+  padding-bottom: .5em;
+  margin-top: .5em;
+  margin-left:-.5em;
+  a {
+    text-decoration: none; }
+}
+
+// Course
+.course {
+  overflow: auto;
+  
+	a.course-title {
+		display: inline-block;
+		padding: .5em .5em .5em 1.5em;
+		color: #369;
+		font-size: 1.1em;
+		font-weight: bold;
+		text-decoration: none;
+		margin-right: 200px;
+		float: left;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	
+	.actions-col {
+		position: absolute;
+		right: 0;
+		width: 220px;
+		text-align: right;
+		
+		.btn-group {
+		  float: left;
+		  margin: .5em;
+		  margin-right:0;
+		  .dropdown-toggle {
+		    text-decoration: none;
+		  }
+		  
+		}
+		
+		.unavailable {
+			position: relative;
+			top: 8px;
+			right: 8px;
+		}
+	}
+}
+
+a.btn-publish {
+  width:100px;
+  float: right;
+  margin-left: 0px;
+}
+.actions-col {
+  & > .btn-delete {
+    width:50px;
+    position: absolute;
+    left:8px;
+    top:0;
+  }
+	.setup-course {
+		float: right;
+		width:100px; }
+	ul {
+		padding: 0;
+		margin: 0; } }
+
+.dev-button {
+	padding-left: 15px; }
+
+.label {
+	margin-top: 5px; }
+
+#newDevCourseButton {
+	display: inline-block;
+	margin-left: 1.5em; }
+
+.futuresection h2 {
+	margin-top: 0; }
+
+/* Right Bar Announcments */
+
+.right-col {
+	width: 30%;
+	float: right;
+	margin-bottom: 70px; }
+
+.rightbar {
+	h4 {
+		position: relative;
+		padding-left: 40px;
+		margin-left: -40px;
+		margin-bottom: .5em;
+		padding-top: 2px;
+		font-size: 18px;
+		line-height: 18px;
+		&:before {
+			content: " ";
+			display: block;
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			background: transparent url('../images/icon-30.png') 0px -300px no-repeat;
+			top: 0;
+			left: 0; } }
+	width: auto;
+	border: 1px solid #ccc;
+	position: relative;
+	padding: 0px 20px 20px 50px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	background-image: url(../images/help_grad.svg);
+	background-size: 100% 100%;
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	background-color: #ffffff;
+	background: -moz-linear-gradient(top, white 0%, #ffffee 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #fff7e5));
+	background: -webkit-linear-gradient(top, white 0%, #ffffee 100%);
+	background: -o-linear-gradient(top, white 0%, #ffffee 100%);
+	background: -ms-linear-gradient(top, white 0%, #ffffee 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffee',GradientType=0 );
+	background: linear-gradient(top, white 0%, #ffffee 100%);
+	&.announcement {
+		margin-top: 28px; }
+	&.help h4:before {
+		background-position: 0px -242px; }
+	&.roadmap h4:before {
+		background-position: 0px -330px; } }
+
+#expandcom, #expanddev, #expandfuture, #expandpast {
+	position: relative;
+	display: block;
+	&:after {
+		content: " ";
+		display: block;
+		width: 20px;
+		height: 20px;
+		background: transparent url('../images/icon-20.png') 0px -420px no-repeat;
+		position: absolute;
+		top: 5px;
+		left: 0; }
+	&.open:after {
+		background-position: 0px -400px; }
+	label {
+		margin: 0;
+		padding: 0; } }
+
+.devsection {
+	display: none; }
+
+.communitysection {
+	display: none; }
+
+.close {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 0;
+	right: 0;
+	background: url(../images/icon-20.png) no-repeat 0 0;
+	cursor: pointer; }
+
+.infotext {
+	font-style: italic; }
+
+.indent {
+	padding-left: 24px;
+	vertical-align: top; }
+
+.course-settings li {
+	padding: 0;
+	margin: 0; }
+
+/* Remove the arrows from the directional nav buttons */
+
+form > div.submit a {
+	&.back:before, &.next:after {
+		content: ''; } }
+
+/* Section groups popup for Setup and GroupSetions pages */
+
+#useContentBox {
+	width: 500px;
+	div.form {
+		margin-left: 20px; }
+	p.warn {
+		color: red; } }
+
+/* Messages */
+
+.scrollCheckBoxesTable ul li {
+	margin-top: .5em; }
+
+/* Files */
+
+#fileList td.type a, tr.parent-folder td.type a {
+	text-indent: -9999px;
+	background: transparent url('../images/icon-20.png') 0px -640px no-repeat;
+	display: inline-block;
+	width: 20px; }
+
+#fileList td.type a {
+	&.folder {
+		background-position: 0px -600px; }
+	&.video {
+		background-position: 0px -680px; }
+	&.audio {
+		background-position: 0px -660px; }
+	&.image {
+		background-position: 0px -700px; }
+	&.flash {
+		background-position: 0px -620px; } }
+
+tr.parent-folder {
+	td.type a {
+		background-position: 0px -720px; }
+	a {
+		text-decoration: none; } }
+
+/* Dashboard */
+
+#dashboardCal {
+	width: 53%;
+	float: left; }
+
+#dashboardAnnounce {
+	width: 41%;
+	float: right; }
+
+a.dashboardEdit {
+	padding: .6em .3em .5em 3px;
+	border-bottom: 1px solid #eee;
+	display: block;
+	color: #628cb6;
+	text-decoration: none; }
+
+.dashboardItem {
+	padding-bottom: 1em;
+   margin-top: 1em;
+	margin-bottom: 6em;
+	> h2 {
+		border-bottom: 1px solid #eee;
+		text-indent: 2px;
+		padding-bottom: 5px;
+		margin-bottom: 0;
+		color: #444;
+		margin-top:.65em; } }
+
+.dashboardDay {
+	margin-bottom: 2.5em; 
+	padding:1em .5em 0 1em;
+	.categoryTitle {
+	  margin: 2em -.5em .75em -1em;
+      border-bottom: 1px dotted #ddd;
+      padding: .1em 0 .1em 1em;
+      @include nate_linear-gradient(#fff, #fbfbfb); } }
+
+.dashboardDayItem {
+	margin-left: 20px;
+	position: relative;
+	&.graded {
+	  margin-top:.25em;
+	  margin-bottom:.5em; } }
+
+.dashboardItem {
+	.greenbar {
+		padding-left: 1em; }
+	h3 {
+		margin-top: 0; }
+	p, ul, ol {
+		margin-top:.25em;
+		margin-bottom:.5em; }
+	.greenHeader {
+		margin: -1em -.5em 0 -1em;
+		padding: .4em .5em .4em 1em;
+		border-bottom: 1px solid #eee;
+		font-weight:bold;
+	& + .categoryTitle {
+	  margin-top:1.5em; } } }
+
+.dashboardDay .graded:after {
+	content: " ";
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	background: transparent url('../images/icon-20.png') 0 -160px no-repeat;
+	top: 0;
+	left: -20px;
+	overflow: hidden; }
+
+.dashboardItem .greenHeader:hover {
+	cursor: default; }
+
+.dashboardAnnouncement {
+	border-top: 1px solid #eee;
+    word-wrap: break-word;
+	margin: 1em 0;
+	padding-top: 1em;
+	h3 {
+	  color:#001948; } }
+
+.dashboardEdit + .dashboardAnnouncement {
+	border-top: none;
+	margin-top: .5em; }
+
+/* Assignments */
+.assignmentDetailsBox {}
+.assignmentDetailsBox .popupSubtitle {font-size: 20px; color: #444; line-height:27px; margin-bottom: 9px;}
+.assignmentDetailsBox .dateInfo {position: relative; border-top:1px solid #ddd; border-bottom:1px solid #ddd; padding:1em 7px;}
+.assignmentDetailsBox .dateInfo .dueDate {margin-top:-2px; background: #fff; width:50px; border-radius: 3px; font-weight: bold; box-shadow:0 -1px 6px rgba(0,0,0,.65);text-align: center;
+		 transform:rotate(-2deg);
+	-moz-transform:rotate(-2deg);
+ -webkit-transform:rotate(-2deg);
+	  -o-transform:rotate(-2deg);
+}
+.assignmentDetailsBox .dateInfo .dueDate .month {color: #fff; background-color: #901; padding:.15em 0; border-radius: 3px 3px 0 0;}
+.assignmentDetailsBox .dateInfo .dueDate .day {font-size: 24px; padding: .25em 0 .4em; color:#666;}
+.assignmentDetailsBox .dateInfo .dueDateText { position: absolute; left:70px; top:25px;}
+#descriptionBox{width: 90%; display:none;}
+
+/* No Content */
+
+#dashboardCal p.no-content:before {
+	background-position: 0px -40px; }
+
+p.no-courses:before {
+  background-position: 0px -120px;
+}
+
+td.no-assignments p.no-content {
+	margin-left: 10px;
+	&:before {
+		background-position: 0px -80px; } }
+
+/**Announcements**/
+
+div.loadAnnouncements {
+	position: fixed;
+	z-index: 100000;
+	background-image: url('../images/ajax-loader.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0; }
+
+.allAnnouncements > table {
+                   table-layout: fixed;
+                   word-wrap: break-word;
+	width: 100%; }
+
+/* Messages */
+
+div {
+	&.sendMail {
+		padding-left: 120px; }
+	&.afterSend {
+		padding-left: 120px;
+		display: none; } }
+
+#additionalRecipients_label, #attachment_label {
+	margin: 10px 0 0; }
+
+/* Copy */
+
+form ul li.copycourse {
+	div:after {
+		content: none; }
+	ul {
+		list-style: none; } }
+
+/* Media Queries */
+
+#dashboardCal, #dashboardAnnounce {
+	transition: width .2s;
+	-moz-transition: width .2s;
+	/* Firefox 4 */
+	-webkit-transition: width .2s;
+	/* Safari and Chrome */
+	-o-transition: width .2s;
+	/* Opera */ }
+		
+		
+/* Unavailable Sections */
+
+.singleUnavailable
+{
+	font-weight: normal;
+	cursor: default;
+	font-size: 1.0em;
+}
+
+.gradebookSection 
+{
+	font-weight: normal;
+	color: #909090;
+	cursor: default;
+	font-size: 1.0em;
+}
+
+.usedSection
+{
+	color: #606060;
+}

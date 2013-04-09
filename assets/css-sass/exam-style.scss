@@ -1,0 +1,586 @@
+/* exam-style.css */
+
+form .desc {
+  padding-top:.8em; 
+  h2 {
+    line-height:1.2; } }
+    
+.examTitle {
+  color:#008040; /* flat green */
+  &:before {
+    content:": "; } }
+
+
+/********** Front Page **********/
+
+div.feature_list {
+  margin: 2em 0;
+  padding: 0 1em;
+  background: #f9fcfe;
+  border: 1px solid #e0edf9;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  p {
+    font-weight: bold; }
+  ol li {
+    margin: 0; } }
+    
+div.options {
+  min-width:7.5em;
+}
+
+a#uploadLink {
+  display: block;
+  margin-top: .5em;
+  padding-left: 1em; }
+
+#sidenav h2 {
+  background-position: 0 -120px; }
+
+/********** Main **********/
+
+#examPreview {
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  margin-bottom: 3em; }
+
+/*** Alert ***/
+/* div.alert { display:none; position:fixed; color:#410; top:20px; left:228px; right:240px; width:auto; z-index:9999; padding-bottom:.2em; background:rgba(255,220,150,.925) url('../images/stripe.png'); -webkit-text-shadow:0 1px 1px #fff; -moz-text-shadow:0 1px 1px #fff; text-shadow:0 1px 1px #fff;}
+*/
+
+div.alert {
+  p {
+    margin: 0 0 .5em; }
+  a.delete {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #601;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 16px;
+    color: #ffdc96;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-text-shadow: none;
+    -moz-text-shadow: none;
+    text-shadow: none;
+    &:hover {
+      color: #fff; } } }
+
+/*** Explain your answer ***/
+
+form {
+  .explain label {
+    font-style: italic;
+    font-weight: normal;
+    color: #777; }
+  li span.explain {
+    display: block;
+    margin: .5em 0;
+    padding-left: .9em;
+    label {
+      margin: .4em 0; } } }
+
+/*** Matching ***/
+
+.matching {
+  label {
+    margin-bottom: .5em; }
+  ol {
+    margin-top: 0;
+    margin-bottom: 0; }
+  li label {
+    font-weight: normal; }
+  .column1 {
+    width: 50%;
+    float: left;
+    list-style: upper-alpha; }
+  .column2 {
+    width: 40%;
+    float: left;
+    list-style: lower-alpha;
+    margin-left: 4%; }
+  .column1 label {
+    margin-top: 1.25em;
+    margin-bottom: .25em; }
+  .column2 label {
+    margin-bottom: 1.5em; } }
+
+#preview {
+  position: relative;
+  overflow: hidden; }
+
+#previewQuestion {
+  ol {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .column1 {
+    width: 50%;
+    float: left;
+    list-style: upper-alpha; }
+  .column2 {
+    width: 40%;
+    float: left;
+    list-style: lower-alpha;
+    margin-left: 4%; }
+  .column1 label {
+    margin-top: 1.25em;
+    margin-bottom: .25em; }
+  .column2 label {
+    margin-bottom: 1.5em; } }
+
+/* Fill in the blank */
+
+li.fill-in {
+  line-height: 2;
+  input {
+    display: inline-block;
+    padding: .25em;
+    border: none;
+    border-bottom: 1px solid #000;
+    background: #ffd;
+    position: relative;
+    top: -0.25em; } }
+
+/********** Insert Box **********/
+
+/* Spacing adjustments, override base.css class */
+
+.insert {
+  padding-right: 8px;
+  margin: 0 -12px;
+  min-width: 560px;
+  form {
+    position: relative; }
+  section {
+    margin: 3px 0px 0 -12px; }
+  table {
+    width: 100%; }
+  td, th {
+    border: 1px solid #C0CCD9; 
+}
+  td {
+    margin: 0;
+    padding: 5px;
+    margin-right: 10px; }
+  table {
+    input[type="text"], textarea {
+      border: none;
+      outline: none;
+      width: 100%;
+      margin: -4px;
+      padding: 4px;
+      font-size: 14px;
+      vertical-align: bottom; }
+    input:active {
+      outline: none; }
+    label {
+      display: inline-block;
+      padding: 0;
+      margin: 0; } }
+  form table td {
+    vertical-align: top; }
+  th {
+    padding: 2px 6px 4px;
+    color: #4C687F;
+    font-weight: bold;
+    margin-left: 0; }
+  section th label, th, section th span label {
+    color: #4C687F;
+    font-weight: bold;
+    margin-left: 0; }
+  th {
+    &.correct {
+      width: 2em; }
+    &.scoring {
+      width: 6.5em; }
+    &.points {
+      width: 6.5em; }
+    &.delete {
+      display: none; } }
+  td.bubble {
+    text-align: center;
+    background: transparent url("../images/bubble.png") center center no-repeat;
+    vertical-align: center;
+    input {
+      opacity: 0;
+      width: 4em;
+      height: 1.5em;
+      position: absolute;
+      z-index: 9999; }
+    label {
+      padding-top: 1px;
+      font-weight: bold; } } }
+
+/* Tables */
+
+/*** Response section ***/
+
+/* Table headings */
+
+/* Answer bubbles */
+
+/* Delete buttons */
+
+td.delete {
+  padding: 5px 3px;
+  width: 1em;
+  a {
+    font-weight: bold;
+    text-indent: -9999px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    background: transparent url("../images/trash.png") top left no-repeat;
+    display: block; } }
+
+tr td.delete {
+  background: #fff; }
+
+/* Correct answer */
+
+.insert {
+  tr {
+    &.answer td.bubble {
+      color: #fff;
+      background-image: url("../images/bubble-filled.png");
+      label {
+        color: inherit; }
+      &:before {
+        content: " ";
+        display: block;
+        width: 23px;
+        height: 26px;
+        position: absolute;
+        left: 5px;
+        background: transparent url("../images/checkmark.png") top left no-repeat; } 
+  }
+ }
+
+  tr.new {
+    color: #999;
+    font-style: italic;
+    td {
+      &.bubble {
+        background: transparent url('../images/bubble-trans.png') center center no-repeat; }
+      padding-bottom: 10px; } } }
+
+/* Inactive table cells */
+
+/* New item line */
+
+.valignTop td label {
+  display: block;
+  vertical-align: top; }
+
+.alignRight td label {
+  display: block;
+  text-align: right; }
+
+table.spaceTheRows1 td {
+  padding-bottom: 11px; }
+
+/*** Question types ***/
+
+/* Open response */
+
+#open-response div.form {
+  span {
+    &.left {
+      float: left;
+      margin: 0 0 .25em 0;
+      width: 5em;
+      label, input {
+        display: inline-block;
+        margin: 0; } }
+    &.right {
+      label, input {
+        display: inline-block;
+        margin: 0; } } }
+  margin: 1.5em .25em; }
+
+/* Matching */
+
+#matching table {
+  position: relative; }
+
+#match-column1 {
+  z-index: 100;
+  border-right: none;
+  td {
+    background: #eee;
+    textarea {
+      background: #eee; } }
+  tr {
+    border: none;
+    &.select {
+      td {
+        background: #fff;
+        textarea {
+          background: #fff; } } }
+    td.noborder {
+      background: transparent; }
+    &.new td {
+      &.noborder {
+        background: transparent; }
+      background: #fff; } } }
+
+#match-column2 {
+  .used td.bubble {
+    background: transparent url('../images/bubble-trans.png') center center no-repeat;
+    label {
+      color: #999; } } }
+
+/*** Examstat section ***/
+
+.insert {
+  section {
+    &.examstat {
+      table, td {
+        border: none;
+        padding-left: 0;
+        vertical-align: bottom; }
+      th {
+        border: none;
+        padding-left: 0;
+        vertical-align: bottom;
+        background: none;
+        padding-right: 30px; } }
+    &.tags {
+      span label {
+        display: inline-block;
+        font-weight: normal;
+        margin: .1em;
+        margin-left: .5em; }
+      div {
+        &.newTag {
+          margin: .5em .5em 1em; }
+        &.tagList {
+          margin: .5em .5em 1em;
+          span {
+            width: 150px;
+            float: left;
+            position: relative;
+            input {
+              position: absolute;
+              top: 4px; }
+            label {
+              margin-left: 18px; } } } } }
+    &.outcomes div.tabs {
+      margin-bottom: 1em; } }
+  #controls, #submit {
+    border: none;
+    background: none; }
+  #controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 210px;
+    margin: 0;
+    padding: 0;
+    > {
+      input {
+        margin: 6px 0 1em; }
+      section {
+        margin: 0; } } }
+  #toolbox section div {
+    margin: .5em 1em;
+    a {
+      display: block; }
+    &.buttons {
+      margin: 0; } }
+  #submit {
+    padding-right: 0;
+    a {
+      float: right;
+      clear: none; }
+    span {
+      position: absolute;
+      top: 6px;
+      width: 210px;
+      right: -210px; } } }
+
+/*** Tags section ***/
+
+/*** Outcomes section ***/
+
+/*** Controls (on right sidebar) ***/
+
+/* Toolbox */
+
+/*** Submit buttons (bottom row) ***/
+
+/********** Preview Box **********/
+
+#preview {
+  background: #ffe;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-color: #ffc;
+  div.explain {
+    margin: -0.5em 0 1em;
+    padding-left: .9em; } }
+
+/********** Toolbox **********/
+
+#toolbox section {
+  margin: 0 -1em; }
+
+/* Other */
+
+.two_column {
+  display: block;
+  .left_column {
+    width: 200px;
+    text-align: right;
+    font-weight: bold;
+	vertical-align: top;
+ } }
+
+/* No Content */
+
+p.no-content {
+  margin: 2em 1em 2em 2em;
+  padding: .9em 0 1em 50px;
+  color: #999;
+  position: relative;
+  font-style: normal;
+  &:before {
+    content: " ";
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent url('../images/icon-40.png') 0px -80px no-repeat; } }
+    
+    
+    
+    
+/* Category Editor Box */
+
+input, textarea, .longTextDisplay {
+  background-color:#fff; }
+
+.insert table#categoryEditor {
+  td, th {
+    border:none; }
+  input[type="text"], textarea {
+    border:1px inset #ddd; } }
+    
+#categoryBox {
+  padding-right:18px;
+  z-index:1001 !important; }
+  
+.gray.zIndex100 {
+  z-index:1000 !important; }
+
+/******************************************************* 
+Print styles Inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/*******************************************************/
+
+@media print {
+  /* Optimize for reading */
+  * {
+    background: transparent !important;
+    color: #444 !important;
+    text-shadow: none !important; }
+  /* Remove unwanted elements */
+  nav, #nav {
+    display: none; }
+  /* Make sure text areas span the whole width */
+  #wrapper, .container {
+    width: auto;
+    border: 0;
+    margin: 0 5%;
+    padding: 0;
+    float: none !important; }
+  /* Links, etc */
+  a {
+    &:link, &:visited {
+      color: #444 !important;
+      background: transparent;
+      font-weight: bold;
+      text-decoration: underline; }
+    &:after, &:link:after, &:visited:after {
+      content: " (" attr(href) ") ";
+      font-size: 90%; } }
+  .ir a:after {
+    content: ""; }
+  abbr:after {
+    content: " (" attr(title) ")"; }
+  /* Spacing and page breaks */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr, img {
+    page-break-inside: avoid; }
+  @page {
+    margin: 0.5cm; }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+  h2, h3 {
+    page-break-after: avoid; } }
+
+/***********************************************************************
+For the Exams/Home Page
+***********************************************************************/
+
+/* For the dropdown buttons */
+
+.examName {
+  width: auto;
+  vertical-align: middle;
+  a.name {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #114477; } }
+
+.exam-options-button ul {
+  margin: 0;
+  padding: 0;
+  min-width: 100%; }
+
+.examspickercontrol {
+  margin-top:1em;
+  td {
+    vertical-align: middle;
+    &.examName {
+       }
+    ul.exam-options-button {
+      margin-left:0; } }
+  th {
+    &.scoring {
+      min-width:100px; } } }
+
+/* examspickercontrol is the table where all the exams are */
+/* examRow is a row in this table */
+
+/** Options page **/
+.inlineLabel {
+    padding-bottom: 5px;
+    min-height: 18px;
+}
+
+/* exam questions */
+#new_Question td.delete a {
+    width:20px;
+    height:20px;
+    background: url("../images/trash.png") no-repeat scroll 0px 0px transparent;
+}
+
+#new_Question td.delete a:hover {
+    background:url("../images/trash.png") no-repeat scroll 0px -20px transparent;
+}

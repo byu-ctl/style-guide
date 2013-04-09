@@ -1,0 +1,93 @@
+@import "../bootstrap/buttons";
+
+// Make sure there's no underline
+.btn {
+  text-decoration: none;
+}
+
+.btn-info,
+.btn-info:link,
+.btn-info:hover {
+  color:#2A445E;
+  text-shadow: none;
+}
+
+.btn-info .caret {
+  border-top-color: #2A445E;
+  border-bottom-color: #2A445E;
+}
+
+.dropdown-menu li {
+  margin-left: 0 !important;
+}
+
+.dropdown-menu li a, a.dropdown-toggle, a.dropdown-toggle:link {
+  color:$gray3;
+  text-decoration: none;
+  text-align: left;
+}
+
+a.add:before {
+  content: "+ ";
+}
+
+.btn-group i {
+  opacity: .35;
+}
+
+// From old buttons
+.basic_button {
+  @extend .btn;
+  margin: .5em;
+  text-decoration: none;
+  position: relative;  
+}
+
+a.action, input.action {
+  @extend .basic_button;
+  @extend .btn-success;
+}
+
+a.action2, a.edit {
+  @extend .basic_button;
+  @extend .btn-primary;
+}
+
+a.edit2 {
+  @extend .basic_button;
+  //@extend .btn-info;
+  color:#2A445E;
+  @include buttonBackground(#eff6fc, #d1e4f6);
+}
+
+#sidenav a.edit {
+  @extend .basic_button;
+}
+
+div.addDayButton {
+  @extend .basic_button;
+  @extend .btn-primary;
+  @extend .btn-mini;
+}
+
+a.super {
+  @extend .btn-large;
+}
+
+a.cancel {
+  @extend .basic_button;
+  text-decoration: none;
+}
+
+a.cancelPopup {
+  @extend .cancel;
+}
+
+a.btn-warning {
+  margin: .5em;
+  text-decoration: none;
+}
+
+a.back:before { content: "◀  "; right: .1em; }
+a.next:after { content: "  ▶"; left: .1em; }
+a.back:before, a.next:after { font-size: .75em; position: relative; }

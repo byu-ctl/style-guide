@@ -1,0 +1,11 @@
+// Sidebar navigation
+body.sidebar { background: white url("../images/sidebar.png") top left repeat-y; }
+.sidebar #main { margin-left: 275px; margin-right: 50px; padding-top: .5em; position: relative; }
+.sidebar nav.sidenav { width: 225px; float: left; margin-top: 2em; border-top: 1px solid $blue4; margin-bottom: 51px; }
+.sidebar:before, .sidebar:after { content: "\0020"; display: block; height: 0; visibility: hidden; }
+.sidebar:after { clear: both; }
+.sidebar { zoom: 1; }
+.sidebar .sidenav a, .sidebar .sidenav a:link { font-weight:bold; display: block; padding: .6em .5em .6em 1.4em; border-bottom: 1px solid; text-decoration: none; position: relative; }
+.sidebar .sidenav li li a, .sidebar .sidenav li li a:link, .sidebar .sidenav .sub a, .sidebar .sidenav .sub a:link { padding: .4em .5em .4em 2em; font-weight: normal; background: $blue4; border-bottom-color: $blue5; }
+.sidebar .sidenav a:active { padding: .6em .4em .6em 1.5em; }
+.sidebar .sidenav a.current, .sidebar .sidenav a.current:hover, .sidebar .sidenav a.current:active, #sidenav a.current, #sidenav a.current:hover, #sidenav a.current:active, .sidenav a.current, .sidenav a.current:hover, .sidenav a.current:active { color: $yellow2; margin-right: -10px; border-bottom-color: transparent; background: $blue0 url("../images/arrow.png") right center no-repeat; }

@@ -1,0 +1,250 @@
+/*
+    Document   : student-style
+    Created on : Aug 16, 2011, 1:20:13 PM
+    Author     : ITAPPMONROBOT
+    Description:
+        This file contains all of the Student App css overrides
+*/
+
+/* Partials */
+@import "mixins";
+@import "colors";
+
+
+
+/* General */
+.desc { border-bottom: 1px dotted #ddd; padding: .25em 0 .75em; }
+.desc h2, .desc h3, #main > div > h2 {
+  margin: .25em 0;
+  font-style: normal;
+  font-size: 1.25em; }
+#main > div#text > h2 {
+	margin:1.5em 0 .25em; }
+.sidebar table {width:auto; border:1px solid #ddd;}
+.sidebar td, .sidebar th {border:1px solid #ddd;}
+
+#assignmentsTable {width:100%; border:none;}
+#assignmentsTable td, #assignmentsTable th {border:none;}
+
+
+/* LS Popup */
+
+.insert table {
+  border:none;
+  width: 100%;
+  td {
+    border:none;
+    label {
+      font-weight: bold;
+    }
+  }
+}
+
+
+/* Calendar */
+#calendarTable tbody .calendarItem:hover {
+	background-color:transparent;
+	border: none;
+}
+
+/* fixes the 1px shift needed by the instructor view because of the highlight border*/
+table#calendarTable tbody .assignment:hover, table#calendarTable tbody .calendarItem:hover { margin:0px;}
+td, th, thead, table { border:none; background:none;}
+
+.greenHeader { font-weight:bold; color:#444444; padding:.5em .5em .5em 1.5em; cursor:pointer; margin:.5em 0 0; }
+.greenHeader label {font-size: 14px;}
+
+#expanddev label { margin:0; padding:0;}
+.devsection { display:none;}
+
+#expandcom label { margin:0; padding:0;}
+.communitysection { display:none;}
+
+.actions-col a.edit {width: 4em; float: right; margin-right: 2em; }
+.actions-col .setup-course { float:right;}
+
+.dev-button { padding-left:15px;}
+.right-col { width:210px; vertical-align:top; padding-left:12px;}
+.label { margin-top:5px;}
+.course-settings li { padding:0; margin:0;}
+.close { position:absolute; width:20px; height:20px; top:0; right:0; background:url(../images/icon-20.png) no-repeat 0 0; cursor:pointer;}
+.infotext { font-style:italic;}
+.indent { padding-left:24px; vertical-align:top;}
+
+#descriptionBox, .assignmentDetailsBox {width:90%;}
+.clickForDesc {cursor: pointer; color:#147;}
+.clickForDesc:hover {text-decoration: underline;}
+
+
+/* Dashboard */
+#dashboardCal {
+	width: 53%;
+	float: left; }
+
+#dashboardAnnounce {
+	width: 41%;
+	float: right; }
+
+/* Old
+.dashboardItem { padding-bottom:1em; margin-bottom:6em;}
+.dashboardItem > h2 {border-bottom: 1px solid #eee; text-indent:2px; padding-bottom:5px; margin-bottom: 0; color: #444} */
+/* New */
+.dashboardItem {
+	padding-bottom: 1em;
+   margin-top: 1em;
+	margin-bottom: 6em;
+	> h2 {
+		border-bottom: 1px solid #eee;
+		text-indent: 2px;
+		padding-bottom: 5px;
+		margin-bottom: 0;
+		color: #444;
+		margin-top:.65em; } }
+
+/* Old
+.dashboardDay { margin-bottom:2em;} */
+/* New */
+.dashboardDay {
+	margin-bottom: 2.5em;
+	padding:1em .5em 0 1em;
+	.categoryTitle {
+	  margin: 2em -.5em .75em -1em;
+      border-bottom: 1px dotted #ddd;
+      padding: .1em 0 .1em 1em;
+      @include nate_linear-gradient(#fff, #fbfbfb); } }
+
+/* Old
+.dashboardDayItem { margin-left:20px; position:relative;} */
+/* New */
+.dashboardDayItem {
+	margin-left: 20px;
+	position: relative;
+	&.graded {
+	  margin-top:.25em;
+	  margin-bottom:.5em; } }
+
+/* Old
+.dashboardItem .greenbar { padding-left:1em; margin-top: 1em}
+.dashboardItem h3 { margin-top:0;}
+.dashboardItem p { margin:4px 0;}
+.dashboardItem .greenHeader { margin-top:0; border-bottom:1px solid #eee;} */
+/* New */
+.dashboardItem {
+	.greenbar {
+		padding-left: 1em; }
+	h3 {
+		margin-top: 0; }
+	p, ul, ol {
+		margin-top:.25em;
+		margin-bottom:.5em; }
+	.greenHeader {
+		margin: -1em -.5em 0 -1em;
+		padding: .4em .5em .4em 1em;
+		border-bottom: 1px solid #eee;
+		font-weight:bold;
+        cursor: default;
+	& + .categoryTitle {
+	  margin-top:1.5em; } } }
+
+
+.dashboardDay .graded:after { content:" "; display:block; width:20px; height:20px; position:absolute; background:transparent url('../images/icon-20.png') 0 -160px no-repeat; top:0; left:-20px; overflow:hidden;}
+.dashboardAnnouncement {
+  border-top:1px solid #eee;
+  margin:1em 0;
+  padding-top: 1em;
+  word-wrap: break-word;
+  h3 {
+    color:#001948; } }
+.dashboardItem > h2 + .dashboardAnnouncement {border-top:none; margin-top:.5em;}
+
+
+
+
+/* Announcements */
+.announcementTitle {margin-top:.75em}
+.announcementText {margin-bottom:1em;}
+
+
+/* Assignments */
+.assignmentDetailsBox {}
+.assignmentDetailsBox .popupSubtitle {font-size: 20px; color: #444; line-height:27px; margin-bottom: 9px;}
+.assignmentDetailsBox .dateInfo {position: relative; border-top:1px solid #ddd; border-bottom:1px solid #ddd; padding:1em 7px;}
+.assignmentDetailsBox .dateInfo .dueDate {margin-top:-2px; background: #fff; width:50px; border-radius: 3px; font-weight: bold; box-shadow:0 -1px 6px rgba(0,0,0,.65);text-align: center;
+		 transform:rotate(-2deg);
+	-moz-transform:rotate(-2deg);
+ -webkit-transform:rotate(-2deg);
+	  -o-transform:rotate(-2deg);
+}
+.assignmentDetailsBox .dateInfo .dueDate .month {color: #fff; background-color: #901; padding:.15em 0; border-radius: 3px 3px 0 0;}
+.assignmentDetailsBox .dateInfo .dueDate .day {font-size: 24px; padding: .25em 0 .4em; color:#666;}
+.assignmentDetailsBox .dateInfo .dueDateText { position: absolute; left:70px; top:25px;}
+.assignmentDetailsBox .dateInfo .dueDateText .passed{color: #666;}
+.assignmentDetailsBox .examContents{border-bottom: 1px solid #DDD; padding-top: 10px; padding-bottom: 10px;}
+.assignmentDetailsBox .examContents .examAction{float: right; margin: 0; margin-top: -5px;}
+.assignmentDetailsBox .examContents > .examAction, .assignmentDetailsBox .examContents > .text {display: inline-block;}
+
+
+/* Messages */
+#studentMessages {
+	table {margin-top:1em; width: 100%;}
+	#scrollBox { float:left; background-color:white; position:relative; right:-3px; width:100%; margin-top: 5px; }
+	form label, form span { display:block; float:right; padding:1px;}
+	table, td, tr { border:none; margin-bottom:auto; margin-top:auto;}
+	ul { list-style-type:none !important; min-width:300px; background-color:white; height:200px;}
+	p { font-size:14px !important; margin-bottom:2px; margin-top:2px;}
+	td, th { padding:5px;}
+	form table td label { font-size:1em;}
+	label, input[type="button"], input[type="submit"], button { color:#000000; font-size:1em; font-style:normal; padding:4px;}
+	input[type="checkbox"] { padding:2px;}
+	form table td label { font-size:1em;}
+	tr td label { font-size:1em; font-weight:bold; float:right;}
+	tr td .inlineLabel label { float:none;}
+	p span label, td span label { float:none; font-size:.85em; font-weight:normal;}
+	.scrollBoxFrame { background-color:#E9E9E9; border :2px solid Gainsboro; border-radius:8px; -moz-border-radius:8px; border-collapse:inherit;}
+	table, td, tr { border-collapse:inherit;}
+	.firstTD { width:100px;}
+	#additionalRecipients { position:relative; top:8px;}
+	form table td{ vertical-align: text-top; }
+	select#courses{ border-color: gainsboro; }
+	table tr td{ vertical-align: top; }
+	.firstTD { width:100px; text-align: right; }
+	#additionalRecipients { position: relative; top: 8px; }
+	#useUserEmail1, #useUserEmail1_label{ position: relative; top: -5px; }
+	#attachment{ position: relative; right: 9px; }
+	#scrollBox label { font-weight:normal; }
+	.courseTitle {font-size: 1.25em; border-bottom: 8px solid transparent; border-top: 3px solid transparent; }
+	.searchBox { padding-bottom: 2px; }
+	.scrollCheckBoxesTable {margin-left: 2%; width:97%; } }
+
+
+/* Syllabus */
+.syllabus_tr .image {
+  min-width:40px;
+}
+
+
+/* Media Queries */
+
+#dashboardCal, #dashboardAnnounce {
+-webkit-transition: width .2s; /* Safari and Chrome */
+   -moz-transition: width .2s; /* Firefox 4 */
+	 -o-transition: width .2s; /* Opera */
+		transition: width .2s;
+}
+
+@media all and (max-width:1100px){
+	.allCourseList, .right-col, #dashboardCal, #dashboardAnnounce {width:100%;}
+	#dashboardAnnounce {margin-bottom:2em;}
+}
+
+ul ul {
+    margin-left: 2em;
+}
+
+.comment ul li {
+    list-style-type: none;
+}
+
+.commentContent ul li{
+    list-style-type: disc;
+}

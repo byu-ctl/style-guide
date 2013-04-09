@@ -1,0 +1,14 @@
+.editableText {
+	background: #fff;
+	border: solid 1px #ccc;
+	padding: .5em;
+	
+	ul {
+		margin-left: 2em;
+	}
+}
+
+td .editableText {
+	border: none;
+	padding: 0;
+}

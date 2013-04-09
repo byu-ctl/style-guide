@@ -1,0 +1,244 @@
+/* AssignmentEditor */
+/* Collapse space in the editing table */
+table.assignmentEditor tr.graded #scoreEntry, 
+table.assignmentEditor tr.graded #gradingScale {
+    margin-right: 10px;
+}
+table.assignmentEditor ul,
+table.assignmentEditor ul > li {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* Space out the learning outcomes checkboxes */
+table.assignmentEditor input.learningOutcomes + label {
+    margin-right: 20px;
+}
+table.assignmentEditor {
+    width: 100%;
+}
+/* TODO Italicize the New Category option */
+table.assignmentEditor #categoryID option:last-child {
+            font-style: italic;
+} 
+/* Repeat assignment inputs */
+table.assignmentEditor td#repeatSection ul li {
+            float: left;
+}
+table.assignmentEditor td#repeatSection ul li label {
+            margin: 0;
+}
+table.assignmentEditor td#repeatSection ul li:last-of-type {
+            margin-top: 10px;
+}
+/*spacing out "repeat every" day check boxes*/
+li.repeatedLI {
+            margin-right: 1em;
+            list-style-type: none;
+}
+table.assignmentEditor tr.graded #points {
+            vertical-align: top;
+}
+table.assignmentEditor tr.graded div.inlineLabel {
+            vertical-align: middle;
+}
+table.assignmentEditor tr.graded ul {
+            list-style: none;
+}
+
+
+/* LongTextEquationsDialog */
+textarea#equationText {
+    width:auto;
+}
+#longtextEquationsDialog label {
+    float: none;
+}
+#texInsertionDiv {
+    padding-left: 15px;
+}
+
+
+/* LongTextInsertDialog */
+tr.insertAsLink {
+    padding-top: 20px;
+}
+
+
+/* RepeatOptions */
+ul.repeatOptionWeekdaysList li {
+    float: left;
+    margin-right: 1em;
+    list-style-type: none;
+}
+ul.repeatOptionWeekdaysList, ul.repeatOptionWeekdaysList > li {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* RubricBuilderDialog.php */
+/* Rubric Builder */
+#rubricBuilder, #rubricReader {
+    width: 100%;
+    max-width: 800px;
+
+    #rubricContent {
+        td {
+            text-align: left;
+        }         
+        th > label {
+            margin: 0;
+            cursor: default;
+        } 
+        .detailTitle {
+            width: 60%;
+        }
+        .detailScore {
+            max-width: 50px;
+        }
+    }
+
+    #rubricCriteria th.criteronTitleColumn, 
+    #rubricContent th.criteriaHeader {
+        min-width: 200px;
+        max-width: 200px;
+    }   
+    #rubricCriteria .criteronTitleColumn {
+        position: relative;
+        input {
+            width: 80%;
+        }
+
+        .change_order {
+            position: absolute;
+            left: -10px;
+        } 
+    }
+    #rubricCriteria .detailScoreColumn, 
+    #rubricContent th.detailScoreHeader {
+        min-width: 80px;
+        max-width: 80px;
+    }
+    #rubricCriteria .detailTitleColumn,
+    #rubricContent th.detailTitleHeader {
+        width: 100%;
+    }
+    
+    textarea, .rubricViewDesc {
+        width: 325px!important;
+        max-height: 320px!important;
+        overflow-y: auto!important;
+    }
+    textarea {
+        min-height: 80px!important;
+    }
+}      
+
+/* Rubric Manager Backbone View */
+#rubricManager {
+    max-width: 700px;
+
+    a.rubricTitle.loading-rubric:before {
+        content: url(../images/ajax-loader-round.gif);
+    }
+}    
+.rubricAssignmentsList {        
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+/* Sortable table Backbone View */
+.sortableTable {
+    tbody td {
+        text-align: left!important;
+    }                
+    thead { 
+        th a {
+            color: #72A4D6;
+        }
+        th.current a {
+            color: #369;
+        }
+    }
+}
+
+
+/* ScrollCheckBoxes */
+.scrollCheckBoxesTable td {margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px !important;}
+.scrollCheckBoxesTable div {margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px !important; white-space: nowrap;}
+.scrollCheckBoxesTable ul {margin: 0px 0px 0px 0px; padding: 5px 5px 5px 10px !important;}
+.scrollCheckBoxesTable input {display: inline !important;}
+.scrollCheckBoxesTable label {display: inline !important;}
+
+
+/* AssignmentDescriptionPopup */
+.assignmentDetailsBox{
+    width: 600px !important;
+}
+.assignmentSubmitButton{
+    position:absolute;
+    left:480px;
+    top:15px;
+}
+
+
+/* AssignmentGradeScaleEditor */
+a.addScaleRow{
+    /*TODO fix icon
+    background: transparent url("../images/icon-20.png") 0px -80px no-repeat;*/
+}
+/* Trash can icon */
+.gradeScaleEditor a.deleteScaleRow {
+    width: 20px;
+    height: 20px;
+    background: url('../images/icon-20.png') 0 -40px no-repeat;
+    float: right;
+}
+.gradeScaleEditor a.deleteScaleRow:hover {
+    background: url('../images/icon-20.png') 0 -60px no-repeat;
+}
+.gradeScaleEditor .scaleTable tbody > tr > td {
+    white-space: nowrap;
+}
+.gradeScaleEditor .scaleTable tbody > tr > td:last-of-type {
+    width:100%;
+}
+
+
+/* ComboNavBox */
+.cbo_nav {display:inline-block;}
+.cbo_nav button {margin:2px 5px 0;}
+.cbo_nav select {margin-top:-4px;}
+.cbo_nav button.disabled {background:#CCCCCC; border-radius: 2px; border-collapse: collapse; border:1px solid #999999;}
+
+
+/* LongTextVideoDialog */
+#longtextInsertVideoDialog tr.alternateSources td:last-of-type div.alt > div {
+    display: inline-block;
+}
+
+
+/* MediaPopup */
+#mediaViewer {
+    z-index: 20000000 !important;  
+}
+
+
+/* MediumText */
+.medium-text-label-top {vertical-align: top;}
+.medium-text-label-middle {vertical-align: middle;}
+.medium-text-label-bottom {vertical-align: bottom;}
+
+
+/* TimePicker */
+#deleteHour {
+    position: relative;
+    display: inline-block;
+    top:2.5em;
+    /* left:-3.7em;*/
+    width:20px;
+    height:20px;
+    vertical-align: top;
+    background-image:url('../plugins/ListEditor/images/trash.png');
+    text-indent: -9999px;
+}

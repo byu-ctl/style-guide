@@ -1,0 +1,37 @@
+// Transitions for media queries. Sweet!
+.allCourseList, .right-col, a#topDropPageTitle, #topDropdown:before { @include nate_transition(width .2s); }
+#tab-course, nav.tabbar a { @include nate_transition(padding .2s); }
+
+
+// < 960
+//@media screen and (max-width:960px) {
+@media screen and (max-width:1050px) {
+  #tab-course { padding-left: 0; }
+  nav.tabbar a { padding: .4em 1em; }
+  .tabbar .fold {display:none;}
+  
+}
+
+  
+// < 860
+//@media all and (max-width:860px) { 
+@media all and (max-width:960px) { 
+  nav.tabbar a { padding: .4em .75em; }
+  #tab-course a { font-size: 15px; }
+}
+
+  
+// < 768
+//@media all and (max-width:768px) { 
+@media all and (max-width:850px) { 
+//  body > header, #tab-course, #fixed-notes { width: 768px; position: absolute; }
+  body > header, #tab-course, #fixed-notes { width: 850px; position: absolute; }
+  #sidenav { position: absolute; }
+  body.sidebar { background-attachment: scroll; }
+}
+
+
+// Print styles
+@media print { 
+	//@import "print";
+}

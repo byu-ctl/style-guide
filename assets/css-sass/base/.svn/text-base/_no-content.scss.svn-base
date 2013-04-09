@@ -1,0 +1,15 @@
+p.no-content {
+  margin: 2em 1em 2em 2em;
+  padding: .9em 0 1em 50px;
+  color: #999;
+  position: relative;
+  font-style: normal;
+  &:before {
+    content: " ";
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent url('../images/icon-40.png') 0px -80px no-repeat; } }

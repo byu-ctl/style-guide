@@ -1,0 +1,1164 @@
+@import "colors";
+
+
+
+/*                      INDEX:                      */
+
+/*All Discussion pages*/
+/*Discussion.php specific*/
+/*ViewDiscussion.php specific*/
+/*New Discussion Dialog */
+
+.overlay.disableStuff {
+	z-index: 500;
+	width: 1000%;
+	height: 1000%;
+	position: absolute;
+	top: 0;
+	background: #fff;
+	opacity: .5;
+}
+
+.hidden{
+        display:none;
+}
+
+/*All Discussion pages
+*
+*/
+
+table.table td {
+  vertical-align: middle;
+}
+form {
+  .desc {
+    border-bottom:none;
+  }
+
+  ul ul{
+  	list-style-type:none;
+  }
+}
+
+ul {
+	list-style-type:none;
+	margin: 0;
+}
+ul ul,
+ul ul ul,
+ul ul ul ul,
+ul ul ul ul ul,
+ul ul ul ul ul ul{
+	list-style-type:none;
+}
+
+.comment {
+  ul li {
+    list-style-type:disc;
+  }
+  ol li {
+    list-style-type: decimal;
+  }
+}
+
+#sidenav h2{
+	background-position:0 -90px;
+}
+
+.header a.folderTitle{
+	color: $gray8;
+	font-style:normal;
+	font-weight:100;
+	text-decoration:none;
+}
+
+.header td{
+    font-size:14px;
+}
+
+table#discussionsTable > tbody > tr.header a{
+    text-decoration: none;
+}
+
+table#groupsTable > tbody > tr.header a{
+    text-decoration: none;
+}
+
+table#discussionsTable, table#groupsTable, table#newCommentTable{
+    width:100%;
+    border: none;
+}
+
+table#discussionsTable td, table#discussionsTable th{
+    border: none;
+}
+
+table#groupsTable td, table#groupsTable th{
+    border:none;
+}
+
+table#newCommentTable td,table#newCommentTable th {
+    border: none
+}
+
+.discussions-active > thead th, .groups-active > thead th, .students-active > thead th{
+    font-size:12px;
+    font-weight:normal;
+    font-style:normal;
+    color:#666;
+    padding-top:6px;
+    padding-bottom:6px;
+}
+
+table#discussionsTable td > a#titleVal{
+    text-decoration:none;
+}
+
+table#groupsTable td > a#titleVal{
+    text-decoration:none;
+}
+
+
+.dropped{
+    border-top: 1px solid $grayE;
+    height: 20px;
+}
+
+.deleted{
+    border-bottom:1px dotted $grayC;
+}
+
+.collapsed{
+    font-weight:bolder;
+    text-decoration:none;
+}
+
+.collapsed:hover{
+    font-weight:bolder;
+    text-decoration:none;
+}
+
+.uncollapsed {
+    background: url("../images/icon-20.png") no-repeat scroll 0 -404px transparent;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.uncollapsed:hover {
+    background: url("../images/icon-20.png") no-repeat scroll 0 -404px transparent;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#tempNewFolderRow {
+  a {
+    display: inline-block;
+    font-size: 13px;
+    &.edit2 {
+      padding-left:1em;
+      padding-right:1em;
+    }
+  }
+}
+
+/*th.title{
+	min-width:125px;
+}*/
+/*
+div.title{
+	padding-left:0;
+}
+
+div.del, div.edit{
+	width:20px;
+}
+
+div.drop{
+	width:25px;
+}*/
+
+a.btn-delete{
+	background:url("../images/icon-20.png") no-repeat scroll 0 -38px transparent;
+	display: block;
+	float: right;
+	height:20px;
+	text-indent:-3000px;
+	width:20px;
+}
+
+a.btn-delete:hover{
+	background: url("../images/icon-20.png") no-repeat scroll 0 -58px transparent;
+}
+
+#groupPopupView {
+    padding-right:.25em;
+    float:left;
+}
+
+/*tr.movebar{
+	border-top: 4px solid #B80000;
+	visibility: hidden;
+}*/
+
+/*table.dragClone{
+	margin:0;
+	padding:0;
+}*/
+
+/*table.dragClone tbody{
+	margin:0;
+	padding:0;
+}*/
+
+/*table.dragClone tbody tr{
+	border: 1px solid $grayC;
+}*/
+
+form table tbody tr:first-child td{
+	padding-top:0;
+}
+
+#deleteDiscussionDialogLine {
+    width: 500px;
+}
+#deleteFolderDialogLine {
+    width: 500px;
+}
+
+#deleteGroupDialogLine {
+    width: 500px;
+}
+
+#newGroupDialogLine {
+    width: 500px;
+}
+
+#groupVisibility {
+    width: 110px;
+}
+
+#newButtons {
+  position: relative;
+}
+
+#newButtons .nav {
+  position: absolute;
+  top:4px;
+  right: 0px;
+}
+
+form ul.nav-pills > li {
+  margin-left:0;
+}
+.nav-pills > li > a,
+.nav-pills > li > span  {
+  text-decoration: none;
+  padding:.4em .5em .5em;
+  display: block;
+  margin-left:2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Discussion.php specific
+*
+*/
+#ddGroupPopup {
+  display: block;
+  /*position: absolute;*/
+  top: 0;
+  /*margin: 5em 2em;*/
+}
+
+#deleteFolderDialog .inlineLabel:nth-child(2) {
+    float: left;
+    margin-right: 1em;
+}
+
+#deleteGroupDialog .inlineLabel:nth-child(2) {
+    float: left;
+    margin-right: 1em;
+}
+
+.emptyNewDiscussion {
+    width: 100%;
+    height: 26px;
+}
+
+a.edit2.btn-edit {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+a.edit2 {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.discussionLinks:hover{
+    background-color:$yellow2;
+}
+
+#WhatDoWithDiscussions_label, #AreYouSureDelete_label, #AreYouSureDelete2_label{
+    font-weight:normal;
+}
+
+#groupAllStudents, #groupUnassigned, #groupSelectedStudents {
+    overflow:auto;
+    height:12em;
+    background-color:white;
+    border-bottom:.18em solid $grayC;
+}
+
+#selectedGroupsBoxList {
+    overflow:auto;
+    height:6.9em;
+    background-color:white;
+    border-bottom:.18em solid $grayC;
+}
+
+#selectedGroupsBoxButton {
+    background-color:white;
+}
+
+.groupParticipant[name='student'], .groupTA[name='TA'] {
+    margin-left: 1em;
+}
+
+.groupCheckBox {
+    margin-left: 1em;
+}
+
+
+#numNotInGroup {
+    background-color: lightgoldenrodyellow;
+}
+
+#numUnassignedStudents {
+    display:none;
+}
+
+#studentsTable{
+    width:100%;
+}
+
+#studentsTable tr{
+    height:25px;
+}
+
+#studentsTable td, #studentsTable th{
+/*    border: solid red 1px;*/
+}
+
+.activeDiscPage, .activeDiscPage:hover, .activeGroupDialogViewLink, .activeGroupDialogViewLink:hover {
+    text-decoration:none;
+    cursor:default;
+    color:#369;
+}
+.discNewComments{
+    background-color: $yellow1;
+}
+
+tr.new-discussion a.add:hover { color: $blue3 }
+
+tr.new-discussion.hover { background-color: $yellow1 }
+
+tr.new-discussion a.add {
+    color: transparent;
+    display: block;
+    padding: 3px 1em;
+    height: 18px;
+    text-decoration: underline;
+    transition: color .2s ease;
+}
+
+.new-discussion{
+    border:none;
+}
+
+.blueHeader {
+    background-color: $blue9 !important;
+    background: #e7f1fa;
+    background: -webkit-linear-gradient(top, $blue10, $blue9);
+    background: -moz-linear-gradient(top, $blue10, $blue9);
+    background: -ms-linear-gradient(top, $blue10, $blue9);
+    background: -o-linear-gradient(top, $blue10, $blue9);
+    background: linear-gradient(top, $blue10, $blue9);
+    font-style: normal;
+    font-weight: normal;
+    font-weight: bold;
+    color: $gray4;
+    padding: 0.1em 0.0em 0.1em 0.0em;
+    cursor: pointer;
+    margin: .5em 0 0;
+}
+
+#newButtons{
+    border-top: 2px solid $grayD;
+    border-bottom: 2px solid $grayD;
+    height: 40px;
+}
+
+span.viewBySpan{
+    position:relative;
+    top:12px;
+    float:right;
+    font-size:1.1em;
+    color:$gray8;
+}
+
+span.viewBySpanStudentView{
+    position:relative;
+    top:12px;
+    float:left;
+    font-size:1.1em;
+    color:$gray8;
+}
+
+span.activeDiscPage{
+    color:$blue3;
+}
+
+.emptyNewDiscussion > a{
+    float:left;
+    margin-left:0.5em;
+
+}
+
+td.title {
+    padding-left: 0;
+}
+
+td.drop {
+    width: 25px;
+}
+
+td.del{
+    width:3%;
+}
+td.edit{
+    width:8%;
+}
+
+.setDefaultPopupWidth{
+	width:600px;
+}
+
+.setNewDiscussionPopupWidth{
+	width:650px;
+}
+
+.discussions-active, .groups-active, .students-active{
+	width:100%;
+}
+
+.discussions-active tr, .groups-active tr, .students-active tr{
+	font-size:12px;
+}
+
+#discussionsTable tr.expanded td:first-child a, #studentsTable tr.expanded td:first-child a, #groupsTable tr.expanded td:first-child a{
+	background: url("../images/icon-20.png") no-repeat scroll 0 -400px transparent;
+	display: block;
+	height: 20px;
+	min-width: 20px;
+	text-indent: -9999px;
+}
+
+#discussionsTable tr.collapsed td:first-child a, #studentsTable tr.collapsed td:first-child a, #groupsTable tr.collapsed td:first-child a{
+	background: url("../images/icon-20.png") no-repeat scroll 0 -420px transparent;
+	display: block;
+	height: 20px;
+	min-width: 20px;
+	text-indent: -9999px;
+}
+#discussionsTable tr.collapsed.folder-true td.arrow a {
+  background-position: 6px -420px;
+}
+#discussionsTable tr.expanded.folder-true td.arrow a {
+  background-position: 6px -400px;
+}
+#discussionsTable tr.folder-true .title a {
+  position: relative;
+  left: 6px;
+}
+
+.discussions-active td:first-child, .groups-active td:first-child, .students-active td:first-child{
+    font-size:13px;
+}
+
+#discussionsTable tr.header td:first-child, #studentsTable tr.header td:first-child, #groupsTable tr.header td:first-child{
+    padding:0;
+}
+
+.folderNewComments{
+	font-style:italic;
+}
+
+p.no-content:before{
+	background-position: 0 -160px;
+/*	background: transparent url(../images/icon-40.png) 0 -160px no-repeat;*/
+}
+
+#newDiscussionDialog_buttons > div, #newGroupDialog_buttons > div{
+    float:right;
+    margin-top:7px;
+}
+
+#tempNewFolder > a.loading{
+    padding:.5em;
+}
+
+.studentName a {
+  text-decoration: none;
+}
+
+
+tr.new-discussion a.add:hover {
+  text-decoration: none;
+}
+tr.new-discussion a.add {
+  text-decoration: none;
+          transition: color 0.2s;
+     -moz-transition: color 0.2s; /* Firefox 4 */
+  -webkit-transition: color 0.2s; /* Safari and Chrome */
+       -o-transition: color 0.2s; /* Opera */
+}
+
+.sortable-placeholder, .placeholder {
+  height: 10px;
+  background-color: $green6;
+  z-index: 9999;
+  border-top:8px solid white;
+  border-bottom:8px solid white;
+}
+
+
+// Discussions table
+
+table.discussions {
+  font-size: 14px;
+  margin-top:.5em;
+  margin-bottom:.5em;
+  tr {
+    border-bottom: 1px solid #eee;
+    &.collapsed, &.expanded {
+      font-weight: normal;
+      a {
+        text-decoration: none;
+        color: $blue2;
+      }
+    }
+  }
+  td {
+    &.title {
+      padding-left: .5em;
+      a {
+        display: block;
+        padding: 6px 0;
+      }
+    }
+    &.arrow {
+      width: 10px;
+      padding-left:0;
+      padding-right: 0;
+      opacity: .5;
+    }
+  }
+  th {
+    border-bottom: 1px solid #ddd;
+    color: $gray8;
+    font-weight: normal;
+    font-size: 13px;
+    padding-bottom: .75em;
+  }
+
+  tr.sub td {
+    a {
+      display: block;
+      padding-top:.3em;
+      padding-bottom:.3em;
+    }
+    &.arrow {
+      padding:0;
+    }
+    &.title {
+      padding-left:2em;
+    }
+  }
+}
+td.participants {
+
+}
+td.comments {
+
+}
+td.newComments {
+  font-style: italic;
+}
+td.comments.new {
+  background-color: $yellow1;
+}
+
+table.discussions tr.ddFolder {
+  a {
+    font-weight: normal;
+  }
+  td.arrow {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ViewDiscussion.php specific
+*
+*/
+
+
+ul ul{
+    margin-top:0em;
+    margin-bottom:0em;
+}
+
+div.attachmentInfo:before{
+        content: " ";
+        display:block;
+        width:40px;
+        height:40px;
+        position:absolute;
+        top:7px;
+        left:10px;
+        background: transparent url("../images/icon-40.png") 0px -120px no-repeat;
+}
+
+div.attachmentInfo.docx:before{
+        background: transparent url("../images/icon-40.png") 0px -320px no-repeat;
+}
+
+div.attachmentInfo.doc:before{
+        background: transparent url("../images/icon-40.png") 0px -320px no-repeat;
+}
+
+div.attachmentInfo.pdf:before{
+        background: transparent url("../images/icon-40.png") 0px -280px no-repeat;
+}
+
+a.edit2 > img{
+        float:left;
+        margin-top:12px;
+}
+
+p.fileSize{
+        color:$gray4;
+}
+
+div.attachmentInfo{
+        float:left;
+        margin-left: 40px;
+}
+
+div.attachmentInfo p{
+        margin: 5px 5px 3px 10px;
+}
+
+img.mugshot{
+        float:left;
+        position: relative;
+        left: 1px;
+}
+
+img.videoThumb{
+        background-image:url(play_button.png);
+        float:left;
+        margin-bottom:10px;
+        margin-right:15px;
+}
+
+img.playButton{
+        position:absolute;
+        left:100px;
+        top:80px;
+}
+
+p.ownerName{
+        position:relative;
+        top:-9px;
+        left: 10px;
+        font-size:1.25em;
+        color:$blue3;
+        font-weight:bold;
+        font-family:"Lucida Grande", "Lucida Sans", Helvetica, Arial, sans-serif;
+        margin-bottom:1em;
+}
+
+p.commentContent{
+        clear:left;
+}
+
+p.videoDuration{
+        margin-top:0;
+}
+
+li{
+        list-style-type:none;
+        position:relative;
+}
+
+div.comment{
+        padding: 15px;
+}
+#divLeft, #divRight{
+    margin-top:5px;
+}
+
+#divTop{
+        position:relative;
+        float:left;
+        width:80%;
+}
+
+#divLeft{
+        float:left;
+        width:80%;
+}
+
+#divRight{
+        float:left;
+        border-top: 1px solid $grayC;
+        padding-left: 2.5%;
+        width:17.5%;
+}
+
+#descriptionDiv{
+        position:relative;
+        background-color:$yellow1;
+        padding:15px;
+        border-bottom: 3px solid $grayC;
+        border-top: 1px solid $grayC;
+        overflow: auto;
+}
+
+#descriptionDiv a.reply{
+        position:absolute;
+        bottom:5px;
+        right:10px;
+}
+
+#descriptionDiv a.reply:active{
+        position:absolute;
+        bottom:5px;
+        right:10px;
+}
+
+p.created{
+        margin-top:0px;
+        margin-bottom:0px;
+        color:$grayA;
+}
+
+
+#groupSelectSpan, #studentSelectSpan{
+        position:absolute;
+        top: -21px;
+        right:10px;
+        
+}
+
+span.commentButtons{
+        position:absolute;
+        bottom:15px;
+        right:10px;
+}
+
+ul#commentList, ul#participantList, ul#participantList > li{
+    margin-left:0px;
+}
+ul#participantList > li {
+  line-height: 1.3;
+  margin-bottom: .4em;
+}
+
+#participantList li .count {
+  color: #888;
+  &:before {
+    content: '(';
+    color: #bbb;
+  }
+  &:after {
+    content: ')';
+    color: #bbb;
+  }
+}
+
+h2#participantTitle{
+    margin-top:10px;
+}
+
+a.sidenavDiscussionLink > span{
+	margin-left:20px;
+	font-weight:normal;
+}
+
+.attachSpan{
+        position:relative;
+}
+
+.attachSpan > *{
+        float:left;
+        margin: 5px 5px 0px 0px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.displayButtons {
+  border-bottom: 1px solid $grayE;
+  overflow: hidden;
+  margin-left: 5px;
+  margin-top: 1em;
+}
+
+.nav {
+  margin-bottom: 0;
+}
+
+
+// Comments
+div.comment {
+  position: relative;
+  border-bottom: 1px solid $grayD;
+}
+li.comment ul div.comment {
+  background-color: mix($blue9, $blue10);
+}
+
+.commentContent, .videoContent {
+  clear: both;
+}
+
+.videoObject {
+  display: none;
+}
+
+div.showVid {
+  .videoContent {
+    display: none;
+  }
+  .videoObject {
+    display: block;
+  }
+}
+
+.collapseBtn {
+  display: block;
+  position: absolute;
+  left: -6px;
+  width: 20px;
+  height: 20px;
+  z-index: 200;
+  background: transparent url('../images/icon-20.png') 0px -400px no-repeat;
+  -webkit-border-radius:3px;
+     -moz-border-radius:3px;
+          border-radius:3px;
+}
+
+.collapseBtn,
+.collapse .expand .collapseBtn,
+.collapse .expand .collapse .expand .collapseBtn {
+  background-position: 0px -400px;
+  top: 8px;
+  padding:0;
+  width:20px;
+}
+.collapse .collapseBtn,
+.expand .collapse .collapseBtn,
+.expand .collapse .expand .collapse .collapseBtn {
+  background-position: 0px -419px;
+  top: 3px;
+  width:100%;
+  padding:2px;
+}
+
+
+
+
+.attachments{
+  clear:both;
+  margin:1em 0 .75em;
+}
+.attachment, .attachNumber {
+  background: transparent url('../images/icon-20.png') -3px -877px no-repeat;
+  padding:3px 19px;
+}
+.attachNumber {
+  display: none;
+  padding-right:0;
+  padding-left:17px;
+}
+
+
+
+// Collapsed discussion style
+
+.collapse,
+.collapse .expand .collapse,
+.collapse .expand .collapse .expand .collapse
+{
+  .attachNumber {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  div.comment {
+    padding:.25em 2em 1em 1.1em;
+    height: 1em;
+    overflow: hidden;
+    position: relative;
+/*
+      &.overflow:after {
+        content:" ...";
+        display: block;
+        position: absolute;
+        right:3em;
+        top:.4em;
+        background-color: white;
+      }
+*/
+    .commentContent {
+      display: inline;
+      font-size: .9em;
+      line-height: 2;
+      p, ul, ol, li, div {
+        display: inline;
+      }
+    }
+    .ownerName {
+      position: static;
+      font-size: 1em;
+      margin-right:1em;
+      font-weight: normal;
+      display: inline;
+    }
+    .created,
+    .commentButtons,
+    .mugshot,
+    .attachments,
+    .videoContent {
+      display:none;
+    }
+  }
+}
+
+.collapse .expand,
+.collapse .expand .collapse .expand,
+.collapse .expand .collapse .expand .collapse .expand,
+{
+  .attachNumber {
+    display: none;
+  }
+  div.comment {
+    padding:15px;
+    height: auto;
+    overflow: visible;
+    .commentContent {
+      display: block;
+      font-size: 1em;
+      line-height: 18px;
+      p, ul, ol, li, div {
+        display: block;
+      }
+    }
+    .ownerName {
+      position: relative;
+      font-size: 1.25em;
+      margin-right:0;
+      font-weight: bold;
+      display: block;
+    }
+    .created,
+    .commentButtons,
+    .mugshot,
+    .attachments,
+    .videoContent {
+      display:block;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*New Discussion Dialog */
+tr.participants {
+  a, a:link {
+    text-decoration: none;
+  }
+  td.label {
+    padding-top:1.1em;
+  }
+  td.tabs {
+    padding-top:.5em;
+    label {
+      font-weight: normal;
+    }
+  }
+
+}
+
+ul.nav-tabs {
+  margin-bottom: 0;
+}
+
+div.tab-content {
+  border-bottom:1px solid $grayD;
+  padding: .75em 1em 1em;
+  margin-bottom: 1.25em;
+  max-height: 170px;
+  overflow-y: scroll;
+}
+
+.discussionFileUploadInput {
+  opacity: .5;
+}
+
+ul.nav-pills li.active a,
+ul.nav-pills li.active a:hover,
+.activeGroupDialogViewLink {
+  color: white;
+  background-color: $blue4-5;
+}
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+// Small
+@media all and (min-width:1px) {
+  .sidebar #main {
+    margin-left:250px;
+    margin-right: 10px;
+  }
+
+  #divRight {
+    clear:left;
+    width: 97.5%;
+    li {
+      display: inline;
+      &:after {
+        content: ",";
+      }
+    }
+  }
+  #divLeft{
+    width:100%;
+  }
+}
+
+
+
+// 800px
+@media all and (min-width:860px) {
+  .sidebar #main {
+    margin-left:275px;
+    margin-right: 25px;
+  }
+  #divRight {
+    clear:none;
+    width: 17.5%;
+    li {
+      display: block;
+      width:110%;
+      &:after {
+        content: none;
+      }
+    }
+  }
+  #divLeft{
+    float:left;
+    width:80%;
+  }
+}
+
+#alerta {
+    width:650px !important;
+}
+
+.comment ul li {
+    list-style-type: none;
+}
+
+.commentContent ul li{
+    list-style-type: disc;
+}

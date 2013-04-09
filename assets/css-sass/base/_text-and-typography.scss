@@ -1,0 +1,32 @@
+body, select, input, textarea {
+  color: #444; // #444 looks better than black: twitter.com/H_FJ/statuses/11800719859
+  font-family: "Lucida Grande","Lucida Sans", Tahoma, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, nav a, span.course-title, #topDropPageTitle h2 {
+  font-family: "Lucida Grande","Lucida Sans", Helvetica, Arial, sans-serif;
+  /*.fontface & { font-weight:normal !important;} .fontface.wf-active & { font-family: "Open Sans", "Lucida Grande","Lucida Sans", Helvetica, Arial, sans-serif; font-weight:bold !important;  }*/
+}
+
+select, input, textarea, button { font: 99% sans-serif; }
+body { font-size: 13px; line-height: 18px; }
+span { line-height: 1; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; }
+blockquote { margin: 1em; }
+ins { text-decoration: none; background: $yellow0; }
+del { text-decoration: line-through; }
+sub { font-size: .8em; vertical-align: -0.2em; line-height: .1em; }
+sup { font-size: .8em; vertical-align: .2em; line-height: .1em; }
+big { font-size: 1.15em; line-height: 1em; }
+small { font-size: .85em; }
+a img { border: none; }
+strong, th { font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+pre {
+  padding: 15px; // www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ 
+  white-space: pre; /* CSS2 */
+  /*white-space: pre-wrap; /* CSS 2.1 */
+  /*white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */ 
+  /*word-wrap: break-word; /* IE */
+}

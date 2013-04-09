@@ -1,0 +1,76 @@
+// Base styles for the action and edit buttons
+a.action, a.action:link, a.action2, a.action2:link, a.edit, a.edit:link, #sidenav a.edit, #sidenav a.edit:link, a.edit2, a.edit2:link, input.action, div.addDayButton {
+  color:#fff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  margin: .5em;
+  @include nate_border-radius(5px);
+  @include nate_transition(box-shadow .05s ease);
+  white-space: nowrap;
+  line-height:18px;
+}
+
+a.action:active, a.action2:active, a.edit:active, a.edit2:active, #sidenav a.edit:active, #sidenav a.edit2:active, a.cancel:active {
+  position: relative;
+  top: 1px;
+}
+
+// Action buttons
+a.action, a.action2, input.action, input.action2 { color: #fff; padding: .25em 1em; border: 2px solid #fff; @include nate_linear-gradient(#c00, #800, 10%, 90%); @include nate_box-shadow(0px 1px 3px); }
+a.action2, a.action2:link, input.aciton2 { padding: .12em 1em; border: none; margin: 7px 4px; @include nate_border-radius(3px); @include nate_linear-gradient(#b00, #700, 10%, 90%);}
+a.action:hover, a.action2:hover { @include nate_linear-gradient(#d00, #600, 10%, 100%); @include nate_text-shadow(0px -1px 0px); @include nate_box-shadow(0px 2px 3px,.65); }
+a.action2:hover { border: 2px solid #fff; margin: 7px 2px; }
+input.action, input.action2 { font-size: 1em; cursor: pointer; font-family: helvetica, arial, sans-serif; line-height: 1.25em; }
+a.action:active, a.action2:active { color: #fdd; }
+
+// Edit buttons
+a.edit, a.edit:link, #sidenav a.edit, #sidenav a.edit:link, input.edit, div.addDayButton { font-size: 1em; padding: .15em 1em .25em; border: 2px solid; font-weight: bold; @include nate_border-radius(4px); @include nate_box-shadow(0px 1px 2px,0.25); }
+a.edit, #sidenav a.edit, input.edit, div.addDayButton { color: #fff; border-color: #fff; @include nate_linear-gradient($blue4, $blue3); }
+a.edit2 { font-size: .95em; padding: .25em 1em; border: 1px solid; color: $blue3; border-color: $blue5; @include nate_linear-gradient($blue11, $blue9); @include nate_box-shadow(none); }
+a.edit:hover, #sidenav a.edit:hover, div.addDayButton:hover { @include nate_linear-gradient($blue4, $blue2); @include nate_text-shadow(0 -1px 0); @include nate_box-shadow(0px 2px 2px,0.4); }
+input.edit { padding: .25em 1em; }
+
+a.edit2, a.edit2:link, input.edit2 {
+	text-decoration: none;
+	font-weight: normal;
+	display: inline-block;
+	position: relative;
+	margin: 0 .5em;
+	white-space: nowrap;
+	padding: .1em 1em .2em;
+	border: 1px solid #628cb6;
+	color: #369;
+	@include nate_box-shadow(0px 1px 2px,0.25);
+	@include nate_border-radius(3px);
+	@include nate_linear-gradient($blue11,$blue9);
+	}
+a.edit2:hover {
+	color: #147;
+	@include nate_linear-gradient($blue10,$blue8);
+	@include nate_box-shadow(0px 2px 2px,0.4);
+	}
+
+
+// Super buttons (extra emphasis)
+.super { font-size: 1.2em; }
+.insert .super { font-size: 1.125em; margin: 10px; }
+
+// Edit buttons in insert boxes
+.insert .super { @include nate_linear-gradient(#339933, #117711);}
+.insert .super:hover { @include nate_linear-gradient(#339933, #006600); @include nate_text-shadow(0 -1px 0, 1, #002200); }
+
+// Cancel button (link)
+a.cancel, a.cancel:link { font-size: .95em; text-decoration: none; margin: .5em; }
+a.cancel:hover { text-decoration: underline; }
+a.cancel:active { color: #024; }
+
+// Back and next buttons
+a.back:before { content: "◀  "; right: .1em; }
+a.next:after { content: "  ▶"; left: .1em; }
+a.back:before, a.next:after { font-size: .75em; position: relative; }
+
+// Add buttons
+a.add:before, div.addDayButton.add span:before { content: "+ "; } // Fix display problem with border-radius and gradient backgrounds (this should come after any gradients have been declared)
+a.action, a.action:hover, a.action2, a.action2:hover, a.edit, a.edit2, a.edit:hover, a.edit2:hover, .insert a.edit, .insert a.edit2, .insert a.edit:hover, .insert a.edit2:hover, div.addDayButton, div.addDayButton:hover { background-clip: padding-box; }

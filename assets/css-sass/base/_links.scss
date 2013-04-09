@@ -1,0 +1,28 @@
+a {
+  @include nate_transition(all 0.2s ease);
+  @include nate_transition(background-position 0s ease);
+  
+  &, &:link {
+    //text-decoration: underline;
+    color: $blue4;
+    cursor: pointer;
+  }
+  
+  &:hover {
+    text-decoration: underline;
+    color: $blue1;
+  }
+  
+  &:active {
+    //text-decoration: underline;
+    color: #c00;
+  }
+  
+  &.visited {
+    //text-decoration: underline;
+    color: #539;
+  }
+}
+
+// Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test
+a:hover, a:active, a:visited { outline: none; }

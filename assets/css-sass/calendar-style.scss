@@ -1,0 +1,817 @@
+/* Partials */
+@import "mixins";
+
+form {
+  padding: 1px 0; }
+
+#sidenav h2 {
+  background-position: 0 -30px; }
+
+#calendarViewTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  margin: 0;
+  margin-left: 30px;
+}
+
+#iCalFeedButton {
+  font-size: 14px;
+  padding-left: 1em;
+  font-weight: normal;
+}
+
+.item-options {
+  position: absolute;
+  top:3px;
+  right:2px;
+  display: none;
+  .calendarItem:hover & {
+    display: block; }
+  .dropdown-toggle {
+    padding:1px 5px; }
+  .dropdown-menu {
+    top:auto;
+    bottom:100%; } }
+
+.column-options {
+  position: absolute;
+  right:0;
+  top:8px;
+  #calendarTableFloatHeaderClone & {
+    top:-1px;
+  }
+}
+
+.dropdown-menu {
+  margin:0;
+  li {
+    margin-left: 0;
+    list-style-type: none; }
+  a.disabled {
+    color: #999; } }
+
+.new-button-wrapper {
+  position: relative;
+  height:1.75em; }    
+.new-item-button {
+  display: none;
+  width:.75em;
+  height:1.5em;
+  position: absolute;
+  right: -.5em;
+  top:-.5em;
+  .selectedDate & {
+    display: block; } }
+
+    
+#calendarTable .selectedDate td.sortable {
+  padding-bottom:2em;
+}
+
+.alert {width: 70% !important; }
+
+/* ContextMenu Plugin */
+
+.contextMenu {
+  position: absolute;
+  width: 120px;
+  z-index: 99999;
+  border: solid 1px #CCC;
+  background: #EEE;
+  padding: 0px;
+  margin: 0px;
+  display: none;
+  li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px; }
+  a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    line-height: 20px;
+    /* height: 20px; */
+    background-position: 6px center;
+    background-repeat: no-repeat;
+    outline: none;
+    padding: 1px 5px;
+    padding-left: 28px; }
+  li {
+    &.hover a {
+      color: #FFF;
+      background-color: #3399FF; }
+    &.disabled a {
+      color: #AAA;
+      cursor: default; }
+    &.hover.disabled a {
+      background-color: transparent; }
+    &.separator {
+      border-top: solid 1px #CCC; }
+    a {
+      background-image: url('../images/icon-20.png');
+      background-position: 0 -280px;
+      background-repeat: no-repeat; }
+    &.moveTo a {
+      background-position: 0 -260px; }
+    &.edit a {
+      background-position: 0 -300px; }
+    &.cut a {}
+    &.copyTo a {
+      background-position: 0 -560px; }
+    &.paste a {}
+    &.delete a {
+      background-position: 0 -40px; }
+    &.quit a, &.insert a {} } }
+
+/* New Header box */
+
+#calendarHeadingBox {
+  width: auto; }
+  
+
+/* SIDEBAR CALENDAR */
+
+div.sidebarCalendar {
+  width: 100%;
+  font-size: 12px;
+  margin-bottom: 0em;
+  margin-top: 0em;
+  border: 0px; }
+
+.sidebar table {
+  &.calendarMonth {
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 0;
+    border: none;
+    td {
+      border:none; } }
+  &.calendarDays {
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 0;
+    border: none;
+    font-style: bold;
+    td {
+      border: none; } } }
+
+//#sidenav {
+//  height: 875px; }
+
+.notSemester, .holiday {
+  color: #999999; }
+
+table.calendarMonth {
+  td {
+    padding: 0;
+    text-align: center; }
+  .inCourseRange {}
+  .white {
+    background: #ffffff; } }
+
+.dateLink {
+  cursor: pointer;
+  font-weight: 900;
+  color: #336699;
+  /*font-size:10px; */ }
+
+.monthName {
+  /*width-min:4em; */
+  min-width: 1.5em;
+  max-width: 1.5em; }
+
+td {
+  &.linkToDate:hover, &.notDisplayed:hover {
+    /*border-color:#EEEEBE; */
+    background-color: #FFE980;
+    cursor: pointer; }
+  &.marked {
+    border: 1px solid #FFE980!important;
+    background-color: #FFFFCC!important; } }
+
+.sidenav {
+  p {
+    margin-bottom: 0.15em;
+    margin-top: 0.15em; }
+  td {
+    /*border:1px none; */
+    border: 1px dotted transparent; } }
+
+#sidenav {
+  .L {
+    border-left: 1px solid #FFA500!important; }
+  .T {
+    border-top: 1px solid #FFA500!important; } }
+
+.sidenav {
+  .B {
+    border-bottom: 1px solid #FFA500!important; }
+  .R {
+    border-right: 1px solid #FFA500!important; } }
+
+table {
+  border-collapse: collapse; }
+
+#sidenav a.miniCalSelection {
+  background: none repeat scroll 0 0 transparent;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  -moz-transition: background-position 0s ease 0s;
+  color: #336699;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline;
+  &.selected {
+    background: none repeat scroll 0 0 transparent;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    -moz-transition: background-position 0s ease 0s;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline; } }
+
+.selection {
+  margin-left: 3.2em; }
+
+#sidenav .sidebarCalendarHome .currentDay {
+  background: #eff6fc!important;
+  border: 1px solid #abc8e4!important;
+  /*#8899ee*/ }
+
+#export {
+  margin-bottom: 8em; }
+
+/* MAIN CALENDAR */
+
+div.desc {
+  border: none; }
+  
+
+#calendarTable {
+  min-width: 100%;
+  //float: left;
+  margin-top: 1.25em;
+  border: 1px solid #ddd;
+  border-left-width: 5px;
+  border-left-color: #CCC;
+  width: 100%;
+  tr > td.row-header {
+    white-space: nowrap; } }
+
+#calendarTable {
+  td {
+    border: 1px solid #ddd; }
+  td.row-header {
+    overflow: visible; }
+  .row-options {
+    margin:.5em 0;
+    display: none; }
+  tr.selectedDate {
+    background: #ffffcc;
+    td.row-header .row-options {
+      display: block; } }
+  td {
+    overflow: visible;
+    vertical-align: top;
+    padding: 6px;
+    border-left: 1px dotted #ddd;
+    border-right: 1px dotted #ddd;
+    &:first-of-type {
+      padding-top: 10px; } } }
+
+/*#calendarTable tbody tr { height:10em;}*/
+
+/*.floatLeft {
+    display: inline;
+    float: left;
+}*/
+
+/*float with the table so the column resizers match up*/
+div.CRC {
+    float: left;
+    top: 30px;
+}
+
+.calendarViewChanger {
+    border-top: {
+        color: #eee;
+        style: solid;
+        width: 1px;
+    }
+    margin-top: .5em;
+    padding-top: .5em;
+    display: block;
+}
+
+a.viewSelector.selected {
+    background: #fff;
+    color: #444;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* For the 'img = graded item' above the calendar */
+
+span {
+  &.calendarLegend {
+    display: inline;
+    color: gray;
+    /*float: left;*/
+    margin-bottom: 10px;
+    margin-right: 1.5em;
+    /*position: absolute;
+    width: 200px;*/ }
+  &.gradedKey {
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 0px;
+    background: transparent url('../images/icon-20.png') 0 -160px no-repeat; } }
+
+/* MAIN CALENDAR HEADER */
+
+#calendarTable th#dateColumn {
+  max-width: 80px !important;
+  width: 80px !important; /*prevents the date column from decreasing in size in safari */
+  padding-top: 10px; }
+
+thead#calendarHead th, .floatHeader th {
+  /* I took this straight from the assignments css and then made the font weight bold (Jason)*/
+  background-color: #e0edf9;
+  background-color: linear-gradient(top, #eff6fc 0%, #e0edf9 100%);
+  font-style: normal;
+  font-weight: bold;
+  border: 1px solid #bdc3c9;
+  border-right: 1px dotted #bdc3c9;
+  border-left: 1px dotted #bdc3c9; }
+
+th.calendarColumnHeader {
+  div.form {
+    margin: 1em 0 1em 0;
+    > {
+      label {
+        margin: 0; }
+      span {
+        margin-left: 1em; }
+      a {
+        margin-left: 2em; } } } }
+
+$sideMargin: 3px;
+
+div {
+  &.columnFunctions {
+    display: block;
+    position: relative;
+    height: 22px;
+    margin:.25em 0 .5em;
+    padding:.25em 0 0;
+    border-top:1px dotted #bdc3c9;
+    a {
+      display: block;
+      text-decoration: none;
+      width: 22px + (2 * $sideMargin);
+      height: 22px;
+      text-indent: -9999em;
+      background: transparent url('../images/icon-20.png') $sideMargin 0 no-repeat;
+      position: absolute;
+      top:0;
+      border-radius: 2px;
+      &:hover {
+        background-color:#d1e4f6; }
+      &:active {
+        background-color:#abc8e4; }
+      
+      &.deleteColumn {
+        background-position: $sideMargin -40px;
+        right: 8px;;
+        top:.3em;
+        &:hover {
+          background-position: $sideMargin -60px; } }
+          
+      &.moveColumnLeft {
+        background-position: $sideMargin -780px;
+        left:0;
+        
+        &:hover {
+          background-position: $sideMargin -740px; } }
+  
+      &.moveColumnRight {
+        background-position: $sideMargin -800px;
+        right:0;
+        &:hover {
+          background-position: $sideMargin -760px; } } }
+                
+    .moveColumnButtons {
+      position: absolute;
+      top:0;
+      left:8px;
+      font-weight: normal;
+      top:.25em;
+    
+      .moveLabel {
+        padding:0 (25px + $sideMargin);
+        color:#999; } } } }
+
+ul#columnFunctionMenu {
+  a.moveColumnLeft {
+    background-position: 3px -740px; }
+  li.disabled a.moveColumnLeft {
+    background-position: 3px -780px;
+    left: 0; }
+  a.moveColumnRight {
+    background-position: 3px -760px; }
+  li.disabled a.moveColumnRight {
+    background-position: 3px -800px;
+    right: 0; }
+  a.deleteColumn {
+    background-position: 3px -60px; }
+  li.disabled a.deleteColumn {
+    background-position: 3px -40px; } }
+
+a.collapsed {
+    background: transparent url("../images/icon-20.png") 3px 0 no-repeat;
+    background-position: 3px -422px;
+}
+
+
+th div#columnCategories {
+  margin: .5em 1em .5em .5em;
+  overflow: hidden;
+  label {
+    color:#444; } }
+
+span {
+  &.deleteDayFunction {
+    a.deleteDay {
+      &:hover {
+      background: transparent url('../images/icon-20.png') 0 -58px no-repeat; }
+      text-decoration: none;
+      display: block;
+      width: 20px;
+      height: 20px;
+      text-indent: -2000px;
+      background: transparent url('../images/icon-20.png') 0 -38px no-repeat; }
+    display: block;
+    float: left;
+    margin: 3px 0; }
+    
+  &.td_dateText {
+    clear: both; } }
+
+
+/* MAIN CALENDAR FLOATING HEADER */
+
+.floatHeader {
+  border-left: 5px solid #ccc;
+  z-index: 99;
+  .columnFunctions {
+    display: none; }
+  th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    vertical-align: middle; }
+  table {
+    margin: 0; } }
+
+/* CALENDAR ITEMS/ASSIGNMENTS */
+
+#calendarTable {
+  .byuCalendarItem {
+    padding: 5px;
+    margin-left: 20px; }
+  .assignment, .calendarItem {
+    padding: 5px; }
+  .assignment > div {
+    /* gives the space to the left for the graded item image */
+    display: block;
+    margin-left: 20px; }
+  .assignment h4, .calendarItem h4 {
+    margin: 0px; }
+  .assignment:hover {
+    background-attachment: scroll;
+    background-color: rgb(255, 255, 238);
+    border-radius: 5px;
+    border-color: rgb(0, 102, 204);
+    border-style: solid;
+    border-width: 1px;
+    margin: -1px; }
+  .calendarItem:hover {
+    background-attachment: scroll;
+    background-color: rgb(255, 255, 238);
+    border-radius: 5px;
+    border-color: rgb(0, 102, 204);
+    border-style: solid;
+    border-width: 1px;
+    margin: -1px;
+    .wheel {
+      margin: 0.2em;
+      float: right;
+      display: block;
+      width: 13px;
+      height: 15px;
+      text-indent: -9999px;
+      background: transparent url("../images/gear-edit.png"); } }
+  .calendarItem, .assignment {
+    position: relative;
+    padding-right: 21px;
+    table {
+      float:none } }
+  tbody {
+    .assignment:hover .wheel {
+      margin: 0.2em;
+      float: right;
+      display: block;
+      width: 13px;
+      height: 15px;
+      text-indent: -9999px;
+      background: transparent url("../images/gear-edit.png"); }
+    .calendarItem .deleteCalendarItem {
+      float: right;
+      display: block;
+      width: 20px;
+      height: 20px;
+      text-indent: -9999px;
+      /*background:transparent url('images/icon-20.png') 0px 0px no-repeat; */
+      &:hover {
+        /*background:transparent url('images/icon-20.png') 0px -20px no-repeat; */ } } } }
+
+.placeholder {
+  border: 1px solid black; }
+
+#calendarTable {
+  ul {
+    list-style-type: disc; }
+  tbody p {
+    margin: 0;
+    font-style: normal;
+    color: #444;
+    font-size: 100%; } }
+
+/* Fix the some styling for the text from CKEditor */
+
+
+section#main {
+  div {
+    &.topBotBtn {
+      position: fixed;
+      border: 1px solid #D1E4F6;
+      right: 5px;
+      background: -moz-linear-gradient(center top, #eff6fc 60%, #d1e4f6 100%) repeat scroll 0 0 transparent;
+      border-bottom: 1px solid #D1E4F6;
+      border-radius: 4px 4px 4px 4px !important;
+      border-top: 1px solid #D1E4F6;
+      list-style-type: none;
+      margin: 0;
+      padding: 8px 8px;
+      text-decoration: none;
+      cursor: pointer; }
+    &#toTopButton {
+      z-index: 1;
+      top: 5px; }
+    &#toBottomButton {
+      bottom: 5px; }
+    &.topBotBtn span {
+      &#toTopText, &#toBottomText {
+        float: left;
+        margin-right: 5px; } }
+    &.addDayButton {
+      cursor: pointer;
+      position: absolute;
+      white-space: nowrap;
+      border-width: 1px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding-box;
+      background-clip: padding-box;
+      &:hover {
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding-box;
+        background-clip: padding-box; } } }
+  #messageBox {
+    #calendarIcon {
+      display: inline;
+      background: url("../images/icon-30.png") no-repeat scroll top left transparent;
+      background-position: 0 -20px;
+      background-size: 25px 300px;
+      font-size: 20px;
+      padding-right: 26px;
+      vertical-align: middle; }
+    #datepicker {
+      left: 134px; }
+    #removeDayWithItems {
+      margin-left: 10px;
+      label {
+        display: inline; } }
+    #messageCancel {
+      margin-right: 10px; } } }
+
+.scrollCheckBoxesTable ul li {
+  margin-top: .5em; }
+
+#messageBox, #addDayBox {
+  width: 400px; }
+
+#messageBox td, #descriptionBox td {
+  text-align: left; }
+
+div.headerToggleBtn {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #E0EDF9;
+    border-color: #BDC3C9;
+    /*border-style: solid none solid dotted;*/
+    border-width: 1px medium 1px 1px;
+    float: left;
+    font-style: normal;
+    font-weight: bold;
+    margin-left: -31px;
+    padding-left: 10px;
+    padding-top: 4px;
+    width: 20px;
+    cursor:pointer;
+    position: relative;
+    left: 90px;
+}
+div#headerToggle {
+    margin-top: 2.25em;
+}
+div#headerToggleImg, div#floatHeaderToggleImg {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("../images/icon-20.png");
+    background-origin: padding-box;
+    background-position: -8px -448px;
+    background-repeat: no-repeat;
+    background-size: 25px 1000px;
+    height: 15px;
+    width: 15px;
+}
+div.condensedHeadingTitle {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    vertical-align: middle;
+}
+
+div.floatHeader.expanded th.calendarColumnHeader #columnHeading {
+    margin-top: 0;
+}
+div.floatHeader.expanded th {
+    padding-bottom: 0;
+}
+div.floatHeader.expanded th#dateColumn {
+    vertical-align: baseline;
+}
+
+.columnHeadingTitle {
+  // @include box-sizing(border-box);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width:100%;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px; 
+  padding: 3px 5px;
+  color:#222;
+}
+
+.dashboardItem {
+	padding-bottom: 1em;
+   margin-top: 1em;
+	margin-bottom: 6em;
+	> h2 {
+		border-bottom: 1px solid #eee;
+		text-indent: 2px;
+		padding-bottom: 5px;
+		margin-bottom: 0;
+		color: #444;
+		margin-top:.65em; } }
+
+.dashboardDay {
+	margin-bottom: 2.5em; 
+	padding:1em .5em 0 1em;
+	.categoryTitle {
+	  margin: 2em -.5em .75em -1em;
+      border-bottom: 1px dotted #ddd;
+      padding: .1em 0 .1em 1em;
+      @include nate_linear-gradient(#fff, #fbfbfb); } }
+
+.dashboardDayItem {
+	margin-left: 20px;
+	position: relative;
+	&.graded {
+	  margin-top:.25em;
+	  margin-bottom:.5em; } }
+
+.dashboardItem {
+	.greenbar {
+		padding-left: 1em; }
+	h3 {
+		margin-top: 0; }
+	p, ul, ol {
+		margin-top:.25em;
+		margin-bottom:.5em; }
+	.greenHeader {
+		margin: -1em -.5em 0 -1em;
+		padding: .4em .5em .4em 1em;
+		border-bottom: 1px solid #eee;
+		font-weight:bold;
+	& + .categoryTitle {
+	  margin-top:1.5em; } } }
+
+.dashboardDay .graded:after {
+	content: " ";
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	background: transparent url('../images/icon-20.png') 0 -160px no-repeat;
+	top: 0;
+	left: -20px;
+	overflow: hidden; }
+
+.dashboardItem .greenHeader:hover {
+	cursor: default; }
+
+.phelp {
+    margin-right: 0 !important;
+}
+
+#iCalendarBox {
+    display: block;
+    position: absolute;
+    width: 654px;
+}
+
+#iCalendarFeedURL {
+    width: 100%;
+}
+
+
+#calendarHead, #calendarTableFloatHeaderClone {
+  .dropdown-toggle {
+    border-radius: 4px;
+    margin:0; } }
+    
+.titleWrapper {
+  margin-right: 2.5em; }
+
+
+.calIcon {
+  display: inline;
+  background: url("../images/icon-30.png") no-repeat scroll top left transparent;
+  background-position: 0 -20px;
+  background-size: 25px 300px;
+  font-size: 20px;
+  padding-right: 26px;
+  vertical-align: middle;
+}
+
+#copyDayBox {
+  display: block;
+  position: absolute;
+  width: 500px;
+}
+
+#copyDaySelectBox {
+  width: 120px;
+}
+
+#moveDayBox {
+  display: block;
+  position: absolute;
+  width: 500px;
+
+  label {
+    display: inline;
+    font-size: 13px;
+    font-weight: 300;
+  }
+}
+
+#moveDaySelectBox {
+  margin-bottom: .5em;
+  margin-top: .5em;
+  width: 120px;
+}
+
+.rowContextMenu {
+    width: 150px !important;
+}
+
+// Screen width < 768, e.g. mobile devices
+@media all and (max-width:768px) {
+  .floatHeader { display: none; }
+}

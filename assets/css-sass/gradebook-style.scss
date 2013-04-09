@@ -1,0 +1,219 @@
+/**
+ * Brian R
+ * Importing forms for modal dialogs
+ *
+ */
+@import "bootstrap/variables"; // Modify this for custom colors, font-sizes, etc
+@import "bootstrap/mixins";
+@import "bootstrap/forms";
+
+
+
+
+/**
+ * Brian R
+ *
+ * Styles for Score View modal dialog
+ *
+ */
+label.checkbox, label.control-label {
+  font-size: 13px;
+  font-weight: normal; }
+
+
+#recipient-option { display: inline-block;
+  margin-left: 15px; }
+
+/* textare in message students modal */
+textarea.modal-textarea { min-height: 175px; }
+
+
+/* statistics modal */
+#score-statistics {
+  min-height: 400px;
+  margin: 10px;
+  min-width: 600px; }
+
+#myModal .closeX {
+    background: #628CB6;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0 4px;
+    margin-top: 2px;
+    margin-right: 9px;
+    opacity: 0.4;
+}
+
+#sidenav h2 {
+  background-position: 0 -150px; }
+
+.gradePage {}
+
+.setupPage {
+  p, ul {}
+  li {
+    margin: 0 0 5px .5em;
+    input[type="checkbox"] {
+      vertical-align: text-bottom; }
+    label {
+      display: inline-block;
+      margin: 0 0 0 5px; }
+    .link {
+      display: inline;
+      margin-left: 15px; }
+    ul {
+      margin: 0 0 0 35px; }
+    li {
+      margin-bottom: 1em;
+      input {}
+      label {
+        margin-right: 20px; }
+      span {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        span {
+          display: block;
+          input, label {} } } } } }
+
+ul.options {
+  list-style: none;
+  .gradingmethod {
+	> label {
+	  margin: 6px 0; 
+	}
+	ul {
+	  margin-left: 6px; 
+	}
+	div:after {
+	  content: none; 
+	} 
+    } 
+}
+
+.nav-tabs li a.current-category{
+    color: black;
+    border: 1px solid lightgray;
+}
+.nav-tabs li a.current-category:hover{
+	background-color: white;
+}
+
+/* Grade scale display table */
+table.gradeScaleDisplay {
+  border: 1px solid #ddd;
+  width: 300px;
+  td {
+    border-top: 1px solid #eee; }
+  th {
+    border: 1px solid #ddd; background: #eee; font-style: normal; } }
+
+
+
+.handsontable th .small {
+  position: relative;
+}
+
+.handsontable td {
+    white-space: nowrap !important;
+}
+
+.title-container {
+  padding-right: 30px;
+}
+
+.title-container .dropdown-menu {
+  top: 9%;
+}
+th.htColHeader .title-container {
+    cursor: pointer;
+}
+
+th.htColHeader {
+    position: relative;
+}
+
+th.htColHeader .header {
+    display: inline-block;
+}
+
+th.htColHeader .dropdown-btn {
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    border: medium none;
+    right: 0;
+    top: 0;
+    border-radius: 4px;
+}
+
+.th-title {
+  line-height: 25px;
+  overflow-y: hidden;
+  width: auto;
+}
+
+.dropdown-btn {
+  height: 100%;
+  margin-top: -1px;
+/* remove the !important later after we fix CSS mess */
+  padding: 0 6px !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* dropdown inside of menu columns */
+.handsontable .headerLink {
+    top: -5px;
+    float: right;
+}
+
+
+/* Assignment Info popover */
+.assignment-popover {
+    position:absolute;
+    z-index:200;
+    background:white;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid #DDD;
+
+    table, td, tr {
+        border: 0;
+    }
+    table {
+        margin: 5px;
+    }
+    .label {
+        font-weight: bold;
+    }
+    .value {
+        vertical-align: middle;
+    }
+}
+
+/* Saving scores progress bar */
+.scores-saving {
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 42%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 2px 10px 2px 10px;
+    border: 2px solid #DDD;
+    background: white;
+    position: fixed;
+    bottom: 0;
+
+    .progress {
+        height: 20px;
+        border: 1px solid black;
+
+        .bar {
+            height: 100%;
+            background: black;
+        }
+    }
+}

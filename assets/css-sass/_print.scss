@@ -1,0 +1,102 @@
+// Don't show this stuff
+
+.noPrint,
+#personal-info a,
+a#change-view,
+#tab-course, 
+#sidenav a, 
+p.phelp,
+footer,
+a.dashboardEdit,
+.localnote,
+ul.actions
+{ display: none !important; }
+
+body > header,
+#sidenav,
+#topDrop,
+a.appTitle .lsTitle
+{ position: static !important; }
+
+html body.sidebar #main {margin:0 !important;}
+
+
+* { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
+a, a:visited { text-decoration: underline; }
+abbr[title]:after { content: " (" attr(title) ")"; }
+pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+thead { display: table-header-group; }
+tr, img { page-break-inside: avoid; }
+img { max-width: 100% !important; }
+@page { margin: 0.5cm; }
+p, h2, h3 { orphans: 3; widows: 3; }
+h2, h3 { page-break-after: avoid; }
+
+body { min-width: 800px; width: auto; padding-right: 0.5cm; }
+body.sidebar { background: none; }
+
+
+// Header
+html body > header { background: none; border: 0 !important; height: auto !important; padding: 0; }
+header a.appTitle {height:auto; width:auto; margin-bottom:9px;}
+header a.appTitle .lsTitle {left: 0; top: 0; display: inline;}
+header a.appTitle h1 {left: 10px; top:0; font-size:1em; font-weight:normal; padding:0; margin:0; display:inline;}
+
+#topDrop a#topDropPageTitle { border: 0; margin: 0; width:auto;}
+#topDrop a#topDropPageTitle h2 { margin: 0; padding: 0; width:auto;}
+#topDrop a#topDropPageTitle h2:after { content: none !important; }
+
+#personal-info { float: none; position: absolute; top: 0; right: 0; font-weight: normal; font-size: 12px; }
+
+#sidenav h2.navTitle { padding: 0 0 .25em; background: none; margin: 0 0 .5em; border-bottom: 1px solid #000; font-size: 16px; font-weight:normal;}
+#sidenav { display: block; float: none; width: auto; border: 0; height:auto !important;}
+
+
+// Course-style
+a.dashboardEdit { display: none; }
+
+// Syllabus-style
+#printAssignmentsView { display: block; visibility: visible; }
+#uiAssignmentsView { display: none; visibility: hidden; }
+
+// Calendar Styles
+  div#sidebarCalendarHome, #toTopButton, #toBottomButton {
+    display: none !important; }
+  div {
+    &.addDayButton, &.floatHeader {
+      display: none !important; } }
+  #addNewColumn {
+    display: none !important; }
+  .calendarColumnHeader {
+    * {
+      display: none; }
+    input.columnHeadingTitle {
+      font-weight: bold;
+      border-style: none;
+      border-color: transparent;
+      overflow: auto;
+      display: block; } }
+  #calendarTable th#dateColumn {
+    padding-top: 5px; }
+  span.gradedKey {
+    background: transparent url("../images/icon-20.png") 0 -160px no-repeat !important; }
+  tr, td {
+    page-break-inside: avoid; }
+    
+/* Popups & Buttons */
+a {
+  &.action, &.edit, &.action2, &.edit2, &.cancelPopup, &.cancel, &.add, &.btn {
+    display:none !important;}
+}
+#main .insert {
+  top:0 !important;
+  background:#fff !important;
+  margin:0 !important;
+  margin-left:1em !important;
+  clear:both;
+  box-shadow:none;}
+  
+.printAssignment {
+	left:0 !important;
+	border:none !important;
+}

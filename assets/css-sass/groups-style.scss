@@ -1,0 +1,182 @@
+#groupPopupView {
+  padding-right: .25em;
+  float: left;
+}
+
+#deleteGroupDialogLine, #newGroupDialogLine {
+  width: 500px;
+}
+
+#groupVisibility {
+  width: 110px;
+}
+
+#deleteGroupDialog .inlineLabel:nth-child(2) {
+  float: left;
+  margin-right: 1em;
+}
+
+#groupAllStudents, #groupUnassigned, #groupSelectedStudents {
+  overflow: auto;
+  height: 12em;
+  background-color: white;
+  border-bottom: .18em solid #ccc;
+}
+
+#selectedGroupsBoxList {
+  overflow: auto;
+  height: 6.9em;
+  background-color: white;
+  border-bottom: .18em solid #ccc;
+}
+
+#selectedGroupsBoxButton {
+  background-color: white;
+}
+
+.groupParticipant[name='student'] {
+  margin-left: 1em;
+}
+
+.groupCheckBox {
+  margin-left: .5em;
+}
+
+#numberOfStudents {
+  background-color: lightgoldenrodyellow;
+}
+
+.activeGroupDialogViewLink {
+  text-decoration: none;
+  cursor: default;
+  color: #369;
+  &:hover {
+    text-decoration: none;
+    cursor: default;
+    color: #369;
+  }
+}
+
+#groupsTable tr {
+  &.expanded td:first-child a {
+    background: url("../images/icon-20.png") no-repeat scroll 0 -400px transparent;
+    display: block;
+    height: 20px;
+    min-width: 20px;
+    text-indent: -9999px;
+  }
+  &.collapsed td:first-child a {
+    background: url("../images/icon-20.png") no-repeat scroll 0 -420px transparent;
+    display: block;
+    height: 20px;
+    min-width: 20px;
+    text-indent: -9999px;
+  }
+  &.header td:first-child {
+    padding: 0;
+  }
+}
+
+#groupSelectSpan {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.blueHeader {
+  background-color: #e0edf9 !important;
+  background: #e7f1fa;
+  background: -webkit-linear-gradient(top, #eff6fc, #e0edf9);
+  background: -moz-linear-gradient(top, #eff6fc, #e0edf9);
+  background: -ms-linear-gradient(top, #eff6fc, #e0edf9);
+  background: -o-linear-gradient(top, #eff6fc, #e0edf9);
+  background: linear-gradient(top, #eff6fc, #e0edf9);
+  font-style: normal;
+  font-weight: normal;
+  font-weight: bold;
+  color: #444444;
+  padding: 0.1em 0.0em 0.1em 0.0em;
+  cursor: pointer;
+  margin: .5em 0 0;
+}
+
+ul {
+  &#commentList {
+    margin-left: 0px;
+  }
+  &#participantList {
+    margin-left: 0px;
+    > li {
+      margin-left: 0px;
+    }
+  }
+}
+
+h2#participantTitle {
+  margin-top: 10px;
+}
+
+form table tbody tr:first-child td {
+  padding-top: 0;
+}
+
+.header td {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+td {
+  &.drop {
+    width: 25px;
+  }
+  &.title {
+    width: 400px;
+    padding-left: 0;
+  }
+}
+
+a.edit2 {
+  &.btn-edit {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    background-position: 0 -475px;
+  }
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+td.edit {
+  width: 8%;
+}
+
+a.btn-delete {
+  background: url("../images/icon-20.png") no-repeat scroll 0 -38px transparent;
+  display: block;
+  float: right;
+  height: 20px;
+  text-indent: -3000px;
+  width: 20px;
+  &:hover {
+    background: url("../images/icon-20.png") no-repeat scroll 0 -58px transparent;
+  }
+}
+
+#newButtons {
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+}
+
+a.edit2 {
+  &:hover {
+    background-position: 0 -475px;
+  }
+  > img {
+    float: left;
+    margin-top: 12px;
+  }
+}
+
+#newGroupDialog_buttons > div {
+  float: right;
+  margin-top: 7px;
+}

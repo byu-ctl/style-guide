@@ -1,0 +1,1399 @@
+
+
+.grid-header { position:relative; }
+.sidebar #main { margin-left: 225px;}
+.desc { display:none; }
+#gb-display-opts { display:inline-block; max-width: 300px; float: left; width: 100% }
+#gb-nav-group { float:left }
+#add-column { display:inline-block }
+#gb-options { display:inline-block;margin-bottom:-6px }
+#students { margin-top: 0 }
+.th-label { height: 20px; line-height: 20px;}
+
+.clear { clear:both; }
+ .handsontable th > div.flag, .handsontable td > div.flag, div.flag  {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 4px solid red;
+    border-bottom: 5px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+#square {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+
+.dropdown-header { color:#104376; padding:3px 10px !important; font-weight:bold; }
+#display-dropdown a { padding: 2px 10px 2px 23px; }
+#scale-wrapper {
+    max-width:400px;
+    width: 100%;
+}
+
+.scale-label, .scale-setting {
+    height: 40px;
+    line-height: 40px;
+}
+
+.scale-label {
+    display: inline-block;
+    float: left;
+    text-align: right;
+    width: 50px;
+    background-color: #00f;
+}
+.scale-setting {
+
+    background-color: #0f0;
+}
+.scale-input {
+    width: 50px;
+}
+
+#option-dropdowns { margin-left:5px;}
+#option-dropdowns .btn-group { float:left; margin-right:4px; }
+
+#gradebook-container { position:relative; padding-top:57px; overflow: hidden;}
+.frozen-cols-toolbar {padding: 0;}
+
+
+/**
+* FROM NEWEST CSS FOR HANDSONTABLE
+*/
+/**
+ * Handsontable 0.8.16
+ * Handsontable is a simple jQuery plugin for editable tables with basic copy-paste compatibility with Excel and Google Docs
+ *
+ * Copyright 2012, Marcin Warpechowski
+ * Licensed under the MIT license.
+ * http://handsontable.com/
+ *
+ * Date: Tue Mar 26 2013 02:34:10 GMT+0100 (Central European Standard Time)
+ */
+
+.handsontable {
+	float: left;
+    font-family: "helveticaregular",Helvetica,sans-serif;
+    font-size: 10pt;
+    position: relative;
+}
+
+.handsontable.hidden {
+  display : none;
+  left : 0;
+  position :absolute;
+  top : 0;
+}
+
+.handsontable * {
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+}
+
+.handsontable table {
+  border-collapse: separate;
+  position: relative;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  /*user-select: none; /*no browser supports unprefixed version*/
+  border-spacing: 0;
+  margin: 0;
+  border-width: 0;
+  width: 0;
+  outline-width: 0;
+  /* reset bootstrap table style. for more info see: https://github.com/warpech/jquery-handsontable/issues/224 */
+  max-width : none;
+  max-height: none;
+}
+
+
+.handsontable col {
+  width: 50px;
+}
+
+.handsontable col.rowHeader {
+  width: 50px;
+}
+
+.handsontable th,
+.handsontable td {
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  height: 22px;
+  line-height: 21px;
+  padding: 0 4px 0 4px; /* top, bottom padding different than 0 is handled poorly by FF with HTML5 doctype */
+  background-color: #FFF;
+  font-size: 12px;
+  vertical-align: top;
+  outline-width: 0;
+}
+
+.handsontable th:last-child {
+  /*Foundation framework fix*/
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+
+.handsontable tr:first-child th.htNoFrame,
+.handsontable th:first-child.htNoFrame,
+.handsontable th.htNoFrame {
+  border-left-width: 0;
+  background-color: white;
+  border-color: #FFF;
+}
+
+.handsontable th:first-child,
+.handsontable td:first-child,
+.handsontable .htNoFrame + th,
+.handsontable .htNoFrame + td {
+  border-left: 1px solid #CCC;
+}
+
+.handsontable tr:first-child th,
+.handsontable tr:first-child td {
+  border-top: 1px solid #CCC;
+}
+
+.handsontable thead tr:last-child th {
+  border-bottom-width: 0;
+}
+
+.handsontable thead tr.lastChild th {
+  border-bottom-width: 0;
+}
+
+.handsontable th.active {
+  background-color: #CCC;
+}
+
+
+/* plugins */
+
+.handsontable .manualColumnMover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  width: 5px;
+  height: 25px;
+  z-index: 999;
+  cursor: move;
+}
+
+.handsontable th .manualColumnMover:hover,
+.handsontable th .manualColumnMover.active {
+  background-color: #88F;
+}
+
+.handsontable .manualColumnResizer {
+  position: absolute;
+  right: -1px;
+  top: 0;
+  background-color: transparent;
+  width: 5px;
+  height: 25px;
+  z-index: 999;
+  cursor: col-resize;
+}
+
+.handsontable th .manualColumnResizer:hover,
+.handsontable .manualColumnResizerLine .manualColumnResizer {
+  background-color: #AAB;
+}
+
+.handsontable .columnSorting:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* border line */
+.handsontable .wtBorder {
+  position: absolute;
+  font-size: 0;
+}
+
+.handsontable td.area {
+  background-color: #EEF4FF;
+}
+
+/* fill handle */
+.handsontable .wtBorder.corner {
+  font-size: 0;
+  cursor: crosshair;
+}
+
+.handsontable .htBorder.htFillBorder {
+  background: red;
+  width: 1px;
+  height: 1px;
+}
+
+/* textarea border color */
+textarea.handsontableInput {
+  border: 2px solid #5292F7;
+  outline-width: 0;
+  margin: 0;
+  padding: 1px 4px 0 2px;
+  font-family: Arial, Helvetica, sans-serif; /*repeat from .handsontable (inherit doesn't work with IE<8) */
+  line-height: 1.3em;
+  font-size: 13px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+  resize: none;
+
+  /*below are needed to overwrite stuff added by jQuery UI Bootstrap theme*/
+  display: inline-block;
+  font-size: 13px;
+  line-height: inherit;
+  color: #000;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.handsontableInputHolder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+}
+
+/*
+AutocompleteRenderer down arrow
+*/
+.handsontable .htAutocomplete {
+  position: relative;
+  padding-right: 20px;
+}
+
+.handsontable .htAutocompleteArrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 10px;
+  color: #EEE;
+  cursor: default;
+  width: 16px;
+  text-align: center;
+}
+
+.handsontable td .htAutocompleteArrow:hover {
+  color: #777;
+}
+
+/*
+NumericRenderer
+*/
+.handsontable .htNumeric {
+  text-align: right;
+}
+
+/* typeahead rules. Needed only if you are using the autocomplete feature */
+.handsontable .typeahead {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.3em;
+  font-size: 13px;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  float: left;
+  display: none;
+  min-width: 160px;
+  padding: 4px 0;
+  margin: 0;
+  list-style: none;
+  background-color: white;
+  border-color: #CCC;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  margin-top: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.handsontable .typeahead li {
+  line-height: 18px;
+  min-height: 18px;
+  display: list-item;
+  margin: 0;
+}
+
+.handsontable .typeahead a {
+  display: block;
+  padding: 3px 15px;
+  clear: both;
+  font-weight: normal;
+  line-height: 18px;
+  min-height: 18px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.handsontable .typeahead li > a:hover,
+.handsontable .typeahead .active > a,
+.handsontable .typeahead .active > a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #08C;
+}
+
+.handsontable .typeahead a {
+  color: #08C;
+  text-decoration: none;
+}
+
+/*context menu rules*/
+ul.context-menu-list {
+  color: black;
+}
+
+ul.context-menu-list li {
+  margin-bottom: 0; /*Foundation framework fix*/
+}
+
+/**
+ * dragdealer
+ */
+
+.handsontable .dragdealer {
+  position: relative;
+  width: 9px;
+  height: 9px;
+  background: #F8F8F8;
+  border: 1px solid #DDD;
+}
+
+.handsontable .dragdealer .handle {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #C5C5C5;
+}
+
+.handsontable .dragdealer .disabled {
+  background: #898989;
+}
+/**
+*END OF CSS FROM HANDSONTABLE
+*/
+
+/**
+ * It may be useful to copy the below styles and use on your page
+*/
+.handsontable {
+    float: left;
+    position: relative;
+    font-family: "helveticaregular", Helvetica, sans-serif;
+    font-size: 10pt;
+}
+
+.handsontable table.htCore th,
+.handsontable .htColHeader {
+    font-family: "helveticaregular", Helvetica, sans-serif;
+    font-size:10.25pt;
+    color:#434343;
+    background: #eeeeee;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNmY2ZjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #eeeeee 0%, #f6f6f6 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#f6f6f6));
+    background: -webkit-linear-gradient(top, #eeeeee 0%,#f6f6f6 100%);
+    background: -o-linear-gradient(top, #eeeeee 0%,#f6f6f6 100%);
+    background: -ms-linear-gradient(top, #eeeeee 0%,#f6f6f6 100%);
+    background: linear-gradient(to bottom, #eeeeee 0%,#f6f6f6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#f6f6f6',GradientType=0 );
+}
+.handsontable .cursor { cursor:pointer; }
+.handsontable .htColHeader .caret {
+opacity: 0.75;
+}
+.handsontable * {
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
+
+.handsontable table {
+    border-collapse: separate;
+    position: relative;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    border-spacing: 0;
+}
+
+.handsontable th,
+.handsontable td {
+    border-right: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    min-width: 80px;
+}
+
+.handsontable th > div,
+.handsontable td > div {
+    position:relative;
+}
+.handsontable th {   padding: 0 0 0 0; /* top, bottom padding different than 0 is handled poorly by FF with HTML5 doctype */ }
+.handsontable td { padding: 0 0 0 0; }
+.handsontable div.minWidthFix {
+    width: 50px;
+}
+
+.handsontable tr:first-child th.htNoFrame,
+.handsontable th:first-child.htNoFrame,
+.handsontable th.htNoFrame {
+    border-left-width: 0;
+    background-color: white;
+    border-color: #FFF;
+}
+
+.handsontable th:first-child,
+.handsontable td:first-child,
+.handsontable .htNoFrame + th,
+.handsontable .htNoFrame + td {
+    /*border-left: 1px solid #DDD;*/
+}
+
+.handsontable tr:first-child td,
+.handsontable .htNoFrame + td {
+    padding-top:0px;
+}
+
+.handsontable tr:first-child th,
+.handsontable tr:first-child td {
+    border-top: 1px solid #DDD;
+}
+
+.handsontable thead tr:last-child th {
+    border-bottom-width: 0;
+}
+
+.handsontable thead tr.lastChild th {
+    border-bottom-width: 0;
+}
+
+.handsontable th {
+    background-color: #EEE;
+    color: #222;
+    font-weight: normal;
+}
+
+.handsontable th .small {
+    width: 108px;
+}
+
+.handsontable thead th {
+    padding-top:0px;
+    padding-bottom:px;
+}
+
+.handsontable th.active {
+    background-color: #CCC;
+}
+
+/* border background */
+.handsontable .htBorderBg {
+    position: absolute;
+    font-size: 0;
+}
+
+.handsontable .htBorderBg.selection {
+    background-color: #EEF4FF;
+}
+
+/* border line */
+.handsontable .htBorder {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #000;
+    font-size: 0;
+}
+
+.handsontable .htBorder.current {
+    background: #5292F7;
+    width: 2px;
+    height: 2px;
+}
+
+.handsontable .htBorder.selection {
+    background: #89AFF9;
+    width: 1px;
+    height: 1px;
+}
+
+/* fill handle */
+.handsontable .htFillHandle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #5292F7;
+    border: 1px solid #fff;
+    font-size: 0;
+    cursor: crosshair;
+}
+
+.handsontable .htBorder.htFillBorder {
+    background: red;
+    width: 1px;
+    height: 1px;
+
+}
+/* textarea border color */
+/** DEPRECIATED
+
+textarea.handsontableInput {
+    border: 2px solid #5292F7;
+    outline-width: 0;
+    margin: 0;
+    padding: 1px 4px 0 2px;
+    font-family: "helveticaregular", Helvetica, sans-serif; /*repeat from .handsontable (inherit doesn't work with IE<8) *//*
+    line-height: 1.3em;
+    font-size: 13px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+    resize: none;
+}
+
+.handsontableInputHolder.htHidden textarea.handsontableInput {
+    border-color: #5292F7;
+    background: #5292F7;
+    color: #5292F7;
+}
+
+.handsontableInputHolder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}*/
+
+.handsontable .htAutocomplete {
+    position: relative;
+    padding-right: 20px;
+}
+
+.handsontable .htAutocompleteArrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 10px;
+    color: #EEE;
+    cursor: default;
+    width: 16px;
+    text-align: center;
+}
+
+.handsontable td .htAutocompleteArrow:hover {
+    color: #777;
+}
+
+.closeX {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+
+.closeX:hover {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+
+button.closeX {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity 0.15s linear;
+    -moz-transition: opacity 0.15s linear;
+    -o-transition: opacity 0.15s linear;
+    transition: opacity 0.15s linear;
+}
+
+.fade.in {
+    opacity: 1;
+}
+
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000000;
+}
+
+.modal-backdrop.fade {
+    opacity: 0;
+}
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1050;
+    /* conflicting with bootstrap files
+    width: 694px;
+    */
+    /* setting max height/width to prevent giant modals */
+    max-height: 600px;
+    max-width: 730px;
+    /* */
+    margin: -250px 0 0 -280px;
+    background-color: #ffffff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    *border: 1px solid #999;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    outline: none;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+.modal.fade {
+    top: -25%;
+    -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, top 0.3s ease-out;
+    transition: opacity 0.3s linear, top 0.3s ease-out;
+}
+
+.modal.fade.in {
+    top: 50%;
+}
+
+.modal-header {
+    padding: 9px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header .closeX {
+    margin-top: 2px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    line-height: 30px;
+}
+
+.modal-body {
+    /*max-height: 400px;*/
+    padding: 15px;
+    /*
+    This is causing issues, commenting out
+    overflow-y: auto;
+    */
+}
+
+.modal-form {
+    margin-bottom: 0;
+}
+
+.modal-footer {
+    padding: 14px 15px 15px;
+    margin-bottom: 0;
+    text-align: right;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    *zoom: 1;
+    -webkit-box-shadow: inset 0 1px 0 #ffffff;
+    -moz-box-shadow: inset 0 1px 0 #ffffff;
+    box-shadow: inset 0 1px 0 #ffffff;
+}
+
+.modal-footer:before,
+.modal-footer:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.modal-footer:after {
+    clear: both;
+}
+
+.modal-footer .btn + .btn {
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.modal-footer .btn-group .btn + .btn {
+    margin-left: -1px;
+}
+
+.modal-footer .btn-block + .btn-block {
+    margin-left: 0;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.affix {
+    position: fixed;
+}
+
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+.tick {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+.bar {
+    fill: steelblue;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.display-grid {
+    position: relative;
+    font-family: 'cartogothic_stdbold';
+    line-height: 1.3em;
+    font-size: 10.5pt;
+}
+
+.display-grid table {
+    background: #EFF6FB;
+    border-collapse: separate;
+    position: relative;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    border-spacing: 0;
+}
+
+.display-grid th, .display-grid td {
+    border-right:1px solid #DDD;
+    border-bottom:1px solid #DDD;
+    min-width: 50px;
+    height: 25px;
+    line-height: 15px;
+}
+
+.display-grid * {
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
+.display-grid td {
+    padding:0 0 0 0;
+}
+
+.display-grid td > div { padding: 0 5px 0 5px; }
+.frozen-cols .display-grid td:first-child > div { padding: 0; }
+
+#display-due-date td { color: #326598; }
+#display-due-date td:first-child { color:#434343; }
+
+.check { 
+    position: absolute; 
+    left: 3px; 
+    top: 4px; 
+    width:20px; 
+    height:11px; 
+    background:transparent url('../images/icon-20.png');
+    background-position: 0 -184px;
+    background-repeat: no-repeat;
+}
+
+#preference-selector li { position:relative; }
+.section-selection { position:relative; }
+.section-selection .check, #preference-selector .check { position:absolute; top:4px; left:3px; }
+/*#filter-by a, #preference-selector a { padding: 3px 10px 3px 19px; }*/
+#filter-by li { position: relative; padding: 3px 15px; }
+#filter-by li>a { padding: 0px !important; }
+
+.data-grid { font-size:10pt; }
+
+
+#myModal .modal-header {
+    background:#003366;
+    color:#ffffff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding:5px 0px;
+    border-bottom:none;
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+}
+
+#myModal { font-family: 'cartogothic_stdregular'; }
+#myModal .modal-header-clone {
+    padding:5px 15px;
+    height:24px;
+    position:relative;
+}
+
+#myModal .save {
+    border:1px #fff solid;
+    -moz-box-shadow:    -1px 2px 5px 1px #999;
+    -webkit-box-shadow: -1px 2px 5px 1px #999;
+    box-shadow:         -1px 2px 5px 1px #999;
+}
+#scores .modal-backdrop { background-color:transparent; }
+/*#myModal .close {
+    background:#628CB6;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding:0 4px;
+    margin-top:2px;
+        margin-right:9px;
+    opacity:0.4;
+}*/
+
+
+/*
+causing issues on the view statistics modal
+width is declared earlier on line 398
+*/
+#myModal.modal { /*width:auto;*/ }
+#myModal.modal.fade.in {
+    top: 50%;
+}
+#myModal.modal { background-color:transparent; }
+#myModal .modal-body  {
+    background: #EFF6FC;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+}
+#myModal .modal-footer {
+    background-color: #EFF6FC;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+}
+#myModal h3 { color:#ffffff; font-family: 'cartogothic_stdregular';font-size:10pt; height:24px; overflow:hidden; line-height:24px;font-weight:normal; padding-left: 8px;}
+
+#myModal #score-view ul { list-style:none; }
+#myModal #score-view li { height:25px; }
+#myModal #score-view input[type='text'] { width:32px; }
+
+#default-score-override { padding:15px 0 0 15px; }
+
+/* hiding overflow to remove scroll bars */
+#score-statistics { margin:10px; overflow: hidden; }
+#score-statistics h2 { margin: 0 0 8px 6px; color:#000; font-size:10pt; }
+#score-statistics table { border:none; margin-top:2px; margin-left:30px;  }
+#score-statistics td:first-child { width:55%; }
+#score-statistics td, #score-statistics th { border:none; }
+#score-statistics .white-background { background:#fff; padding:10px 60px 10px 10px; border: 1px #ccc solid; }
+
+.score-view-list { width:100%; list-style:none; margin-left:0; margin-right:0; margin-top:0; margin-bottom:0;  overflow:auto;}
+.score-view-list li { float:left; padding:0px; text-align:center; min-width:44px; margin-left:0; margin-right:0; margin-top:0; margin-bottom:0; }
+.plagiarism { width:11px; height:11px; margin: 2px auto 0;}
+.plagiarism.green { background:#329846; }
+.plagiarism.blue { background:#326598; }
+.plagiarism.yellow { background:#ED8700; }
+.plagiarism.red { background:#980010; }
+.plagiarism.none { background:transparent; }
+
+section#main > :first-child { display:none; }
+
+.nav-tabs > li > a { text-decoration:none; }
+.nav-tabs > li > a.active {
+    border:1px solid #ccc;
+    text-decoration:none;
+    color:#000;
+}
+
+#message-students { width:500px; }
+#message-students textarea { height:220px; width:350px;}
+#message-students label { float:left; width:67px; }
+#message-students textarea, #message-students input, #message-students select { float:left; }
+#message-students input { width:350px; }
+#message-students select { width:280px; }
+#message-students ul { list-style:none; }
+#message-students li { padding-bottom:10px; }
+#message-students li > div { overflow:hidden; }
+#message-students #recipient-option { overflow:hidden; float:left; padding-left:6px; }
+#message-students #recipient-option input { width:40px; margin-right:2px;}
+
+li.disabled > a { color:#aaa !important; }
+li.disabled > a:hover { background-color:#fff !important; color:#aaa !important; }
+/*This is to set the column width to a given range. This also sets max-height, so text will only wrap once.*/
+.handsontable td, .handsontable th {
+    max-width:150px;
+}
+th {
+    word-wrap: break-word;
+}
+
+td.name-dropdown .btn {
+    position: absolute;
+    right: 0;
+    top: -6px;
+    display: none;
+}
+td.name-dropdown:hover div .btn{
+    display: inline;
+}
+div.gradebook-popup{
+    max-height:400px;
+    overflow-y:scroll;
+}
+.handsontable table.htCore th, th.htColHeader, th.htColHeader .small{
+    height: 41px;
+    max-height: 36px;
+}
+.handsontable table.htCore th .btn,
+.htColHeader .small,.htColHeader .btn-group,
+th.htColHeader .btn, 
+.static-wrapper-td .headerButton{
+    //height: 100%;
+    //position: absolute;
+    //top:0;
+    //right:0;
+   /* top: 13px; */
+}
+.handsontable table.htCore th .btn,
+th.htColHeader .btn {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.handsontable table.htCore th .btn:first-of-type,
+th.htColHeader .btn:first-of-type {
+    padding: 0;
+    float: right;
+    border:none;    
+    width: 20px;
+    height: 36px;
+}
+.handsontable table.htCore th .btn-fill,
+.htColHeader .btn-fill {
+    width: 78%;
+}
+.handsontable table.htCore th .btn-full,
+.htColHeader .btn-full {
+    width: 98%;
+}
+.dropdown-btn{
+    border: medium none;
+    max-height: 31px;
+    max-width: 1px;
+    position: absolute;
+
+}
+
+section#main{
+    border-left: thin solid #DDDDDD;
+}
+.handsontable td {
+    position: relative;
+}
+/*#category-tabs{
+    max-height: 35px;
+    max-width:850px;
+    min-width: 650px;
+    border-bottom: 1px solid #DDDDDD;
+    position: relative;
+    top: 2px;
+    width: 80%;
+}*/
+.nav-tabs > li{
+    float:none;
+    display:inline-block;
+}
+#cat-nav{
+    position:relative;
+    left: 10px;
+}
+
+input.lowScoreInput{
+	width: 4em;
+}
+.additional-rows{
+    background: #FAFBFF
+}
+
+td.flagMe:before{
+	/*content: "<div class='flag'></div>";*/
+}
+div.lowStudents{
+	max-height: 17em;
+}
+div.overflowLowScore{
+	overflow: scroll;
+	
+}
+.points, .percent{
+    padding: 0 1em;
+}
+#messageSubject{
+    width:600px;
+}
+
+.btn-group > .dropdown-toggle{
+    box-shadow: none !important;
+}
+#view-percentage, #view-points{
+    position: relative;
+    top: 6px;
+}
+#view-letter-grade{
+    position: relative;
+    top: -3px;
+}
+.htColHeader{
+    height:36px;
+}
+.btn-group .headerButton{
+    position:relative;
+}
+.btn-group:before, .btn-group:after {
+    content : none;
+}
+
+th.htColHeader:first-child .dropdown-menu.pull-right{
+    left: 0;
+    right: auto;
+}
+.sidebar #main{
+    margin-right: 0;
+}
+.static-wrapper-td{
+    padding: 3px 0 2px 5px !important;
+    position: relative;
+    height: 20px !important;
+}
+.static-data{
+display: block;
+margin-right: 20px;
+padding-left: 5px;
+}
+.static-wrapper-td .caret{
+    position: relative;
+    top: 6px;
+}
+
+$trPadding: 5px;
+.htCore td, .additional-rows tr td{
+    height: 20px !important;
+    padding: 2px $trPadding 2px !important;
+}
+.flagHolder .flag {
+    left: -$trPadding;
+}
+#cat-left, #cat-right{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#cat-right{
+    left: auto;
+    right: 0;
+}
+.nav-tabs{
+    margin: 0;
+    border-bottom: none;
+    overflow: hidden;
+}
+.score-table{
+    height: 100%;
+    width: 50%;
+    overflow: scroll;
+}
+
+div.frozen-cols table th.htColHeader{
+	cursor: pointer;
+}
+
+div.handsontable table.htCore th.htColHeader{
+	cursor: pointer;
+}
+
+
+tbody.additional-rows {
+  position: fixed;
+  bottom:37px;
+  border-top:2px solid #bbb;
+  border-bottom:1px solid #bbb;
+  td {
+    width:98px;
+  }
+}
+
+
+/* Nate update */
+body > footer {
+  position: fixed;
+  
+}
+
+body.sidebar {
+  #main {
+    padding-top:0px;
+  }
+}
+
+#sidenav {
+  background-color:#eee;
+  border-right: 1px solid #ddd;
+}
+
+html, body, div#main {
+}
+
+div#gradebook-container { // Everything
+  position: absolute;
+  margin:0;
+  padding: 0;
+  padding-top:46px;
+  padding-bottom:36px;
+  border-bottom:1px solid #ddd;
+  
+  table {
+    border:none;
+  }
+  
+  th {
+    font-size: 13px;
+    div.btn-group {
+      position: absolute;
+      top:0;
+      right:0;
+    }
+    a.dropdown-toggle {
+      display: block;
+      height: 40px;
+      width: 12px;
+      padding:0;
+      padding-left:5px;
+      top:0;
+      span.caret {
+        margin-top:18px;
+      }
+    }
+    .header {
+      margin:0 16px 0 5px;
+      padding:7px 0 0;
+      text-align: left;
+      display: block;
+      position: static;
+      line-height: 1.2;
+      height:32px;
+      overflow: hidden;
+    }
+  }
+  
+  
+  div.frozen-cols-toolbar, div.free-cols-toolbar { // Top bars (filters and categories)
+    position:fixed;
+    background-color: #fff;
+    z-index: 3;
+    border-bottom: 1px solid #ddd;
+    padding-top:12px;
+  }
+  
+  div.frozen-cols-toolbar { // Gradebook Filters
+    width:100%;
+    height: 35px;
+  }
+
+  div.free-cols-toolbar { // Assignment Categories
+    overflow: hidden;
+    padding: 12px 45px 0;
+    white-space: nowrap;
+    #cat-left, #cat-right {
+      display: none;
+    }
+    ul.nav {overflow: hidden;}
+    li {
+      margin-left: 0;
+      margin-right: 6px;
+    }
+    li.tab-narrow {
+      margin-right: 4px;
+      a {
+        padding-left:5px;
+        padding-right:5px;
+      }
+    }
+  }
+  
+  div#score-table { // All the scores
+    width:auto;
+    
+    div.frozen-cols { // The frozen columns
+      position:absolute;
+      top:46px;
+      left:0;
+      background-color: #fff;
+      z-index: 1;
+      
+      tbody .headerButton {
+        position: absolute;
+        top:0;
+        right:0;
+      }
+      
+      table { // The table
+        thead.header-copy {
+          margin-top:1px;
+        }
+      }
+
+    }
+    
+    div.dynamic-holder { // Container
+      z-index:0;
+      position: relative;
+    
+      div.data-grid.data-table { // Another container
+      
+        div.handsontable { // The scores table container
+        
+          div table.htcore { // The table
+
+          }
+        }
+      }
+    }
+  }
+  
+  tfoot.footer-copy, 
+  thead.header-copy,
+  tbody.body-copy {
+    position: fixed;
+    z-index: 4;
+    background-color: #fff;
+  }
+  
+  tfoot.footer-copy {
+    border-top: 1px solid #ccc;
+  }
+  
+  thead.header-copy {
+    top:0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  tbody.body-copy {
+    z-index: 3;
+    td {
+      width:108px;
+    }
+    .static-wrapper-td {
+      width:103px;
+    }
+  }
+  
+  .handsontable {
+    .body-copy, .footer-copy, .header-copy {
+      td, th {
+        max-width: 1000px;
+      }
+    }
+  }
+}
+
+footer {
+  z-index: 3;
+  border-top: 2px solid #ddd;
+}
+
+section #assignmentBox{
+    max-width: 750px;
+}
+
+div.handsontable table.htCore tbody td span.scoreHolder{
+	width: 33%;
+	display: inline-block;
+}
+
+div.handsontable.frozen-cols table tbody td span.allScoresHolder{
+	text-align: center;
+}
+
+div.handsontable.frozen-cols table tbody td span.scoreHolder{
+	width: 33%;
+	display: inline-block;
+}

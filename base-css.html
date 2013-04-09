@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Base · Bootstrap</title>
+    <title>Base CSS · Style Guide · BYU Learning Suite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le styles -->
+    <!-- styles -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/ls/base.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
 
@@ -18,32 +19,17 @@
       <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
 
-    <!-- Le fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+	<link rel="shortcut icon" href="assets/ico/favicon.ico">
+	<link rel="apple-touch-icon" href="assets/ico/apple-touch-icon.png">
 
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-146052-10']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
   </head>
 
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
-
     <!-- Navbar
     ================================================== -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container">
+        <div class="container nopadding">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -52,18 +38,24 @@
           <a class="brand" href="./index.html">Bootstrap</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="">
+              <li class="active">
                 <a href="./index.html">Home</a>
               </li>
+              <li class="">
+                <a href="./base-css.html">Base CSS</a>
+              </li>
+              <li class="">
+                <a href="./icons.html">Icons</a>
+              </li>
+              <!--
               <li class="">
                 <a href="./getting-started.html">Get started</a>
               </li>
               <li class="">
                 <a href="./scaffolding.html">Scaffolding</a>
               </li>
-              <li class="active">
-                <a href="./base-css.html">Base CSS</a>
-              </li>
+              -->
+<!--
               <li class="">
                 <a href="./components.html">Components</a>
               </li>
@@ -73,16 +65,98 @@
               <li class="">
                 <a href="./customize.html">Customize</a>
               </li>
+-->
             </ul>
           </div>
         </div>
       </div>
     </div>
 
+<style>
+
+ul.swatches {
+  list-style: none;
+  margin:0;
+}
+
+ul.swatches span, ul.swatches code {
+  display: inline-block;
+  width: 5em;
+  margin-left:.5em;
+}
+
+ul.swatches li div {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+/* BYU Blue */
+.blue0 { background-color: #001948; }
+.blue1 { background-color: #025; }
+.blue2 { background-color: #036; }
+.blue3 { background-color: #147; }
+.blue4 { background-color: #369; }
+.blue4-5 { background-color: #47A; }
+.blue5 { background-color: #628cb6; }
+.blue6 { background-color: #91b2d2; }
+.blue7 { background-color: #abc8e4; }
+.blue8 { background-color: #d1e4f6; }
+.blue9 { background-color: #e0edf9; }
+.blue10 { background-color: #eff6fc; }
+.blue11 { background-color: #f9fcfe; }
+
+
+/* Highlight Yellow */
+.yellow0 { background-color: #ffc; }
+.yellow1 { background-color: #ffd; }
+.yellow2 { background-color: #ffe; }
+
+
+/* Reds */
+.red0 { background-color: #901; }
+.red1 { background-color: #b01; }
+
+
+/* Green (not used much) */
+.green0 { background-color: #004818; }
+.green1 { background-color: #005518; }
+.green2 { background-color: #006614; }
+.green3 { background-color: #117725; }
+.green4 { background-color: #339947; }
+.green5 { background-color: #62b672; }
+.green6 { background-color: #91d29d; }
+.green7 { background-color: #abe4b6; }
+.green8 { background-color: #d1f6d8; }
+.green9 { background-color: #e0f9e4; }
+.green10 { background-color: #effcf1; }
+.green11 { background-color: #f9fefa; }
+
+
+/* Gray */
+.gray0 { background-color: #000; }
+.gray1 { background-color: #111; }
+.gray2 { background-color: #222; }
+.gray3 { background-color: #333; }
+.gray4 { background-color: #444; }
+.gray5 { background-color: #555; }
+.gray6 { background-color: #666; }
+.gray7 { background-color: #777; }
+.gray8 { background-color: #888; }
+.gray9 { background-color: #999; }
+.grayA { background-color: #aaa; }
+.grayB { background-color: #bbb; }
+.grayC { background-color: #ccc; }
+.grayD { background-color: #ddd; }
+.grayE { background-color: #eee; }
+.grayF { background-color: #fff; }
+</style>
+
+
 <!-- Subhead
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
-  <div class="container">
+  <div class="container nopadding">
     <h1>Base CSS</h1>
     <p class="lead">Fundamental HTML elements styled and enhanced with extensible classes.</p>
   </div>
@@ -96,8 +170,8 @@
     <div class="row">
       <div class="span3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#colors"><i class="icon-chevron-right"></i> Colors</a></li>
           <li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
-          <li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li>
           <li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li>
           <li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
           <li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
@@ -107,6 +181,45 @@
       </div>
       <div class="span9">
 
+
+        <!-- Colors
+        ================================================== -->
+        <section id="colors">
+          <div class="page-header">
+            <h1>Colors</h1>
+          </div>
+          
+          <div class="span4">
+            <h2>Blues</h2>
+            <ul class="swatches">
+              <li><div class="blue0  "></div> <span>Blue 0  </span> <code>#001948</code></li>
+              <li><div class="blue1  "></div> <span>Blue 1  </span> <code>#025   </code></li>
+              <li><div class="blue2  "></div> <span>Blue 2  </span> <code>#036   </code></li>
+              <li><div class="blue3  "></div> <span>Blue 3  </span> <code>#147   </code></li>
+              <li><div class="blue4  "></div> <span>Blue 4  </span> <code>#369   </code></li>
+              <li><div class="blue4-5"></div> <span>Blue 4.5</span> <code>#47A   </code></li>
+              <li><div class="blue5  "></div> <span>Blue 5  </span> <code>#628cb6</code></li>
+              <li><div class="blue6  "></div> <span>Blue 6  </span> <code>#91b2d2</code></li>
+              <li><div class="blue7  "></div> <span>Blue 7  </span> <code>#abc8e4</code></li>
+              <li><div class="blue8  "></div> <span>Blue 8  </span> <code>#d1e4f6</code></li>
+              <li><div class="blue9  "></div> <span>Blue 9  </span> <code>#e0edf9</code></li>
+              <li><div class="blue10 "></div> <span>Blue 10 </span> <code>#eff6fc</code></li>
+              <li><div class="blue11 "></div> <span>Blue 11 </span> <code>#f9fcfe</code></li>
+            </ul>
+          </div>
+
+          <div class="span4">
+            <h2>Highlights</h2>
+            <ul class="swatches">
+              <li><div class="yellow0"></div> <span>Yellow 0 </span> <code>#ffc</code></li>
+              <li><div class="yellow1"></div> <span>Yellow 1 </span> <code>#ffd</code></li>
+              <li><div class="yellow2"></div> <span>Yellow 2 </span> <code>#ffe</code></li>
+              <li><div class="red0   "></div> <span>Red 0    </span> <code>#901</code></li>
+              <li><div class="red1   "></div> <span>Red 1    </span> <code>#b01</code></li>
+            </ul>
+          </div>
+          
+        </section>
 
 
         <!-- Typography
@@ -462,36 +575,6 @@
       </section>
 
 
-
-        <!-- Code
-        ================================================== -->
-        <section id="code">
-          <div class="page-header">
-            <h1>Code</h1>
-          </div>
-
-          <h2>Inline</h2>
-          <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
-<div class="bs-docs-example">
-  For example, <code>&lt;section&gt;</code> should be wrapped as inline.
-</div>
-<pre class="prettyprint linenums">
-For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped as inline.
-</pre>
-
-          <h2>Basic block</h2>
-          <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p>
-<div class="bs-docs-example">
-  <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
-</div>
-<pre class="prettyprint linenums" style="margin-bottom: 9px;">
-&lt;pre&gt;
-  &amp;lt;p&amp;gt;Sample text here...&amp;lt;/p&amp;gt;
-&lt;/pre&gt;
-</pre>
-          <p><span class="label label-info">Heads up!</span> Be sure to keep code within <code>&lt;pre&gt;</code> tags as close to the left as possible; it will render all tabs.</p>
-          <p>You may optionally add the <code>.pre-scrollable</code> class which will set a max-height of 350px and provide a y-axis scrollbar.</p>
-        </section>
 
 
 
@@ -2175,7 +2258,6 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
   </div>
 
 
-
     <!-- Footer
     ================================================== -->
     <footer class="footer">
@@ -2218,23 +2300,6 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
     <script src="assets/js/google-code-prettify/prettify.js"></script>
 
     <script src="assets/js/application.js"></script>
-
-
-    <!-- Analytics
-    ================================================== -->
-    <script>
-      var _gauges = _gauges || [];
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
 
   </body>
 </html>

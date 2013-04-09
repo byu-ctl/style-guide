@@ -1,0 +1,70 @@
+/******************************************************* 
+	File:	 base.css
+	Author:	 BYU Center for Teaching & Learning
+	Contact: Nathan Walton 
+	
+	Desc:	Contains a reset and basic styles.
+	
+			This is the basic style sheet for web
+			applications built by or through CTL.
+			DO NOT CHANGE THESE STYLES. If necessary,
+			override them.
+					
+*******************************************************/
+
+@import "mixins";
+@import "colors";
+
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/buttons";
+@import "bootstrap/button-groups";
+@import "bootstrap/dropdowns";
+@import "bootstrap/sprites";
+@import "bootstrap/navs";
+@import "base/font-awesome";
+
+@import "base/reset";
+@import "base/html5";
+@import "base/nav-pos";
+@import "base/push-footer";
+@import "base/spacing";
+@import "base/text-and-typography";
+@import "base/headings";
+@import "base/lists";
+@import "base/tables";
+@import "base/links";
+@import "base/highlight-colors";
+@import "base/header";
+@import "base/alerts";
+@import "base/no-content";
+@import "base/buttons";
+@import "base/action-lists";
+@import "base/forms";
+@import "base/aloha";
+@import "base/ck-fixes";
+@import "base/navigation";
+@import "base/sidebar";
+@import "base/top-dropdown";
+@import "base/tabs";
+
+@import "base/interface-elements";
+
+@import "base/course-style";
+
+@import "base/non-semantic";
+@import "base/media-queries";
+
+
+
+// Fixes - (look at these later)
+body #buttonbar { display: none; }
+form { margin: 0; padding: 0; }
+form .desc h2 { font-size: 1.5em; color: $blue3; }
+.navImage { display: none; }
+
+@import "base/controls";
+
+@media print {
+  @import "print";
+}

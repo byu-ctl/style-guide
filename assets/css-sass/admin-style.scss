@@ -1,0 +1,29 @@
+/* 
+    Document   : admin-style
+    Created on : Oct 25, 2011, 3:24:27 PM
+    Author     : cmk49
+    Description: 
+        Blank style sheet for future use.
+*/
+
+#sidenav h2 {
+  background-position: 0 -210px; }
+
+root {
+  display: block; }
+
+.feedback-titles {
+  font-weight: bold;
+  font-style: normal; }
+
+.feedback-table {
+  margin: 7px;
+  width: 100%;
+  td {
+    border-bottom: 1px dotted #ccc;
+    &.feedback {
+      min-width: 50%; } } }
+
+.feedback-table .date{
+    position: relative !important;
+}

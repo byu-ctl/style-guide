@@ -1,0 +1,35 @@
+// Push footers to the bottom of short pages
+
+html { height: 100%; background: #fff; }
+body { min-height: 100%; position: relative; background: #fff; }
+
+body > section#main {
+  padding-bottom: 9em; // At least height of the footer
+  margin: 1em 4em 0;
+  @include nate_clearfix();
+}
+
+.sidebar nav.sidenav { margin-bottom: 63px; } // At least height of the footer
+
+body > footer {
+  background: #fff;
+  border-top: 1px solid #eee;
+  height: 36px; // Height of the footer
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  clear: both;
+  margin-left: 225px;
+}
+
+body > footer > * { margin-left: 20px; margin-right: 20px; }
+footer a#footerSend { padding-top: 4px; height: 20px; color: $blue5; padding-left: 30px; background: transparent url("../images/icon-24.png") 0px -600px no-repeat; }
+footer a#footerSend:hover { color: $blue1; background-position: 0px -600px; }
+
+#copyright-notice {
+  position: absolute;
+  top: .5em;
+  color: #999;
+  left: 0;
+}

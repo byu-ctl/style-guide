@@ -1,0 +1,68 @@
+body { min-width: 768px; }
+#personal-info {
+  margin: 5px 14px 6px;
+  position: absolute;
+  top: 1px;
+  right: 5px;
+  h3 {
+    display: inline;
+    color:$blue8;
+    padding-right:5px; }
+  a { 
+    color: $blue9;
+    display: inline-block; 
+    @include nate_linear-gradient($blue5, $blue4);
+    @include nate_text-shadow(0px -1px 0px, .35);
+    @include nate_border-radius(14px); 
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset,0 1px 8px rgba(0, 0, 0, 0.2);
+    padding: 1px 18px 3px;
+    &:hover {
+      color:#fff;
+      @include nate_text-shadow(0px -1px 0px, .5); } } }
+      
+  a#change-view {
+  	color:$blue7;
+    margin-right: 12px; 
+    padding-left: 22px; 
+    background: transparent url("../images/icon-20.png") 0px -360px no-repeat; 
+    display: block; 
+    position: absolute; 
+    top: 38px; 
+    right: 16px;
+    @include nate_transition(color .2s);
+    .wf-active & {
+      font-weight:bold; }
+    &:hover { 
+      background-position: 0px -380px;
+      color:$blue9; } }
+
+
+
+
+/* Copyright message */
+.copyrightAgree { color: $green4; }
+
+/* File upload */
+.fileUploadFrame {overflow:hidden; width:100%;}
+
+
+/* Debug Pre Tags */
+pre.cake-debug { background: #ffcc00; overflow: auto; position: relative; max-height: 375px; }
+
+
+
+/* Green Header Bar */
+.greenHeader { background-color: $blue9 !important; @include nate_linear-gradient($blue10, $blue9); font-style: normal; font-weight: normal; }
+.course-title { font-size: 1.1em; font-weight: bold; color: $blue3; }
+.full-width { width: 100%; margin-bottom: 18px; }
+.thborder { border-bottom: 1px solid #ccc; vertical-align: bottom; font-style: normal; font-weight: normal; }
+.thborder h2 { font-style: normal; font-size: 1.2em; color: #337cc8; margin: 0; padding: 0; }
+
+
+
+/* Top Bar Notes */
+.localnote a.proxy { background: transparent url("../images/icon-20.png") 0px -520px no-repeat; display: block; float: left; height: 20px; width: 20px; }
+.localnote span { font-size: 12px; }
+.localnote a.studentview { background: transparent url("../images/icon-20.png") 0px -860px no-repeat; display: block; float: left; height: 20px; width: 20px; }
+.localnote b { font-size: 1.1em; }
+.localnote { background: none repeat scroll 0 0 #FFE980; border-bottom: 1px solid #F7C319; padding: 3px 1em; margin-left: 225px; display: block; }

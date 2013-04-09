@@ -1,0 +1,13 @@
+.alert { font-weight: bold; border: 2px solid $red0; background: #f6e1dc; padding: .65em 1em .25em 2em; color: #300; position: relative; @include nate_box-shadow(0 1px 5px); @include nate_border-radius(3px); }
+.alert p { margin: 0 3em .5em 0; min-height: 1em; position: relative; }
+.alert p:before { content: " "; width: 20px; height: 20px; position: absolute; top: 0; left: -24px; }
+.alert a.close { background: $red0 url("../images/icon-20.png") 0px -120px no-repeat; position: absolute; top: -6px; right: -10px; font-size: 18px; line-height: 20px; color: #fff; border: 1px solid #600; padding: 0; width: 20px; text-indent: -9999px; overflow: hidden; @include nate_border-radius(12px); }
+.alert a.close:hover { background-color: #600; background-position-y: -140px; }
+.alert.warning p:before { background: transparent url("../images/icon-20.png") 0px -200px no-repeat; }
+.alert.error { background: $yellow1; }
+.alert.error p:before { content: "!"; font-weight: bold; top: -5px; left: -15px; font-size: 1.5em; color: $red0; }
+.alert.info { background: #ddecde; border-color: #069918; color: #00590e; }
+.alert.info p:before { background: transparent url("../images/icon-20.png") 0px -180px no-repeat; }
+.alert.info a.close { background-color: #069918; border-color: #069918; }
+.alert.info a.close:hover { background-color: #037313; }
+.alert span.title {font-size: 1.2em; display: block; margin-bottom: .5em}

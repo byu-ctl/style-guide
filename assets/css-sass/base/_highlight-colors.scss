@@ -1,0 +1,4 @@
+::-moz-selection { background: #fd9; @include nate_text-shadow(none); }
+::selection { background: #fd9; @include nate_text-shadow(none); }
+a:link { -webkit-tap-highlight-color: #fd9; }
+.notify { background-color: $yellow0; color: $red0; }

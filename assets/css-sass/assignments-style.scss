@@ -1,0 +1,456 @@
+/******************************************************* 
+	File:	 assignments-style.css
+	Author:	 BYU Center for Teaching & Learning
+	Contact: 
+
+	
+	Desc:	The styles specific to the Assignments.php page.
+
+*******************************************************/
+
+#assignmentsTable tr {
+  &.header td {
+    border: none;
+    &:first-child {
+      padding: 0;
+      a {
+        display: block;
+        height: 20px;
+        text-indent: -9999px;
+        background: transparent url('../images/icon-20.png') 0px -400px no-repeat;
+        min-width: 20px; } } }
+  &.collapsed td:first-child a {
+    background-position: 0px -420px; }
+  &.greenHeader {
+    border-bottom: 5px solid #fff; } }
+
+/* Table cell widths */
+
+td {
+  &.title {
+    padding-left: 0; }
+  &.del, &.edit {
+    width: 20px; }
+  &.drop {
+    width: 25px; } }
+
+th.title {
+  min-width: 125px; }
+
+#gray {
+  position: absolute;
+  filter: alpha(opacity = 50);
+  opacity: .5;
+  background: #fff;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 5em; }
+
+#assignmentBox {
+  min-width: 700px; }
+
+#gradingCriteriaBox, #gradeScaleBox, #assignmentBox, #categoryBox {
+  position: absolute !important; }
+
+#gradeScaleBox {
+  width: auto;
+  .reset {
+    float: left;
+    margin-top: .5em; } }
+
+#gradingCriteriaBox {
+  width: 97%; }
+
+/* The editor labels */
+
+.insert tbody td:first-of-type > label {
+  text-align: right;
+  white-space: nowrap;
+  margin: 0; }
+
+a#moreOptions {
+  float: right;
+  white-space: nowrap;
+  margin: 0; }
+
+/* The save/cancel buttons for the editors */
+
+.insert {
+  div.submit {
+    float: right;
+    border: none;
+    margin: 0;
+    a:first-of-type {
+      margin-right: 10px; } }
+  hr {
+    margin-top: .5em;
+    margin-bottom: 0; } }
+
+/* Space out the rows in the editors */
+
+#assignmentBox tbody td, #categoryBox tbody td {
+  padding-bottom: .5em; }
+
+#assignmentBox .cke_editor tbody td, #categoryBox.cke_editor tbody td {
+  padding-bottom: 0; }
+
+/* Table row edit and delete buttons */
+
+a.btn-delete {
+  display: block;
+  height: 20px;
+  width: 20px;
+  text-indent: -3000px;
+  background: transparent url('../images/icon-20.png') 0 -38px no-repeat;
+  float: right;
+  &:hover {
+    background: transparent url('../images/icon-20.png') 0 -58px no-repeat; } }
+
+table#assignmentsTable > tbody > {
+  tr.header a {
+    text-decoration: none; }
+  td:last-of-type {
+    border-left: none;
+    width: 88px;
+    padding-left: 8px; } }
+
+ul.actions a {
+  font-weight: normal; }
+
+table#assignmentsTable {
+  ul.actions {
+    margin: 0; }
+  td.edit ul.actions li:first-of-type {
+    border: 1px solid #D1E4F6;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px 4px;
+    border-bottom-right-radius: 4px 4px;
+    border-top-left-radius: 4px 4px;
+    border-bottom-left-radius: 4px 4px; } }
+
+/* Keep the alert above the modal background */
+
+.alert {
+  margin-bottom: 1.5em;
+  z-index: 300; }
+
+/* Gray out the new assignment links */
+
+tr.new-assignment {
+  a.add {
+    color: transparent;
+    display: block;
+    padding: 3px 1em;
+    height: 18px;
+    text-decoration: underline;
+    transition: color .2s ease;
+    &:hover {
+      color: #147; } }
+  &.hover {
+    background-color: #ffe; } }
+    
+
+/* The point/wieght entries */
+
+td {
+  &.assignmentPoints a, &.assignmentWeight a, &.titleCell a {
+    text-decoration: none;
+    color: #444; }
+  &.assignmentWeight a {
+  	 display:block !important;
+  }
+  &.assignmentWeight a.weightNotSet {
+    color: #999;
+    &:before {
+      content: '('; }
+    &:after {
+      content: ')'; } } }
+      
+
+/* The use weights checkbox */
+
+.assignments-showWeight {
+  &.form {
+    margin-top: 1em;
+    margin-bottom: 0; }
+  div {
+    color: #444; }
+  label {
+    color: #444; } }
+.assignments-showWeight > label {
+    text-align: right;
+    margin-bottom: 0 !important;
+}
+.assignments-showWeight > div {
+    margin-left: 85%;
+    width: 200px;
+}
+
+/* CSS for moving <tr> */
+
+tr.movebar {
+  border-top: 4px solid #B80000;
+  visibility: hidden; }
+
+table.dragClone {
+  padding: 0;
+  margin: 0;
+  tbody {
+    padding: 0;
+    margin: 0;
+    tr {
+      border: 1px solid #ccc; } } }
+
+/* When we need to hide something without using display:none */
+
+.outOfSight {
+  position: absolute;
+  top: -3000px; }
+
+/* Defeat base.css which would make the first <tr> fatter */
+
+form table tbody tr:first-child td {
+  padding-top: 0; }
+
+/* Identifier for extra credit assignments */
+
+tr.EC td.titleCell:after {
+  content: ' (Extra)';
+  font-style: italic; }
+
+/* Text after the Ungraded label when user selects an ungraded category for the assignment */
+
+#assignmentBox .usingUngradedCategory:after {
+  content: ' (this assignment is in an ungraded category)';
+  color: gray; }
+
+/* When editing the due date in line */
+
+table#assignmentsTable > tbody table#datepicker td {
+  border: none!important; }
+
+/* Nathan and Marvin's CSS */
+
+.assignments-active {
+  width: 100%;
+  > thead th {
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    color: #666;
+    padding-top: 6px;
+    padding-bottom: 6px; }
+  tr:not(:last-of-type) td:first-child {
+    border-left: none; }
+  th {
+    font-style: normal;
+    font-size: 14px; }
+  tbody th:first-child {
+    font-size: 15px; }
+  tr {
+    font-size: 12px; }
+  td:first-child {
+    font-size: 13px; }
+  label {
+    color: #999;
+    font-weight: normal; }
+  .weight-edited {
+    color: #444; }
+  > tbody > td {
+    &:nth-child(7), &:nth-child(8) {
+      text-align: right; } } }
+
+.new-assignment {
+  border: none;
+  > tbody > td {
+    border: none; } }
+
+/* Start th change to td, added first line to fake the header */
+
+.header td {
+  font-weight: bold;
+  font-size: 14px;
+  &:first-child {
+    padding-left: 20px; }
+ }
+
+/* End th change to td */
+
+.dropped {
+  border-top: 1px solid #eee;
+  height: 20px; }
+
+.assignments-deleted {
+  width: 100%;
+  margin-top: 30px;
+  th {
+    background: #eeeeee;
+    background: -moz-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
+    background: -webkit-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+    background: -o-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+    background: -ms-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+    background: linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+    font-style: normal;
+    font-size: 15px; }
+  tr {
+    font-size: 12px;
+    td:first-child {
+      font-size: 13px;
+      border-right: solid #ccc 1px; }
+    &:first-child th:last-child {
+      text-align: right; } }
+  td {
+    height: 30px; } }
+
+.deleted {
+  border-bottom: 1px dotted #ccc; }
+
+.assignments-total, .assignments-extra {
+  border: none;
+  td {
+    border: none; } }
+
+.assignments-total td {
+  font-weight: bold;
+  font-size: 14px;
+  background: transparent url('../images/icon-tabletop.png') top left repeat-x;
+  padding-top: 5px;
+  &:nth-child(2) {
+    font-size: 12px; } }
+
+.assignments-extra td {
+  font-size: 12px; }
+
+.assignments-total .totalData, .assignments-extra .totalData {
+  background-color: #e0f9e4; }
+
+.assignments-total td:nth-child(2), .assignments-extra td:nth-child(1) {
+  text-align: right; }
+
+.assignments-total td:nth-child(3) {
+  text-align: left; }
+
+.assignments-extra td {
+  &:nth-child(2) {
+    text-align: left; }
+  &.totalData {
+    border-bottom: solid #ccc 1px; } }
+
+.assignments-total td:nth-child(2), .assignments-extra td:nth-child(1) {
+  border-left: solid #ccc 1px; }
+
+.assignments-total td:nth-last-child(2), .assignments-extra td:nth-last-child(2) {
+  border-right: solid #ccc 1px; }
+
+.collapsed {
+  text-decoration: none;
+  font-weight: bolder;
+  /*background:url("../images/icon-20.png") no-repeat scroll 0 -423px transparent;*/
+  &:hover {
+    text-decoration: none;
+    font-weight: bolder;
+    /*background:url("../images/icon-20.png") no-repeat scroll 0 -423px transparent;*/ } }
+
+.uncollapsed {
+  text-decoration: none;
+  font-weight: bold;
+  background: url("../images/icon-20.png") no-repeat scroll 0 -404px transparent;
+  &:hover {
+    text-decoration: none;
+    font-weight: bold;
+    background: url("../images/icon-20.png") no-repeat scroll 0 -404px transparent; } }
+    
+    
+table#assignmentsTable td > a#titleVal {
+    text-decoration:none;
+}
+
+/* Pulled from Assignments.php getHead() */
+td.assignmentPoints > a, td.weightCol > a {
+    display: inline;
+    border: 1px solid #DDD;
+    padding: 3px;
+}
+td.assignmentPoints > input, td.weightCol > input {
+    width: 50px;
+}
+td.assignmentPoints, td.weightCol {
+    width: 55px;
+}
+.invalidAssignment {
+    background: #fdd;
+}
+
+/* Pulled from AssignmentsManager.php getHead() */
+tr.weightHidden {
+    display: none !important;
+}
+
+
+/* Student Side */
+
+tr.EC td:first-child {
+  background: url("images/delete-bg.png") top center no-repeat; }
+
+#assignmentsTable.studentview {
+  font-size:13px;
+  border-bottom: 1px solid #EEE;
+  
+  .dropped {
+    border-top: 1px solid #EEE; }
+      
+  td {
+    padding:.3em .5em .4em;
+    font-size: 13px;
+    
+    &.viewDescription {
+      border:none;
+      padding:0; width: 1px;
+      a {
+        display:block;
+        width: 20px;
+        height: 20px;
+        text-indent:-9999px;
+        background:transparent url('images/icon-20.png') 0px -420px no-repeat;
+        margin-left: 10px;
+        margin-right: 10px;} }
+    &.catWeight {
+      font-weight: bold }
+    &.title {
+      font-family: "Arimo","Lucida Grande","Lucida Sans",Helvetica,Arial,sans-serif;
+      color: #036;
+      white-space: nowrap;
+      div:hover {
+        cursor: pointer; } } }
+  tr {
+    padding:.125em .5em;
+    
+    &.greenHeader {
+      height: 30px;
+      td {
+        vertical-align: middle;
+        padding:0; } }
+    &.descVisible td.viewDescription a {
+      background-position:0px -400px; }
+    &.assignmentDescription {
+      border-bottom: 1px dotted #EEE;
+      border-top: none; }
+    &.noBottomBorder {
+      border-bottom: none; }
+    &.assignment {
+      td:nth-child(3), td:nth-child(4), td:nth-child(5),td:nth-child(6) {
+        width: 20%; } } } }
+
+
+@media print {
+	
+}

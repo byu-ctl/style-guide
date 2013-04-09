@@ -1,0 +1,167 @@
+/* Interface Elements */
+  // Help
+form li .helpContent p, form div.form .helpContent p, form tr .helpContent p { color: #444; font-style: normal; }
+.helpTitle { color: #444; }
+table.help td { max-width: 200px; }
+a.helpicon, a.helpicon2, a:hover.helpicon, a:focus.helpicon, a:active.helpicon { text-decoration: none; }
+.helpicon { display: inline-block; background-color: $blue6; color: #fff; font-weight: bold; border: none; font-size: 12px; line-height: 12px; text-align: center; padding: 2px 0; width: 16px; height: 12px; margin: 0 6px; @include nate_border_radius(8px); }
+.helpicon:hover { color: #fff; background-color: $blue5; }
+.helpicon2 { background-color: $yellow2; color: #27598C; font-weight: bold; border: 1px solid #ff0000; @include nate_border_radius(0.6em); width: 1.5em; height: 1.4em; font-size: 12px; vertical-align: middle; margin-left: 5px; }
+.helptext { border: 1px solid $blue5; background-color: $yellow2; padding: 5px 10px 10px 35px; position: relative; margin: .5em 0 1em; z-index: 300; display: block; @include nate_border_radius(3px); text-align: left; }
+.helptext:after { content: " "; display: block; background: transparent url("../images/icon-20.png") 0px -500px; width: 20px; height: 20px; position: absolute; top: 5px; left: 5px; }
+table p.phelp, p.phelp { min-height: 0em; margin-bottom: 0.2em; margin-top: 0.2em; font-style: normal; font-size: 100%; position:relative; }
+p.phelp {
+  position:relative;
+  & > a:last-child {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 200px;
+    text-align: right;
+    padding-right: 8px; } }
+body section#main label p.phelp { min-height: 0em; margin-bottom: 0.3em; margin-top: 0.3em; min-height: 0em; margin-bottom: 0.3em; margin-top: 0.3em; font-style: normal; font-weight: normal; color: black; text-align:left;}
+div.helptext p { min-height: 0em; margin-bottom: 0.3em; margin-top: 0.3em; min-height: 0em; margin-bottom: 0.3em; margin-top: 0.3em; font-style: normal; font-weight: normal; color: black; font-size: 13px; }
+
+
+
+  /* Information insert boxes */
+.insert { font-size: 1em; background: $blue11; border: 1px solid $blue6; padding: 12px 18px; margin-left: -6px; margin-bottom: 20px; position: relative; @include nate_border_radius(4px); @include nate_box-shadow(0 2px 20px,0.5); }
+.insert > h2, .insert > h3 { font-size: 1.1em; font-style: normal; margin: -12px -18px 10px -18px; padding: 6px 20px; background: $blue3; color: #fff; border-top-left-radius: 3px; border-top-right-radius: 3px; }
+.insert h4 { font-style: normal; color: $blue2; }
+.insert a.edit, .insert a.edit2, .insert input.edit, .insert input.edit2 { clear: both; margin: .25em .5em; margin-left: 0; }
+.insert form { margin: .5em 0; padding: .25em 0; border-color: $blue10; }
+.insert form ul { margin: 0; }
+.insert form ul li { margin: 1em 0 1em .5em; }
+.close a.cancel, .close a.cancel:link { margin: 0; }
+
+.insert .close { display: block; position: absolute; top: 2px; right: 4px; padding: 2px 4px; }
+.insert .close a, .insert a.close {
+  display: block;
+  background: $blue2 url("../images/icon-20.png") 0px -120px no-repeat;
+  border: 2px solid $blue5;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  @include nate_border_radius(7px);
+  padding:0;
+ }
+.insert .close a:hover { border: 2px solid $blue8;}
+
+
+
+  /* Tables in insert boxes */
+.insert table { width: 100%; }
+.insert table td { vertical-align: top; }
+td.textarea { width: 100%; font-weight: normal; }
+.insert tr td:first-child, #setupOptions tr td:first-child, .insert .labelTD { width: 100px; text-align: right; }
+#assignmentBox tr td:first-child { width: 150px; }
+#categoryBox tr td:first-child { width: 200px; }
+#datepicker tr td:first-child { width: auto; }
+
+  /* Insert sub-boxes */
+.insert form { margin: 0; }
+.insert section { background: #fff; font-size: 1em; border: 1px solid $blue7; margin: 1em -0.25em; padding: 1em 1em 0; position: relative; @include nate_border_radius(4px); }
+.insert section h4.toggle { margin: 0; padding: 0; border: 0; }
+.insert section h4, .insert section h4.toggle a { display: block; font-size: 1em; border: 1px solid $blue8; border-bottom: 1px solid $blue7; margin: -1em -1em 0; padding: .4em .75em .35em; text-decoration: none; position: relative; @include nate_text-shadow(0 1px 0,1,#fff); border-top-left-radius: 4px; border-top-right-radius: 4px; @include nate_linear-gradient($blue9, $blue8); /* firefox */ }
+.insert section h4.toggle a:active { color: $blue1; }
+.insert section h4.toggle a:after { color: $blue7; content: "▼"; position: absolute; border-left: 1px solid $blue7; padding: 0.45em 0.75em 0.25em; display: block; right: 0; top: 0; }
+.insert section h4.toggle:hover a:after { color: $blue6; @include nate_linear-gradient($blue10, $blue8); @include nate_text-shadow(0 1px 0,1,#fff); }
+.insert section.closed { padding-bottom: 0; }
+.insert section.closed h4.toggle a { border: none; }
+.insert section label { font-size: 14px; color: #333; }
+
+  /* Insert sub-sub-boxes */
+.insert section section { margin: 0; padding: 0; border: none; @include nate_border_radius(0); }
+.insert section section h5, .insert section section h5 a { margin: 0; padding: .2em .25em .2em 1em; text-decoration: none; display: block; font-size: .95em; }
+.insert section section h5 { color: $blue3; border-top: 1px solid $blue7; border-bottom: 1px solid $blue7; position: relative; @include nate_linear-gradient($blue10, $blue9); @include nate_text-shadow(0 1px 0,1,#fff); }
+.insert section section h5 a { margin: -0.15em -0.25em -0.15em -0.75em; }
+.insert section section h5 a:hover, .insert section section h5 a:active { color: $blue2; }
+.insert section section h5 a:after { color: $blue8; content: "▼"; position: absolute; padding: 0.25em .5em; display: block; right: 0; top: 0; }
+.insert section section h5:hover a:after { color: $blue7; }
+.insert section.closed > * { display: none; }
+.insert section.closed h4, .insert section.closed h5 { display: block; }
+
+
+// Popup Windows
+.insert.LSPopupControl .submitPopup { text-align: right; }
+.gray { position: fixed; @include nate_opacity(.5); background: #fff; width: 100%; top: 0; left: 0; bottom: 0; z-index:999; }
+
+.insert hr {
+  display: none;
+}
+.submitPopup {
+  border-top:1px solid #ccc;
+  padding-top:.65em;
+  margin-top:1.5em;
+}
+
+
+
+
+
+/* Overlay */
+.overlay.active {
+	z-index: 200000;
+	width: 1000%;
+	height: 1000%;
+	position: absolute;
+	top: 0;
+	background: #fff;
+	opacity: .5;
+}
+.loaderImage.active, .loaderImageBox {
+	display:block !important;
+	z-index: 200001;
+	position:absolute;
+	top:120px;
+	left:250px;
+}
+.loaderImageBox {
+	background:$yellow2;
+	border:1px solid $green5;
+	padding:1.5em 2em 2em;
+	padding-left:70px;
+	width:350px;
+	@include nate_border_radius();
+	@include nate_box-shadow(0 0 5px);
+	@include nate_icon('../images/icon-40.png', 0px -400px, 40px, true, 1em, 1em);
+}
+.loaderImageBox h3 {
+	margin-top:0;
+}
+.loaderImageBox h3 + img {
+	margin-top:1em;
+}
+.loaderImageBox p {
+	overflow-x:hidden;
+}
+.loaderImageBox .loaderImage {
+	position:static;
+	display:block !important;
+}
+.loaderImageBox {
+	position:fixed;
+}
+
+
+/* Users table */
+table.users td { border-right: none; border-left: none; }
+
+
+
+/* FEEDBACK */
+#footerSend { float: right; }
+#feedbackBox, #feedbackFeedbackBox { display: none; position: absolute; width: 40%; bottom: 0; right: 0; }
+#feedbackBox div.submit, #feedbackFeedbackBox div.submit { text-align: right; }
+#feedbackFeedbackBox div.submit { border-top: 1px solid #ccc; padding-top: .25em; margin-top: .75em; }
+#closeFeedbackBox, #closeFeedbackFeedbackBox { float: right; text-decoration: none; }
+div.feedbackThanks { color: #444; }
+#feedbackDef, #feedbackSelect {font-size: 1.1em;}
+#feedbackText { padding:.5em; @include box-sizing(border-box); }
+#feedbackBox .suggest {display: none;}
+#feedbackBox div.closeBox { text-align: right; border-top: 1px solid #ddd; margin-top: 1em}
+#feedbackBox.suggestion {
+  #feedbackText, > .submit {display: none;}
+  .suggest {display: block;} }

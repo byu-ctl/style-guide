@@ -1,0 +1,76 @@
+#topDrop {
+  position: absolute; 
+  top: 23px; 
+  left: 185px;
+  a { 
+    line-height: 18px; 
+    display: block; 
+    padding: 4px 12px 5px 21px; 
+    outline: 0; 
+    text-decoration: none; 
+    font-weight: bold; 
+    color: $blue2; 
+    font-size: 15px; 
+    border-top: 1px solid transparent; 
+    border-bottom: 1px solid transparent;
+    &:hover { 
+      background: $yellow2; 
+      border-color: $blue6; } }
+  h3 { 
+    margin: 0 0 .5em; 
+    color: $blue5; 
+    padding: .25em 12px; 
+    font-size: 12px; 
+    background: $blue10; 
+    @include nate_text-shadow(0 1px 0,0.35,#fff); }
+  .courseSection { 
+    border-top: 1px solid $blue9; 
+    margin-top: 1em;
+    &:first-child { 
+      margin-top: 0; }
+    &:last-child { 
+      padding-bottom: .75em; } } }
+
+a#topDropPageTitle { 
+  padding: 0; 
+  overflow: hidden; 
+  width: 400px; 
+  z-index: 1;
+  position: relative; 
+  background-clip: content-box;
+  &:hover {
+    border-color:transparent;
+    h2, h2:after {
+      color:#fff; } }
+  h2 {
+    color:$blue8;
+    font-weight:bold;
+    margin: 0; 
+    padding: 10px 0 10px 18px; 
+    font-size: 17px; 
+    overflow: hidden; 
+    width: 1000px;
+    @include nate_transition(color .2s);
+    &:after {
+      @include nate_transition(color .2s);
+      content: "▾";
+      color: $blue5; 
+      position: relative;
+      left:.5em;
+      z-index: 1002; } } }
+
+#topDrop a#topDropPageTitle:hover { 
+  background-color: transparent; }
+#topDropdown { 
+  display: none; 
+  min-width: 400px; 
+  max-width: 600px; 
+  @include nate_border_radius(3px); 
+  border: 1px solid $blue6; 
+  position: relative; 
+  top: -1px; 
+  z-index: 1001; 
+  @include nate_box-shadow(0 1px 10px,0.5); 
+  background-color: #fff; }
+#topDrop.open #topDropdown { 
+  display: block; }

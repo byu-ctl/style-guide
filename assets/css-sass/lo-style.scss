@@ -1,0 +1,131 @@
+/* 
+    Document   : lo-style
+    Created on : Sep 22, 2011, 12:42:17 PM
+    Author     : Jeff Hoffman
+    Description: I just moved all the css from the learning outcomes to a seperate file.
+*/
+
+section.jEdit {
+  min-height: 500px;
+  z-index: 100; }
+
+.allLearningOutcomes {
+  border-bottom: thin solid #CCCCCC !important; }
+
+.submit {
+  float: right; }
+
+div.submit {
+  float: none; }
+
+#contributingCheckbox, #linkToCheckBoxes {
+  background-color: white;
+  min-height: 280px;
+  max-height: 280px;
+  border: solid gray 1px; }
+
+#contributingCheckbox span {
+  border-bottom: solid gray 1px;
+  &#pages {
+    border-bottom: none; } }
+
+.collapsed {
+  text-decoration: none;
+  font-weight: bolder;
+  background: url("../images/icon-20.png") no-repeat scroll 0 -423px transparent;
+  &:hover {
+    text-decoration: none;
+    font-weight: bolder;
+    background: url("../images/icon-20.png") no-repeat scroll 0 -423px transparent; } }
+
+.uncollapsed {
+  text-decoration: none;
+  font-weight: bold;
+  background: url("../images/icon-20.png") no-repeat scroll 0 -404px transparent;
+  &:hover {
+    text-decoration: none;
+    font-weight: bold;
+    background: url("../images/icon-20.png") no-repeat scroll 0 -404px transparent; } }
+
+#linkToCheckBoxes {
+  margin-top: 5px;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+.assignmentCB {
+  float: left;
+  margin: 1px; }
+
+#descriptionPopup {
+  display: none;
+  z-index: 101; }
+
+div ul li {
+  list-style: none outside none; }
+
+span ul div li {
+  list-style: none; }
+
+#linkToProgramOutcomes div ul label {
+  min-height: inherit;
+  margin-bottom: auto;
+  margin-top: auto;
+  font-weight: normal !important;
+  font-size: 100%;
+  position: relative;
+  top: -3px; }
+
+select {
+  width: 274px; }
+
+.bulleted li {
+  list-style: disc inside !important;
+  padding: 0 0 0 0.5em !important; }
+
+#allLearningOutcomes {
+  li {}
+  h3 {
+    margin: 0 0 .5em;
+    font-style: normal;
+    font-weight: bold;
+    color: #147;
+    font-size: 16px;
+    border: none;
+    padding: 0;
+    span.department {
+      color: #008000;
+      font-size: .875em;
+      display: inline; } } }
+
+ul.ListEditorList li a.editMe {
+  display: block;
+  font-size: 14px;
+  padding: 3px 3px 3px 0;
+  top: 9px;
+  float: right;
+  background: transparent url('../images/icon-20.png') 0px -300px no-repeat;
+  clip: rect(0px, 30px, 20px, 0px);
+  text-indent: 9999px;
+  right: -9999px;
+  &:hover {
+    background-position: 0px -320px; } }
+
+input.divisionCB {
+  width: 274px; }
+
+#linkToProgramOutcomes {
+  width: 100%; }
+
+#main .insert li {
+  padding-bottom: 10px; }
+
+ul li {
+  span {
+    position: relative;
+    left: 1.95em;
+    bottom: .5em; }
+  h3 span {
+    left: 0;
+    bottom: 0; }
+  p span {
+    position: static; } }

@@ -1,0 +1,57 @@
+nav.tabbar { zoom: 1; margin: 1em 0 -1px 0.5em; overflow: hidden; }
+nav.tabbar a { display: block; float: left; clear: none; margin: 0 1px; padding: .4em 1.25em; font-weight: bold; text-decoration: none; border: 1px solid #8ab; border-bottom: 1px solid $blue1; background-color: #f5f8fa; }
+nav.tabbar a.current { background: #fff; border: 1px solid $blue1; border-bottom-color: #fff; color: $blue1; }
+section.tabcontent { margin: 0 0 1em; border: 1px solid $blue1; padding: .5em 1em; @include nate_border_radius(3px); }
+/* No Javascript fallback */
+.no-js nav.tabbar { margin: 1em 0; }
+.no-js nav.tabbar a { float: none; border: 0; background: none; text-decoration: underline; }
+.no-js nav.tabbar a.current { color: $blue4; }
+.no-js section.tabcontent { display: block !important; visibility: visible !important; }
+
+
+
+/* Tab bar */
+#tab-course { 
+  margin: 0;
+  padding-left: 9px;
+  background-color: $blue0;
+  border-top:1px solid #000;
+  a { 
+    position:relative;
+    color:$grayC;
+    font-size: 16px; 
+    font-weight:normal;
+    border: none; 
+    background: transparent; 
+    border-bottom: 1px solid transparent; 
+    margin: -1px 0; position: relative; 
+    @include nate_border_radius(4px 4px 0 0);
+    @include nate_transition(color .2s);
+    &.beta:after {
+      content:"Beta";
+      display:block;
+      position:absolute;
+      top:-3px;
+      right:.9em;
+      color:#dd9;
+      font-size:.7em;
+      padding:0;
+      z-index:2000;
+      -webkit-transform: rotate(4deg);
+         -moz-transform: rotate(4deg);
+          -ms-transform: rotate(4deg);
+           -o-transform: rotate(4deg); }
+    &.current .beta {
+      display:none; }
+    .wf-active & {
+      font-weight:bold; }
+    &:hover { 
+      color:#fff; }
+    &.current { 
+      background-color: #fff;
+      color: $blue0; 
+      border-color: #fff; } }
+  a#adminMenu, a#helpMenu {
+    float:right; }
+  a#helpMenu {
+    margin-right:9px; } }

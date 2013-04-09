@@ -1,0 +1,114 @@
+.submittedPopupHeader{
+    width: 500px;
+}
+
+/*Styling for the Title of the "Submitted Assignment" popup */
+.submittedPopupTitle{
+    color:#444;
+    font-size:20px;
+    font-weight:bold;
+    font-family:"Lucida Grande","Lucida Sans", Helvetica, Arial, sans-serif;
+    margin-top:20px;
+    margin-bottom:20px;
+    float:left;
+    width:380px;
+}
+
+.submittedPopupUselessCenter{
+    width:500px;
+}
+
+.submittedPopupStudentAssignmentSection{
+    margin-bottom:30px;
+}
+
+.assignmentFeedbackSection{
+    margin-bottom:30px;
+}
+
+.plagiarismScoreSection{
+    margin-bottom:30px;
+}
+
+/*Styling for the Grade part of the "Submitted Assignment" popup */
+.submittedPopupStudentAssignmentGrade{
+    color:#444;
+    font-size:14px;
+    font-weight:bold;
+    font-family:"Lucida Grande","Lucida Sans", Helvetica, Arial, sans-serif;
+    margin-top:20px;
+    margin-bottom:20px;
+    float: left;
+    width:120px;
+}
+
+/*Styling for the Document link of the Instructor Feedback section of the "Submitted Assignment" popup */
+.submittedPopupFeedbackDocument{
+    margin-bottom:10px;
+}
+
+.gradeMarkFeedback{
+    margin-bottom:10px;
+}
+
+/*Styling for the Notes portion of the Instructor Feedback section of the "Submitted Assignment" popup */
+.submittedPopupFeedbackText{
+    margin-bottom:10px;
+}
+
+/*Styling for the Title portion of the "Submit Assignment" popup*/
+#fileUploadAssignmentTitle{
+    color:#444;
+    font-size:20px;
+    font-weight:bold;
+    font-family:"Lucida Grande","Lucida Sans", Helvetica, Arial, sans-serif;
+    margin-top:1.25em;
+    margin-bottom:15px;
+}
+
+form label {
+    font-size: 1.00em;
+    color:#444;
+}
+
+.examNotOpen {
+    color: #666;
+}
+
+.assignment td {
+    vertical-align: middle;
+}
+
+.plagiarismReportLink{
+    text-decoration:none;
+    padding-right: 5px;
+    border-right-width: 15px;
+    border-right-style: solid;
+}
+
+.totals {
+    background-color: #E0F9E4;
+    margin-right: 3em;
+    padding: .5em 1.5em;
+    float: right;
+}
+
+.bold *{
+    font-weight:bold;
+}
+
+.totals table {
+    border: none;
+}
+
+.totals td {
+    border: none;
+}
+
+/*
+    p cannot go here because it messes up the scores page.
+    please add classes to your p tags
+*/
+.totals td {                
+    text-align: right;
+}

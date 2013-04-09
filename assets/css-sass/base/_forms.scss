@@ -1,0 +1,71 @@
+form { margin: 1em 0; padding: .5em 0; }
+form ul { list-style: none; margin-left: 1em; }
+form ul ul, form section ul { list-style: disc; margin-left: 2em; }
+form ul ul li, form section ul li { margin-left: 0; }
+form label { display: block; }
+form label p {margin-top:.5em; margin-bottom:.5em;}
+form label p:first-child {margin-top:0;}
+form .desc { border-bottom: 1px dotted #ddd; padding: 0 0 .75em; }
+form label, form .desc h2, form .desc h3 { color: #000; font-weight: bold; margin: .25em 0; font-style: normal; font-size: 1.25em; }
+form .setupPage label { font-weight: normal; }
+form .desc h2 { font-size: 1.75em; }
+form .desc h3 { font-style: italic; font-size: 1.125em; }
+form .desc p { margin: 0; color: #666; }
+form fieldset { margin-top: 2.5em; margin-left: 1.25em; border-top: 1px dotted #ccc; }
+form fieldset legend { font-weight: bold; font-size: 17px; color: #000; padding: 0 1em; display: block; margin-left: -1.25em; }
+
+// Form items can be made using <li> elements or <div class='form'> elements
+// Don't use this style right now. It's causing trouble.
+/* form li h3, form div.form h3, form tr h3 { color: #000; border-top: 1px dotted #ccc; border-bottom: 1px dotted #ccc; padding: .5em 0 .4em; font-size: 1.125em; font-style: italic; margin: 2.5em 0 1em -0.75em; font-weight: normal; } */
+// form li, form div.form, form tr {margin:1.75em 0;}
+
+form li label, div.form label, form tr label { font-size: 1em; margin: 0 0 1em; }
+form ul > li, div.form, form tr { margin-left: .5em; }
+form li > label, div.form > label, form tr > label { margin-left: -0.5em; }
+form li span, form div.form span, form tr span { margin: .25em 0; }
+form li span label, form div.form span label, form tr span label, form li div.inlineLabel label, form div.form div.inlineLabel label, form tr div.inlineLabel label, form div.inlineLabel label { display: inline-block; font-weight: normal; margin: 0 0 0 .5em; }
+div.inlineLabel label {display:inline !important;}
+
+/*
+form li p, form div.form p, form tr p { color: #999; font-size: .9em; margin: .25em 0; font-style: italic; }
+
+form li div:after, form div.form div:after, form tr div:after,
+form li div:before, form div.form div:before, form tr div:before { content:""; display: table;
+}
+form li div:after, form div.form div:after, form tr div:after {clear:both;}
+form li div, form div.form div, form tr div {zoom:1}
+*/
+
+form li .optionalField:after { display: none; }
+form li div span, form div.form div span, form tr div span { margin-bottom: 0; }
+form li div span label, form div.form div span label, form tr div span label { color: #666; display: block; margin: .25em 0 0; size: .9em; }
+form li.left, form li.right, form li div span.left, form li div span.right, div.form div span.left, div.form div span.right, form tr div span.left, form tr div span.right { float: left; margin-top: 0; }
+form li.right, form li div span.right { clear: none; }
+form li.left, form li div span.left, form li.right, form li div span.right { margin-right: 1em; }
+form li.phone div span, form li.date div span, form div.phone div span, form div.date div span { margin: 0 .25em 0 0; }
+form li.phone div span label, form li.date div span label, form div.phone div span label, form div.date div span label { padding-left: .25em; }
+form input[type="radio"] { vertical-align: text-top; line-height: 1em; margin-top: 0; }
+form .submit { margin-top: 1em; border-top: 1px dotted #ddd; padding: .5em; }
+form .placeholder { font-style: italic; color: gray; margin: 0; padding: 0; }
+
+// Tables in Forms
+form table {
+  border: none;
+  width: auto;
+  /* margin:1em 0; margin-bottom:2.5em;*/
+  margin: 0;
+}
+
+form table td { border: none; width: auto; vertical-align: middle; }
+form table td label { font-size: 1em; }
+form table th { border: none; background: none; border-bottom: 1px solid #ddd; }
+form table tbody tr:first-child td { padding-top: .5em; }
+form table tbody tr:first-child td.cke_top { padding-top: 0; }
+.insert table { margin: 0; }
+.greenHeader { font-weight: bold; color: #444444; padding: .5em .5em .5em 1.5em; cursor: pointer; margin: .5em 0 0; }
+tr.greenHeader { cursor: default; }
+.greenHeader label, tr.greenHeader th { font-size: 14px; }
+tr.greenHeader th { padding: .5em; }
+
+// Required Field
+label.required:after { content: '*'; color: $red0; }

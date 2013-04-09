@@ -23,6 +23,8 @@ h3 code {
 
 
 
+
+
 /* Tweak navbar brand link to be super sleek
 -------------------------------------------------- */
 
@@ -541,11 +543,13 @@ h2 + .row {
   margin-left: 0;
   list-style: none;
 }
+/*
 .the-icons li {
   float: left;
   width: 25%;
   line-height: 25px;
 }
+*/
 .the-icons i:hover {
   background-color: rgba(255,0,0,.25);
 }
@@ -844,6 +848,45 @@ form.bs-docs-example {
   top: auto;
   bottom: 270px;
 }
+
+
+
+
+
+
+
+
+
+
+
+div.nopadding {
+  padding:0;
+}
+
+body > header {
+  height:auto;
+}
+
+body > footer {
+  margin-left: 0;
+  position: relative;
+  height: auto;
+}
+
+header h1 {
+  color:white;
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.page-header h1 {
+  font-size: 2.5em;
+}
+
+section {
+  clear:both;
+}
+
 
 
 

@@ -1,0 +1,59 @@
+/**
+ * Brian R
+ * Importing forms for modal dialogs
+ *
+ */
+@import "bootstrap/forms";
+
+
+
+#sidenav h2 {
+  background-position: 0 -150px; }
+
+.gradePage {}
+
+.setupPage {
+  p, ul {}
+  li {
+    margin: 0 0 5px .5em;
+    input[type="checkbox"] {
+      vertical-align: text-bottom; }
+    label {
+      display: inline-block;
+      margin: 0 0 0 5px; }
+    .link {
+      display: inline;
+      margin-left: 15px; }
+    ul {
+      margin: 0 0 0 35px; }
+    li {
+      margin-bottom: 1em;
+      input {}
+      label {
+        margin-right: 20px; }
+      span {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        span {
+          display: block;
+          input, label {} } } } } }
+
+ul.options {
+  list-style: none;
+  .gradingmethod {
+    > label {
+      margin: 6px 0; }
+    ul {
+      margin-left: 6px; }
+    div:after {
+      content: none; } } }
+
+/* Grade scale display table */
+table.gradeScaleDisplay {
+  border: 1px solid #ddd;
+  width: 300px;
+  td {
+    border-top: 1px solid #eee; }
+  th {
+    border: 1px solid #ddd; background: #eee; font-style: normal; } }

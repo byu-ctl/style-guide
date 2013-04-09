@@ -1,0 +1,14 @@
+ul.actions { display: inline-block; z-index: 500; }
+ul.actions > li { @include nate_linear-gradient($blue11, $blue10); @include nate_border-radius(4px); border: 1px solid $blue8; }
+ul.actions > li:hover { @include nate_linear-gradient($blue10, $blue9); }
+ul.actions.open { z-index: 501; @include nate_box-shadow(0 0 5px,0.25); }
+ul.actions.open > li { background: $blue11; @include nate_border-radius(4px 4px 0 0 !important); border-bottom: none; }
+ul.actions a, ul.actions a:visited, ul.actions a:hover { padding: 4px 8px; font-size: 14px; line-height: 16px; display: block; text-decoration: none; color: $blue4; }
+a.btn-edit, ul.actions a.btn-preview, ul.actions a.btn-options, ul.actions a.btn-delete { background: transparent url("../images/icon-24.png") top left no-repeat; padding-left: 24px !important; }
+a.btn-edit { background-position: 0 -480px; }
+a.btn-delete{ background-position: 0 -75px; }
+a.btn-preview { background-position: 0 -500px; }
+a.btn-options { background-position: 0 -525px; }
+ul.actions li { margin: 0; list-style-type: none; position: relative; padding: 0; }
+ul.actions ul li:hover { background-color: $blue10; }
+ul.actions ul { position: absolute; left: -1px; overflow: visible; border: 1px solid $blue8; z-index: 99; display: none; text-align: left; border-top: none; @include nate_linear-gradient($blue11, $blue10); @include nate_border-radius(0 4px 4px 4px); @include nate_box-shadow(0 5px 5px,0.2); }
