@@ -857,7 +857,9 @@ form.bs-docs-example {
 
 
 
-
+body {
+  min-width: 0px;
+}
 
 div.nopadding {
   padding:0;
@@ -865,12 +867,21 @@ div.nopadding {
 
 body > header {
   height:auto;
+  width: 100%;
 }
 
 body > footer {
   margin-left: 0;
   position: relative;
   height: auto;
+}
+
+.container {
+  padding:0;
+}
+
+.bs-docs-sidenav li {
+  margin-right: 20px;
 }
 
 header h1 {
@@ -881,13 +892,121 @@ header h1 {
 
 .page-header h1 {
   font-size: 2.5em;
+  margin-top: 0;
 }
 
 section {
   clear:both;
 }
 
+.jumbotron h1 {
+  font-size: 90px;
+  margin:0;
+  color: white;
+}
+.jumbotron p {
+  font-size: 30px;
+}
 
+.subhead h1 {
+  font-size: 50px;
+}
+.subhead p {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.bs-docs-sidenav .active .icon-chevron-right, .bs-docs-sidenav .active a:hover .icon-chevron-right {
+  background-image: none;
+}
+
+
+
+ul.the-icons li {
+  display: block;
+  font-size: 14px;
+}
+
+h2 {
+  clear:both;
+}
+
+ul.swatches {
+  list-style: none;
+  margin:0;
+}
+
+ul.swatches span, ul.swatches code {
+  display: inline-block;
+  width: 5em;
+  margin-left:.5em;
+}
+
+ul.swatches li div {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+/* BYU Blue */
+.blue0 { background-color: #001948; }
+.blue1 { background-color: #025; }
+.blue2 { background-color: #036; }
+.blue3 { background-color: #147; }
+.blue4 { background-color: #369; }
+.blue4-5 { background-color: #47A; }
+.blue5 { background-color: #628cb6; }
+.blue6 { background-color: #91b2d2; }
+.blue7 { background-color: #abc8e4; }
+.blue8 { background-color: #d1e4f6; }
+.blue9 { background-color: #e0edf9; }
+.blue10 { background-color: #eff6fc; }
+.blue11 { background-color: #f9fcfe; }
+
+
+/* Highlight Yellow */
+.yellow0 { background-color: #ffc; }
+.yellow1 { background-color: #ffd; }
+.yellow2 { background-color: #ffe; }
+
+
+/* Reds */
+.red0 { background-color: #901; }
+.red1 { background-color: #b01; }
+
+
+/* Green (not used much) */
+.green0 { background-color: #004818; }
+.green1 { background-color: #005518; }
+.green2 { background-color: #006614; }
+.green3 { background-color: #117725; }
+.green4 { background-color: #339947; }
+.green5 { background-color: #62b672; }
+.green6 { background-color: #91d29d; }
+.green7 { background-color: #abe4b6; }
+.green8 { background-color: #d1f6d8; }
+.green9 { background-color: #e0f9e4; }
+.green10 { background-color: #effcf1; }
+.green11 { background-color: #f9fefa; }
+
+
+/* Gray */
+.gray0 { background-color: #000; }
+.gray1 { background-color: #111; }
+.gray2 { background-color: #222; }
+.gray3 { background-color: #333; }
+.gray4 { background-color: #444; }
+.gray5 { background-color: #555; }
+.gray6 { background-color: #666; }
+.gray7 { background-color: #777; }
+.gray8 { background-color: #888; }
+.gray9 { background-color: #999; }
+.grayA { background-color: #aaa; }
+.grayB { background-color: #bbb; }
+.grayC { background-color: #ccc; }
+.grayD { background-color: #ddd; }
+.grayE { background-color: #eee; }
+.grayF { background-color: #fff; }
 
 
 
@@ -1010,6 +1129,11 @@ section {
   .footer p {
     margin-bottom: 9px;
   }
+  
+  .container {
+    margin:0 5%;
+  }
+  
 }
 
 /* Landscape phones

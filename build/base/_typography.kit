@@ -1,0 +1,224 @@
+<!-- Typography
+================================================== -->
+<section id="typography">
+  <div class="page-header">
+    <h1>Typography</h1>
+  </div>
+
+  <h2 id="headings">Headings</h2>
+  <div class="bs-docs-example">
+    <h1>h1. Heading 1</h1>
+    <h2>h2. Heading 2</h2>
+    <h3>h3. Heading 3</h3>
+    <h4>h4. Heading 4</h4>
+    <h5>h5. Heading 5</h5>
+    <h6>h6. Heading 6</h6>
+  </div>
+
+  <h2 id="body-copy">Body copy</h2>
+  <p>Learning Suite's global default <code>font-size</code> is <strong>13px</strong>, with a <code>line-height</code> of <strong>18px</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive top and bottom margins of 1em (13px by default).</p>
+  <div class="bs-docs-example">
+    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+  </div>
+  <pre class="prettyprint">&lt;p&gt;...&lt;/p&gt;</pre>
+  
+  
+  
+  <hr class="bs-docs-separator">
+
+
+  <h2 id="emphasis">Emphasis</h2>
+  <p>Make use of HTML's default emphasis tags with lightweight styles.</p>
+
+  <h3><code>&lt;small&gt;</code></h3>
+  <p>For de-emphasizing inline or blocks of text, <small>use the small tag.</small></p>
+  <div class="bs-docs-example">
+    <p><small>This line of text is meant to be treated as fine print.</small></p>
+  </div>
+<pre class="prettyprint">
+&lt;p&gt;
+&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;
+&lt;/p&gt;
+</pre>
+
+  <h3>Bold</h3>
+  <p>For emphasizing a snippet of text with a heavier font-weight.</p>
+  <div class="bs-docs-example">
+    <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+  </div>
+  <pre class="prettyprint">&lt;strong&gt;rendered as bold text&lt;/strong&gt;</pre>
+
+  <h3>Italics</h3>
+  <p>For emphasizing a snippet of text with italics.</p>
+  <div class="bs-docs-example">
+    <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+  </div>
+  <pre class="prettyprint">&lt;em&gt;rendered as italicized text&lt;/em&gt;</pre>
+
+
+    <hr class="bs-docs-separator">
+
+
+  <h2 id="abbreviations">Abbreviations</h2>
+  <p>Stylized implementation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover.</p>
+
+  <h3><code>&lt;abbr&gt;</code></h3>
+  <p>For expanded text on long hover of an abbreviation, include the <code>title</code> attribute.</p>
+  <div class="bs-docs-example">
+    <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+  </div>
+  <pre class="prettyprint">&lt;abbr title="attribute"&gt;attr&lt;/abbr&gt;</pre>
+
+  <h3><code>&lt;abbr class="initialism"&gt;</code></h3>
+  <p>Add <code>.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
+  <div class="bs-docs-example">
+    <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
+  </div>
+  <pre class="prettyprint">&lt;abbr title="HyperText Markup Language" class="initialism"&gt;HTML&lt;/abbr&gt;</pre>
+
+
+
+    <hr class="bs-docs-separator">
+
+
+  <!-- Lists -->
+  <h2 id="lists">Lists</h2>
+
+  <h3>Unordered</h3>
+  <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+  <div class="bs-docs-example">
+    <ul>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit
+        <ul>
+          <li>Phasellus iaculis neque</li>
+          <li>Purus sodales ultricies</li>
+          <li>Vestibulum laoreet porttitor sem</li>
+          <li>Ac tristique libero volutpat at</li>
+        </ul>
+      </li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+    </ul>
+  </div>
+<pre class="prettyprint linenums">
+&lt;ul&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+  <h3>Ordered</h3>
+  <p>A list of items in which the order <em>does</em> explicitly matter.</p>
+  <div class="bs-docs-example">
+    <ol>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit</li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+    </ol>
+  </div>
+<pre class="prettyprint linenums">
+&lt;ol&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<h3>Unstyled</h3>
+<p>Remove the default <code>list-style</code> and left padding on list items (immediate children only).</p>
+<div class="bs-docs-example">
+  <ul class="unstyled">
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>Integer molestie lorem at massa</li>
+    <li>Facilisis in pretium nisl aliquet</li>
+    <li>Nulla volutpat aliquam velit
+      <ul>
+        <li>Phasellus iaculis neque</li>
+        <li>Purus sodales ultricies</li>
+        <li>Vestibulum laoreet porttitor sem</li>
+        <li>Ac tristique libero volutpat at</li>
+      </ul>
+    </li>
+    <li>Faucibus porta lacus fringilla vel</li>
+    <li>Aenean sit amet erat nunc</li>
+    <li>Eget porttitor lorem</li>
+  </ul>
+</div>
+<pre class="prettyprint linenums">
+&lt;ul class="unstyled"&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h3>Inline</h3>
+<p>Place all list items on a single line with <code>inline-block</code> and some light padding.</p>
+<div class="bs-docs-example">
+  <ul class="inline">
+    <li>Lorem ipsum</li>
+    <li>Phasellus iaculis</li>
+    <li>Nulla volutpat</li>
+  </ul>
+</div>
+<pre class="prettyprint linenums">
+&lt;ul class="inline"&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h3>Description</h3>
+<p>A list of terms with their associated descriptions.</p>
+<div class="bs-docs-example">
+  <dl>
+    <dt>Description lists</dt>
+    <dd>A description list is perfect for defining terms.</dd>
+    <dt>Euismod</dt>
+    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+    <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+    <dt>Malesuada porta</dt>
+    <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+  </dl>
+</div>
+<pre class="prettyprint linenums">
+&lt;dl&gt;
+&lt;dt&gt;...&lt;/dt&gt;
+&lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+
+<h4>Horizontal description</h4>
+<p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side.</p>
+<div class="bs-docs-example">
+  <dl class="dl-horizontal">
+    <dt>Description lists</dt>
+    <dd>A description list is perfect for defining terms.</dd>
+    <dt>Euismod</dt>
+    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+    <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+    <dt>Malesuada porta</dt>
+    <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+    <dt>Felis euismod semper eget lacinia</dt>
+    <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+  </dl>
+</div>
+<pre class="prettyprint linenums">
+&lt;dl class="dl-horizontal"&gt;
+&lt;dt&gt;...&lt;/dt&gt;
+&lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+<p>
+  <span class="label label-info">Heads up!</span>
+  Horizontal description lists will truncate terms that are too long to fit in the left column fix <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.
+</p>
+
+  
+</section>

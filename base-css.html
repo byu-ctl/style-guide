@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,27 +40,25 @@
           <a class="brand" href="./index.html">Bootstrap</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active">
+              <li class="x">
                 <a href="./index.html">Home</a>
               </li>
-              <li class="">
+              <li class="active">
                 <a href="./base-css.html">Base CSS</a>
               </li>
-              <li class="">
-                <a href="./bootstrap.html">Bootstrap CSS</a>
-              </li>
-              <li class="">
+              <li class="x">
                 <a href="./icons.html">Icons</a>
               </li>
-              <!--
+              <li class="x">
+                <a href="./controls.html">Forms & controls</a>
+              </li>
+<!--
               <li class="">
                 <a href="./getting-started.html">Get started</a>
               </li>
               <li class="">
                 <a href="./scaffolding.html">Scaffolding</a>
               </li>
-              -->
-<!--
               <li class="">
                 <a href="./components.html">Components</a>
               </li>
@@ -74,86 +74,6 @@
         </div>
       </div>
     </div>
-
-<style>
-
-ul.swatches {
-  list-style: none;
-  margin:0;
-}
-
-ul.swatches span, ul.swatches code {
-  display: inline-block;
-  width: 5em;
-  margin-left:.5em;
-}
-
-ul.swatches li div {
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-}
-
-/* BYU Blue */
-.blue0 { background-color: #001948; }
-.blue1 { background-color: #025; }
-.blue2 { background-color: #036; }
-.blue3 { background-color: #147; }
-.blue4 { background-color: #369; }
-.blue4-5 { background-color: #47A; }
-.blue5 { background-color: #628cb6; }
-.blue6 { background-color: #91b2d2; }
-.blue7 { background-color: #abc8e4; }
-.blue8 { background-color: #d1e4f6; }
-.blue9 { background-color: #e0edf9; }
-.blue10 { background-color: #eff6fc; }
-.blue11 { background-color: #f9fcfe; }
-
-
-/* Highlight Yellow */
-.yellow0 { background-color: #ffc; }
-.yellow1 { background-color: #ffd; }
-.yellow2 { background-color: #ffe; }
-
-
-/* Reds */
-.red0 { background-color: #901; }
-.red1 { background-color: #b01; }
-
-
-/* Green (not used much) */
-.green0 { background-color: #004818; }
-.green1 { background-color: #005518; }
-.green2 { background-color: #006614; }
-.green3 { background-color: #117725; }
-.green4 { background-color: #339947; }
-.green5 { background-color: #62b672; }
-.green6 { background-color: #91d29d; }
-.green7 { background-color: #abe4b6; }
-.green8 { background-color: #d1f6d8; }
-.green9 { background-color: #e0f9e4; }
-.green10 { background-color: #effcf1; }
-.green11 { background-color: #f9fefa; }
-
-
-/* Gray */
-.gray0 { background-color: #000; }
-.gray1 { background-color: #111; }
-.gray2 { background-color: #222; }
-.gray3 { background-color: #333; }
-.gray4 { background-color: #444; }
-.gray5 { background-color: #555; }
-.gray6 { background-color: #666; }
-.gray7 { background-color: #777; }
-.gray8 { background-color: #888; }
-.gray9 { background-color: #999; }
-.grayA { background-color: #aaa; }
-.grayB { background-color: #bbb; }
-.grayC { background-color: #ccc; }
-.grayD { background-color: #ddd; }
-.grayE { background-color: #eee; }
-.grayF { background-color: #fff; }
-</style>
 
 
 <!-- Subhead
@@ -173,14 +93,240 @@ ul.swatches li div {
     <div class="row">
       <div class="span3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
-          <li><a href="#colors"><i class="icon-chevron-right"></i> Colors</a></li>
           <li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
+          <li><a href="#colors"><i class="icon-chevron-right"></i> Colors</a></li>
+          <li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
+          <li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
         </ul>
       </div>
       <div class="span9">
 
 
-                <!-- Colors
+        <!-- Buttons
+        ================================================== -->
+        <section id="buttons">
+          <div class="page-header">
+            <h1>Buttons</h1>
+          </div>
+
+          <h2>Default buttons</h2>
+          <p>Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.</p>
+
+
+
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Button</th>
+                <th>class=""</th>
+                <th>alt class (deprecated)</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><button type="button" class="btn btn-primary">Primary</button></td>
+                <td><code>btn btn-primary</code></td>
+                <td><code>action, edit</code></td>
+                <td>Identifies the primary action in a page, popup, or set of buttons.</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-info">Info</button></td>
+                <td><code>btn btn-info</code></td>
+                <td><code>edit</code></td>
+                <td>Used for secondary actions or actions that update data on the page.</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn">Default</button></td>
+                <td><code>btn</code></td>
+                <td><code>cancel</code></td>
+                <td>Standard gray button with gradient. Used for secondary actions.</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-success">Success</button></td>
+                <td><code>btn btn-success</code></td>
+                <td><code>action</code></td>
+                <td>Indicates a successful or positive action. Not used much in Learning Suite.</td>
+              </tr>
+<!--
+              <tr>
+                <td><button type="button" class="btn btn-danger">Danger</button></td>
+                <td><code>btn btn-danger</code></td>
+                <td></td>
+                <td>Indicates a dangerous or potentially negative action. Not used at this point in Learning Suite</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-inverse">Inverse</button></td>
+                <td><code>btn btn-inverse</code></td>
+                <td></td>
+                <td>Alternate dark gray button, not tied to a semantic action or use. Not used at this point in Learning Suite</td>
+              </tr>
+-->
+              <tr>
+                <td><button type="button" class="btn btn-link">Link</button></td>
+                <td><code>btn btn-link</code></td>
+                <td></td>
+                <td>Deemphasize a button by making it look like a link while maintaining button behavior.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4>Cross browser compatibility</h4>
+          <p>IE9 doesn't crop background gradients on rounded corners, so we remove it. Related, IE9 jankifies disabled <code>button</code> elements, rendering text gray with a nasty text-shadow that we cannot fix.</p>
+          
+          
+          <h2>Specialized buttons</h2>
+          
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Button</th>
+                <th>class=""</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a type="button" class="btn btn-primary add">Add</a></td>
+                <td><code>btn btn-primary add</code></td>
+                <td>Indicates creation of a new item (often in a list).</td>
+              </tr>
+              <tr>
+                <td><a type="button" class="btn btn-primary next">Next</a></td>
+                <td><code>btn btn-primary next</code></td>
+                <td>Indicates movement to the next page.</td>
+              </tr>
+              <tr>
+                <td><a type="button" class="btn btn-primary back">Back</a></td>
+                <td><code>btn btn-primary back</code></td>
+                <td>Indicates movement to the previous page.</td>
+              </tr>
+              <tr>
+                <td><a type="button" class="cancel">Cancel</a></td>
+                <td><code>cancel</code></td>
+                <td>Indicates a cancel action (often in a popup).</td>
+              </tr>
+            </tbody>
+          </table>
+
+          
+          
+
+          <h2>Button sizes</h2>
+          <p>Fancy larger or smaller buttons? Add <code>.super</code>, <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code> for additional sizes.</p>
+          <div class="bs-docs-example">
+            <p>
+              <a type="button" class="btn super btn-primary">Super button</a>
+              <a type="button" class="btn super">Super button</a>
+            </p>
+            <p>
+              <button type="button" class="btn btn-large btn-primary">Large button</button>
+              <button type="button" class="btn btn-large">Large button</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-primary">Default button</button>
+              <button type="button" class="btn">Default button</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-small btn-primary">Small button</button>
+              <button type="button" class="btn btn-small">Small button</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-mini btn-primary">Mini button</button>
+              <button type="button" class="btn btn-mini">Mini button</button>
+            </p>
+          </div>
+<pre class="prettyprint linenums">
+&lt;p&gt;
+  &lt;a class="btn btn-primary super"&gt;Large button&lt;/a&gt;
+  &lt;a class="btn super"&gt;Large button&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-large btn-primary" type="button"&gt;Large button&lt;/button&gt;
+  &lt;button class="btn btn-large" type="button"&gt;Large button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-primary" type="button"&gt;Default button&lt;/button&gt;
+  &lt;button class="btn" type="button"&gt;Default button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-small btn-primary" type="button"&gt;Small button&lt;/button&gt;
+  &lt;button class="btn btn-small" type="button"&gt;Small button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-mini btn-primary" type="button"&gt;Mini button&lt;/button&gt;
+  &lt;button class="btn btn-mini" type="button"&gt;Mini button&lt;/button&gt;
+&lt;/p&gt;
+</pre>
+<!--
+          <p>Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.</p>
+          <div class="bs-docs-example">
+            <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
+              <button type="button" class="btn btn-large btn-block btn-primary">Block level button</button>
+              <button type="button" class="btn btn-large btn-block">Block level button</button>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;button class="btn btn-large btn-block btn-primary" type="button"&gt;Block level button&lt;/button&gt;
+&lt;button class="btn btn-large btn-block" type="button"&gt;Block level button&lt;/button&gt;
+</pre>
+-->
+
+
+          <h2>Disabled state</h2>
+<!--
+          <p>Make buttons look unclickable by fading them back 50%.</p>
+
+          <h3>Anchor element</h3>
+-->
+          <p>Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.</p>
+          <p class="bs-docs-example">
+            <a href="#" class="btn btn-large btn-primary disabled">Primary link</a>
+            <a href="#" class="btn btn-large disabled">Link</a>
+          </p>
+<pre class="prettyprint linenums">
+&lt;a href="#" class="btn btn-large btn-primary disabled"&gt;Primary link&lt;/a&gt;
+&lt;a href="#" class="btn btn-large disabled"&gt;Link&lt;/a&gt;
+</pre>
+          <p>
+            <span class="label label-info">Heads up!</span>
+            We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required. Also, this class is only for aesthetic; you must use custom JavaScript to disable links here.
+          </p>
+
+<!--
+          <h3>Button element</h3>
+          <p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p>
+          <p class="bs-docs-example">
+            <button type="button" class="btn btn-large btn-primary disabled" disabled="disabled">Primary button</button>
+            <button type="button" class="btn btn-large" disabled>Button</button>
+          </p>
+<pre class="prettyprint linenums">
+&lt;button type="button" class="btn btn-large btn-primary disabled" disabled="disabled"&gt;Primary button&lt;/button&gt;
+&lt;button type="button" class="btn btn-large" disabled&gt;Button&lt;/button&gt;
+</pre>
+-->
+
+
+          <h2>One class, multiple tags</h2>
+          <p>Use the <code>.btn</code> class on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element. </p>
+          
+          <form class="bs-docs-example">
+            <a class="btn" href="">Link</a>
+            <button class="btn" type="submit">Button</button>
+            <input class="btn" type="button" value="Input">
+            <input class="btn" type="submit" value="Submit">
+          </form>
+<pre class="prettyprint linenums">
+&lt;a class="btn" href=""&gt;Link&lt;/a&gt;
+&lt;button class="btn" type="submit"&gt;Button&lt;/button&gt;
+&lt;input class="btn" type="button" value="Input"&gt;
+&lt;input class="btn" type="submit" value="Submit"&gt;
+</pre>
+          <p>As a best practice, try to match the element for your context to ensure matching cross-browser rendering. If you have an <code>input</code>, use an <code>&lt;input type="submit"&gt;</code> for your button.</p>
+          <p><span class="label label-warning">Watch out!</span> The specialized button classes (<code>.add</code>, <code>.next</code>, <code>.back</code>, <code>.cancel</code>) and deprecated alternate classes (<code>.action</code>, <code>.edit</code>, <code>.action2</code>, <code>.edit2</code>) DO NOT work on <code>button</code> elements&mdash;only use <code>a</code> and <code>input</code> elements with those.</p>
+
+        </section>
+        <!-- Colors
         ================================================== -->
         <section id="colors">
           <div class="page-header">
@@ -218,170 +364,230 @@ ul.swatches li div {
           </div>
           
         </section>
-                <!-- Buttons
-        ================================================== -->
-        <section id="buttons">
-          <div class="page-header">
-            <h1>Buttons</h1>
-          </div>
+<!-- Typography
+================================================== -->
+<section id="typography">
+  <div class="page-header">
+    <h1>Typography</h1>
+  </div>
 
-          <h2>Default buttons</h2>
-          <p>Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.</p>
-          <table class="table table-bordered table-striped">
-            <thead>
-              <tr>
-                <th>Button</th>
-                <th>class=""</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><button type="button" class="btn">Default</button></td>
-                <td><code>btn</code></td>
-                <td>Standard gray button with gradient</td>
-              </tr>
-              <tr>
-                <td><button type="button" class="btn btn-primary">Primary</button></td>
-                <td><code>btn btn-primary</code></td>
-                <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
-              </tr>
-              <tr>
-                <td><button type="button" class="btn btn-info">Info</button></td>
-                <td><code>btn btn-info</code></td>
-                <td>Used as an alternative to the default styles</td>
-              </tr>
-              <tr>
-                <td><button type="button" class="btn btn-success">Success</button></td>
-                <td><code>btn btn-success</code></td>
-                <td>Indicates a successful or positive action</td>
-              </tr>
-              <tr>
-                <td><button type="button" class="btn btn-warning">Warning</button></td>
-                <td><code>btn btn-warning</code></td>
-                <td>Indicates caution should be taken with this action</td>
-              </tr>
-              <tr>
-                <td><button type="button" class="btn btn-danger">Danger</button></td>
-                <td><code>btn btn-danger</code></td>
-                <td>Indicates a dangerous or potentially negative action</td>
-              </tr>
-              <tr>
-                <td><button type="button" class="btn btn-inverse">Inverse</button></td>
-                <td><code>btn btn-inverse</code></td>
-                <td>Alternate dark gray button, not tied to a semantic action or use</td>
-              </tr>
-              <tr>
-                <td><button type="button" class="btn btn-link">Link</button></td>
-                <td><code>btn btn-link</code></td>
-                <td>Deemphasize a button by making it look like a link while maintaining button behavior</td>
-              </tr>
-            </tbody>
-          </table>
+  <h2 id="headings">Headings</h2>
+  <div class="bs-docs-example">
+    <h1>h1. Heading 1</h1>
+    <h2>h2. Heading 2</h2>
+    <h3>h3. Heading 3</h3>
+    <h4>h4. Heading 4</h4>
+    <h5>h5. Heading 5</h5>
+    <h6>h6. Heading 6</h6>
+  </div>
 
-          <h4>Cross browser compatibility</h4>
-          <p>IE9 doesn't crop background gradients on rounded corners, so we remove it. Related, IE9 jankifies disabled <code>button</code> elements, rendering text gray with a nasty text-shadow that we cannot fix.</p>
+  <h2 id="body-copy">Body copy</h2>
+  <p>Learning Suite's global default <code>font-size</code> is <strong>13px</strong>, with a <code>line-height</code> of <strong>18px</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive top and bottom margins of 1em (13px by default).</p>
+  <div class="bs-docs-example">
+    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+  </div>
+  <pre class="prettyprint">&lt;p&gt;...&lt;/p&gt;</pre>
+  
+  
+  
+  <hr class="bs-docs-separator">
 
 
-          <h2>Button sizes</h2>
-          <p>Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code> for additional sizes.</p>
-          <div class="bs-docs-example">
-            <p>
-              <button type="button" class="btn btn-large btn-primary">Large button</button>
-              <button type="button" class="btn btn-large">Large button</button>
-            </p>
-            <p>
-              <button type="button" class="btn btn-primary">Default button</button>
-              <button type="button" class="btn">Default button</button>
-            </p>
-            <p>
-              <button type="button" class="btn btn-small btn-primary">Small button</button>
-              <button type="button" class="btn btn-small">Small button</button>
-            </p>
-            <p>
-              <button type="button" class="btn btn-mini btn-primary">Mini button</button>
-              <button type="button" class="btn btn-mini">Mini button</button>
-            </p>
-          </div>
-<pre class="prettyprint linenums">
+  <h2 id="emphasis">Emphasis</h2>
+  <p>Make use of HTML's default emphasis tags with lightweight styles.</p>
+
+  <h3><code>&lt;small&gt;</code></h3>
+  <p>For de-emphasizing inline or blocks of text, <small>use the small tag.</small></p>
+  <div class="bs-docs-example">
+    <p><small>This line of text is meant to be treated as fine print.</small></p>
+  </div>
+<pre class="prettyprint">
 &lt;p&gt;
-  &lt;button class="btn btn-large btn-primary" type="button"&gt;Large button&lt;/button&gt;
-  &lt;button class="btn btn-large" type="button"&gt;Large button&lt;/button&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;button class="btn btn-primary" type="button"&gt;Default button&lt;/button&gt;
-  &lt;button class="btn" type="button"&gt;Default button&lt;/button&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;button class="btn btn-small btn-primary" type="button"&gt;Small button&lt;/button&gt;
-  &lt;button class="btn btn-small" type="button"&gt;Small button&lt;/button&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;button class="btn btn-mini btn-primary" type="button"&gt;Mini button&lt;/button&gt;
-  &lt;button class="btn btn-mini" type="button"&gt;Mini button&lt;/button&gt;
+&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;
 &lt;/p&gt;
 </pre>
-          <p>Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.</p>
-          <div class="bs-docs-example">
-            <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
-              <button type="button" class="btn btn-large btn-block btn-primary">Block level button</button>
-              <button type="button" class="btn btn-large btn-block">Block level button</button>
-            </div>
-          </div>
+
+  <h3>Bold</h3>
+  <p>For emphasizing a snippet of text with a heavier font-weight.</p>
+  <div class="bs-docs-example">
+    <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+  </div>
+  <pre class="prettyprint">&lt;strong&gt;rendered as bold text&lt;/strong&gt;</pre>
+
+  <h3>Italics</h3>
+  <p>For emphasizing a snippet of text with italics.</p>
+  <div class="bs-docs-example">
+    <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+  </div>
+  <pre class="prettyprint">&lt;em&gt;rendered as italicized text&lt;/em&gt;</pre>
+
+
+    <hr class="bs-docs-separator">
+
+
+  <h2 id="abbreviations">Abbreviations</h2>
+  <p>Stylized implementation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover.</p>
+
+  <h3><code>&lt;abbr&gt;</code></h3>
+  <p>For expanded text on long hover of an abbreviation, include the <code>title</code> attribute.</p>
+  <div class="bs-docs-example">
+    <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+  </div>
+  <pre class="prettyprint">&lt;abbr title="attribute"&gt;attr&lt;/abbr&gt;</pre>
+
+  <h3><code>&lt;abbr class="initialism"&gt;</code></h3>
+  <p>Add <code>.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
+  <div class="bs-docs-example">
+    <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
+  </div>
+  <pre class="prettyprint">&lt;abbr title="HyperText Markup Language" class="initialism"&gt;HTML&lt;/abbr&gt;</pre>
+
+
+
+    <hr class="bs-docs-separator">
+
+
+  <!-- Lists -->
+  <h2 id="lists">Lists</h2>
+
+  <h3>Unordered</h3>
+  <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+  <div class="bs-docs-example">
+    <ul>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit
+        <ul>
+          <li>Phasellus iaculis neque</li>
+          <li>Purus sodales ultricies</li>
+          <li>Vestibulum laoreet porttitor sem</li>
+          <li>Ac tristique libero volutpat at</li>
+        </ul>
+      </li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+    </ul>
+  </div>
 <pre class="prettyprint linenums">
-&lt;button class="btn btn-large btn-block btn-primary" type="button"&gt;Block level button&lt;/button&gt;
-&lt;button class="btn btn-large btn-block" type="button"&gt;Block level button&lt;/button&gt;
+&lt;ul&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
 </pre>
 
-
-          <h2>Disabled state</h2>
-          <p>Make buttons look unclickable by fading them back 50%.</p>
-
-          <h3>Anchor element</h3>
-          <p>Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.</p>
-          <p class="bs-docs-example">
-            <a href="#" class="btn btn-large btn-primary disabled">Primary link</a>
-            <a href="#" class="btn btn-large disabled">Link</a>
-          </p>
+  <h3>Ordered</h3>
+  <p>A list of items in which the order <em>does</em> explicitly matter.</p>
+  <div class="bs-docs-example">
+    <ol>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit</li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+    </ol>
+  </div>
 <pre class="prettyprint linenums">
-&lt;a href="#" class="btn btn-large btn-primary disabled"&gt;Primary link&lt;/a&gt;
-&lt;a href="#" class="btn btn-large disabled"&gt;Link&lt;/a&gt;
-</pre>
-          <p>
-            <span class="label label-info">Heads up!</span>
-            We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required. Also, this class is only for aesthetic; you must use custom JavaScript to disable links here.
-          </p>
-
-          <h3>Button element</h3>
-          <p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p>
-          <p class="bs-docs-example">
-            <button type="button" class="btn btn-large btn-primary disabled" disabled="disabled">Primary button</button>
-            <button type="button" class="btn btn-large" disabled>Button</button>
-          </p>
-<pre class="prettyprint linenums">
-&lt;button type="button" class="btn btn-large btn-primary disabled" disabled="disabled"&gt;Primary button&lt;/button&gt;
-&lt;button type="button" class="btn btn-large" disabled&gt;Button&lt;/button&gt;
+&lt;ol&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;
 </pre>
 
-
-          <h2>One class, multiple tags</h2>
-          <p>Use the <code>.btn</code> class on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
-          <form class="bs-docs-example">
-            <a class="btn" href="">Link</a>
-            <button class="btn" type="submit">Button</button>
-            <input class="btn" type="button" value="Input">
-            <input class="btn" type="submit" value="Submit">
-          </form>
+<h3>Unstyled</h3>
+<p>Remove the default <code>list-style</code> and left padding on list items (immediate children only).</p>
+<div class="bs-docs-example">
+  <ul class="unstyled">
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>Integer molestie lorem at massa</li>
+    <li>Facilisis in pretium nisl aliquet</li>
+    <li>Nulla volutpat aliquam velit
+      <ul>
+        <li>Phasellus iaculis neque</li>
+        <li>Purus sodales ultricies</li>
+        <li>Vestibulum laoreet porttitor sem</li>
+        <li>Ac tristique libero volutpat at</li>
+      </ul>
+    </li>
+    <li>Faucibus porta lacus fringilla vel</li>
+    <li>Aenean sit amet erat nunc</li>
+    <li>Eget porttitor lorem</li>
+  </ul>
+</div>
 <pre class="prettyprint linenums">
-&lt;a class="btn" href=""&gt;Link&lt;/a&gt;
-&lt;button class="btn" type="submit"&gt;Button&lt;/button&gt;
-&lt;input class="btn" type="button" value="Input"&gt;
-&lt;input class="btn" type="submit" value="Submit"&gt;
+&lt;ul class="unstyled"&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
 </pre>
-          <p>As a best practice, try to match the element for your context to ensure matching cross-browser rendering. If you have an <code>input</code>, use an <code>&lt;input type="submit"&gt;</code> for your button.</p>
 
-        </section>
+<h3>Inline</h3>
+<p>Place all list items on a single line with <code>inline-block</code> and some light padding.</p>
+<div class="bs-docs-example">
+  <ul class="inline">
+    <li>Lorem ipsum</li>
+    <li>Phasellus iaculis</li>
+    <li>Nulla volutpat</li>
+  </ul>
+</div>
+<pre class="prettyprint linenums">
+&lt;ul class="inline"&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
 
+<h3>Description</h3>
+<p>A list of terms with their associated descriptions.</p>
+<div class="bs-docs-example">
+  <dl>
+    <dt>Description lists</dt>
+    <dd>A description list is perfect for defining terms.</dd>
+    <dt>Euismod</dt>
+    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+    <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+    <dt>Malesuada porta</dt>
+    <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+  </dl>
+</div>
+<pre class="prettyprint linenums">
+&lt;dl&gt;
+&lt;dt&gt;...&lt;/dt&gt;
+&lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+
+<h4>Horizontal description</h4>
+<p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side.</p>
+<div class="bs-docs-example">
+  <dl class="dl-horizontal">
+    <dt>Description lists</dt>
+    <dd>A description list is perfect for defining terms.</dd>
+    <dt>Euismod</dt>
+    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+    <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+    <dt>Malesuada porta</dt>
+    <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+    <dt>Felis euismod semper eget lacinia</dt>
+    <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+  </dl>
+</div>
+<pre class="prettyprint linenums">
+&lt;dl class="dl-horizontal"&gt;
+&lt;dt&gt;...&lt;/dt&gt;
+&lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+<p>
+  <span class="label label-info">Heads up!</span>
+  Horizontal description lists will truncate terms that are too long to fit in the left column fix <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.
+</p>
+
+  
+</section>
 
 
 
@@ -410,7 +616,7 @@ ul.swatches li div {
 
 
 
-    <!-- Le javascript
+    <!-- JS
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>

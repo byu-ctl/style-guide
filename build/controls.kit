@@ -1,0 +1,209 @@
+<!-- $title = Base CSS -->
+
+<!-- $home = x -->
+<!-- $base = x -->
+<!-- $icons = x -->
+<!-- $controls = active -->
+
+<!-- @include header.kit -->
+<!-- @include nav.kit -->
+
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container nopadding">
+    <h1>Forms & controls</h1>
+    <p class="lead">Allowing users to interact with the data</p>
+  </div>
+</header>
+
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
+          <li><a href="#basics"><i class="icon-chevron-right"></i> Basic elements</a></li>
+          <li><a href="#date"><i class="icon-chevron-right"></i> Date & time input</a></li>
+          <li><a href="#files"><i class="icon-chevron-right"></i> File input</a></li>
+          <li><a href="#text"><i class="icon-chevron-right"></i> Text input</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+        <!-- Forms
+        ================================================== -->
+        <section id="forms">
+          <div class="page-header">
+            <h1>Forms</h1>
+          </div>
+          
+          <p>Every page in Learning Suite (instructor side) is wrapped in a <code>form</code> element. That means form controls work anywhere.</p>
+          
+          <p>The controls below are all created using LS control objects in PHP. You don't usually create them directly in the HTML. Refer to the LS developer wiki for documentation.</p>
+          
+          <p>Each control can be rendered 
+
+        </section>
+        
+        
+        
+
+        <!-- Basic elements
+        ================================================== -->
+        <section id="basics">
+          <div class="page-header">
+            <h1>Basic Elements</h1>
+          </div>
+          
+          <h2>Checkboxes</h2>
+          
+          <p>Checkboxes are created with the <code>CheckBox</code> control. Labels can be aligned either to the right or left.</p>
+
+<!--
+<pre class="prettyprint php">&lt;?php
+require_once CHECKBOX_URL;
+...
+$cb = new CheckBox($title, $label, $mode);
+$cb->render($s);
+...
+CheckBox::getEndJavascript();
+?&gt;</pre>
+-->
+          
+          <h4>Output:</h4>
+          
+          <div class="bs-docs-example">
+            <div class="inlineLabel ">
+              <input type="checkbox" id="cb" class="" name="cb">
+              <label id="cb_label" for="cb" class="">Checkbox 1</label>
+            </div>
+          </div>
+<pre class="prettyprint">&lt;div class="inlineLabel "&gt;
+  &lt;input type="checkbox" id="cb" class="" name="cb"&gt;
+  &lt;label id="cb_label" for="cb" class=""&gt;Checkbox 1&lt;/label&gt;
+&lt;/div&gt;</pre>
+          
+          <div class="bs-docs-example">
+            <div class="inlineLabel ">
+              <label id="cb_label" for="cb" class=" ">Checkbox 1</label>
+              <input type="checkbox" id="cb" class="" name="cb">
+            </div>
+          </div>
+<pre class="prettyprint">&lt;div class="inlineLabel "&gt;
+  &lt;label id="cb_label" for="cb" class=" "&gt;Checkbox 1&lt;/label&gt;
+  &lt;input type="checkbox" id="cb" class="" name="cb"&gt;
+&lt;/div&gt;</pre>
+  
+          
+        </section>
+        
+        
+        
+
+        <!-- Date & time
+        ================================================== -->
+        <section id="date">
+          <div class="page-header">
+            <h1>Date & time input</h1>
+          </div>
+  
+          
+        </section>
+        
+        
+        
+
+        <!-- Files
+        ================================================== -->
+        <section id="files">
+          <div class="page-header">
+            <h1>File input</h1>
+          </div>
+  
+          
+        </section>
+        
+        
+        
+
+        <!-- Text
+        ================================================== -->
+        <section id="text">
+          <div class="page-header">
+            <h1>Text input</h1>
+          </div>
+  
+          
+        </section>
+        
+<!--
+<form action="save.php" method="post" enctype="multipart/form-data">
+			<input name="pageId" type="hidden" value="0">
+			<input name="appId" type="hidden" value="home">
+			<input name="redirect" id="REDIRECT_KEY" type="hidden">
+			<input name="redirectHref" id="REDIRECT_HREF" type="hidden">
+			<input name="subsessionID" id="subsessionID" type="hidden" value="9">
+			
+						<div class="desc">
+				<h2>Dashboard</h2>
+				
+							</div>
+						
+			<hr><h3>Checkbox</h3><br>  <div class="inlineLabel "> <input type="checkbox" id="cb" class="" name="cb">            <label id="cb_label" for="cb" class=" ">Checkbox 1</label>
+          </div>   <div class="inlineLabel ">             <label id="cb_label" for="cb" class=" ">Checkbox 1</label>
+        <input type="checkbox" id="cb" class="" name="cb">  </div> <table><tbody><tr><td><input type="checkbox" id="cb" class="" name="cb"></td><td setvalue="setCheckboxContent( , 0 )">            <label id="cb_label" for="cb" class=" ">Checkbox 1</label>
+        </td></tr></tbody></table><hr><h3>ComboBox</h3><br>            <label id="type_label" for="type" class=" required required ">Type</label>
+        		
+		
+		<select id="type" name="type" class=" verify-Field  verify-ComboBoxChoice">
+				<option value="assignment">Assignment</option><option value="exam">Exam</option>		</select><table><tbody><tr><td class="">            <label id="type_label" for="type" class=" ">Type</label>
+        </td><td>		
+		
+		<select id="type" name="type" class="">
+				<option value="assignment">Assignment</option><option value="exam">Exam</option>		</select></td></tr></tbody></table><hr><h3>MultiCheckBox</h3><br>                             <table>
+                    <tbody>
+                        <tr>
+                            <td class="" style="vertical-align:top;padding-top:0em">            <label id="hoursM_label" for="hoursM" class="labelM ">M</label>
+        <input type="checkbox" id="hoursM" class="M" name="hoursM"></td><td class="" style="vertical-align:top;padding-top:0em">            <label id="hoursTu_label" for="hoursTu" class="labelTu ">Tu</label>
+        <input type="checkbox" id="hoursTu" class="Tu" name="hoursTu"></td><td class="" style="vertical-align:top;padding-top:0em">            <label id="hoursW_label" for="hoursW" class="labelW ">W</label>
+        <input type="checkbox" id="hoursW" class="W" name="hoursW"></td><td class="" style="vertical-align:top;padding-top:0em">            <label id="hoursTh_label" for="hoursTh" class="labelTh ">Th</label>
+        <input type="checkbox" id="hoursTh" class="Th" name="hoursTh"></td><td class="" style="vertical-align:top;padding-top:0em">            <label id="hoursF_label" for="hoursF" class="labelF ">F</label>
+        <input type="checkbox" id="hoursF" class="F" name="hoursF"></td><td class="" style="vertical-align:top;padding-top:0em">            <label id="hoursSa_label" for="hoursSa" class="labelSa ">Sa</label>
+        <input type="checkbox" id="hoursSa" class="Sa" name="hoursSa"></td><td style="min-width: 0.5em"></td><td style="vertical-align:top;padding-top:0em;min-width:2em">             <label id="hoursStartTime_label" for="hoursStartTime" class="labelStartTime ">From:</label>
+        </td><td style="min-width:11em; vertical-align:top; padding-top:0.5em;"> 		
+		
+		<select id="hoursStartTimeHours" name="hoursStartTimeHours" class="hours timepicker StartTime">
+				<option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option selected="selected" value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>		</select>		
+		
+		<select id="hoursStartTimeMinutes" name="hoursStartTimeMinutes" class="mintues timepicker StartTime">
+				<option value=":00">:00</option><option value=":05">:05</option><option value=":10">:10</option><option value=":15">:15</option><option value=":20">:20</option><option value=":25">:25</option><option value=":30">:30</option><option value=":35">:35</option><option value=":40">:40</option><option value=":45">:45</option><option value=":50">:50</option><option value=":55">:55</option>		</select>		
+		
+		<select id="hoursStartTimeAmPm" name="hoursStartTimeAmPm" class="amPm timepicker StartTime">
+				<option value="am">am</option><option value="pm">pm</option>		</select></td><td style="vertical-align:top;padding-top:0em;min-width:2em">             <label id="hoursEndTime_label" for="hoursEndTime" class="labelEndTime ">To:</label>
+        </td><td style="min-width:11em; vertical-align:top; padding-top:0.5em;"> 		
+		
+		<select id="hoursEndTimeHours" name="hoursEndTimeHours" class="hours timepicker EndTime">
+				<option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option selected="selected" value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>		</select>		
+		
+		<select id="hoursEndTimeMinutes" name="hoursEndTimeMinutes" class="mintues timepicker EndTime">
+				<option value=":00">:00</option><option value=":05">:05</option><option value=":10">:10</option><option value=":15">:15</option><option value=":20">:20</option><option value=":25">:25</option><option value=":30">:30</option><option value=":35">:35</option><option value=":40">:40</option><option value=":45">:45</option><option value=":50">:50</option><option value=":55">:55</option>		</select>		
+		
+		<select id="hoursEndTimeAmPm" name="hoursEndTimeAmPm" class="amPm timepicker EndTime">
+				<option value="am">am</option><option value="pm">pm</option>		</select></td>                        </tr>
+                    </tbody>
+                </table>
+                         			
+						</form>
+-->
+
+      </div>
+    </div>
+
+  </div>
+
+<!-- @include footer.kit -->
